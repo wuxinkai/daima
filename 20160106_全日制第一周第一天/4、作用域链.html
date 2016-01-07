@@ -10,17 +10,17 @@
     //1)如果是私有的则和外面的都没有任何的关系,操作的都是私有的；
     //2)如果不是私有的变量，则往当前作用域的上一级作用域进行查找，上级没有在向上查找，直到找到window为止...假设找到的是window下的,那么在当前的私有作用域中我们操作的都是window下的变量
 
-    //    console.log(n, m);//->undefined undefined
-    //    var n = 100;
-    //    var m = "珠峰";
-    //    function fn() {
-    //        console.log(n, m);//->undefined "珠峰"
-    //        var n = 200;
-    //        m = "培训";
-    //        console.log(n, m);//->200 "培训"
-    //    }
-    //    fn();
-    //    console.log(n, m);//->100 "培训"
+        console.log(n, m);//->undefined undefined
+        var n = 100;
+        var m = "珠峰";
+        function fn() {
+            console.log(n, m);//->undefined "珠峰"
+            var n = 200;
+            m = "培训";
+            console.log(n, m);//->200 "培训"
+        }
+        fn();
+        console.log(n, m);//->100 "培训"
 
 
     //疑问?如果在私有作用域中的变量不是私有的，往上一级作用域找...一直找到window，如果window下也没有呢?
