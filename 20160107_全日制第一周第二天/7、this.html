@@ -23,7 +23,7 @@
     //        console.log(this);//->window
     //    })();
     //    var obj = {
-    //        fn: (function () {
+    //        fn: (function () {   //把一个自执行函数的结果。给了fn
     //            console.log(this);//->window
     //            return function () {//->xxxfff111
     //
@@ -55,9 +55,7 @@
         console.log(this);
     }
     document.getElementById("div1").onclick = function () {
-        console.log(this);//->#div1
-
-        fn();//this->window
+        console.log(this);//->#div1        fn();//this->   就相当于window.fn
     };
     //学好this记住这句话:你以为 你以为的 就是你以为的
 </script>

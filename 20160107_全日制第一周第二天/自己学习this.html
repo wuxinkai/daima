@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function fn(){
+        console.log(this.innerHTML)
+    } //xxxfff000
+
+    var obj={
+
+    }
+
+
+div.onclick = (function(){  //点击的是地址
+    console.log(this);  //自执行函数
+    return function(){  //return 返回的是 xxxfff000
+        console.log(this)
+    }
+})()
+</script>
+</body>
+</html>

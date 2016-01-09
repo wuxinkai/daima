@@ -9,12 +9,12 @@
     var ary = [1, 2, 3, 4];
     function fn(ary) {
         ary[0] = 0;
-        ary = [0];
+        ary = [0];  //这是object类型的数组类型，所以他也会开辟一个私有空间
         ary[0] = 100;
         return ary;
     }
-    var res = fn(ary);
-    console.log(ary);
+    var res = fn(ary); //左侧内容进行了预解释 （右侧信息不进行预解释，只是把返回值给左侧），右侧内容开始执行函数 fn(ary);
+    console.log(ary); //只有执行的时候才会赋值 ary接收的是全局下的ary但在十六行执行的时候已经把第全局性的ary修改了
     console.log(res);
 </script>
 </body>
