@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+//    var a=9;
+//    function fn(){
+//        a=0;  //这不是私有作用域每次执行都会改变全局的变量，
+//        return function(b){ return b+a++; }
+//    }
+//    var f=fn();
+//    var m=f(5);
+//    alert(m);
+//    var n=fn()(5);
+//    alert(n);
+//    var x=f(5);
+//    alert(x);
+//    alert(a)
+
+//var num = 10;
+//var obj = {num: 20};
+//obj.fn = (function (num) {
+//    this.num = num * 3; //30
+//    num++;       // 20++
+//    return function (n) {
+//        this.num += n; //3
+//        num++;
+//        console.log(num);
+//    }
+//})(obj.num);
+//var fn = obj.fn;
+//fn(5); //22
+//obj.fn(10); //23
+////            65    30
+//console.log(num, obj.num);
+
+//var n=0;
+//function a(){
+//    var n=10;
+//    function b(){
+//        n++;
+//        alert(n);
+//    }
+//    b();
+//    return b;
+//}
+//var c=a();
+//c();
+//alert(n);
+//var a=10,b=11,c=12;
+//function test(a){
+//    a=1;
+//var b=2;
+//    c=3;
+//}
+//test(10);
+//alert(a);  alert(b);   alert(c);
+
+//if(!("a" in window)){
+//    var a=1;
+//}
+//alert(a);
+
+
+//var foo=1;
+//function bar(){
+//    if(!foo){
+//        var foo=10;
+//    }
+//    console.log(foo);
+//}
+//bar();
+
+//var a=4;
+//function b(x,y,a) {
+//    alert(a);
+//    arguments[2]=10;
+//    alert(a);
+//}
+//a=b(1,2,3);   alert(a)
+
+//var foo='hello';
+//(function(foo){
+//    console.log(foo);
+//    var foo=foo||'world';
+//    console.log(foo);
+//})(foo);
+//
+//console.log(foo)
+
+var a=9;
+function fn(){
+    a=0;
+    return function(b){ return b+a++; }
+}
+var f=fn()
+var m=f(5);alert(m);
+var n=fn()(5);alert(n);
+var x=f(5);alert(x);
+
+
+</script>
+</body>
+</html>
