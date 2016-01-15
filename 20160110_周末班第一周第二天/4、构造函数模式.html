@@ -22,6 +22,7 @@
     //    jsPerson1.writeJs();
 
     //构造函数模式
+<<<<<<< HEAD
     //1)执行:普通的函数是createJsPerson()，而构造函数模式是new CreateJsPerson()来执行的,如果是new这样来执行的,
     //      我们的CreateJsPerson就叫做类,返回的jsPerson1是当前这个类的一个实例
     //a、类其实也是一个函数,只不过执行的时候多加了一个new而已,typeof CreateJsPerson->"function" 类也是函数数据类型的
@@ -33,6 +34,15 @@
     // 浏览器默认创建的这个对象就是我们当前类的一个实例
     //b、在代码从上到下执行的时候,以实例为执行的主体(函数中的this就是当前类的一个实例),
     // 分别把对应的属性名和属性值赋值给当前实例 ->在构造函数模式中,函数体中的this.xxx=xxx中的this是当前类的一个实例
+=======
+    //1)执行:普通的函数是createJsPerson()，而构造函数模式是new CreateJsPerson()来执行的,如果是new这样来执行的,我们的CreateJsPerson就叫做类,返回的jsPerson1是当前这个类的一个实例
+    //a、类其实也是一个函数,只不过执行的时候多加了一个new而已,typeof CreateJsPerson->"function" 类也是函数数据类型的
+    //b、jsPerson1是当前类的一个实例,它是对象数据类型的,typeof jsPerson1->"object"
+
+    //2)运行:普通的函数执行会形成一个私有的作用域,然后形参赋值->预解释->代码从上到下执行,通过new来执行,除了拥有普通函数执行这些操作以外,还有一些自己特殊的操作:
+    //a、不需要自己在手动的创建一个对象,浏览器会默认的给它创建一个对象,并且默认的返回到函数的外面->浏览器默认创建的这个对象就是我们当前类的一个实例
+    //b、在代码从上到下执行的时候,以实例为执行的主体(函数中的this就是当前类的一个实例),分别把对应的属性名和属性值赋值给当前实例 ->在构造函数模式中,函数体中的this.xxx=xxx中的this是当前类的一个实例
+>>>>>>> 1feed5eb77d0297e982151d84d691506486c1eb8
     //    function CreateJsPerson(name, age) {
     //        //->浏览器自己创建一个对象(实例) this
     //        this.name = name;
@@ -65,7 +75,11 @@
     //普通函数:形成了一个私有的作用域,而num是它的一个私有的变量,私有的变量和实例是没有任何的关系的
     //函数拥有多面性,而且每一种角色之间是不影响的
     //    function Fn() {
+<<<<<<< HEAD
     //        var num = 10;  //私有的变量和实例是没有任何的关系的
+=======
+    //        var num = 10;
+>>>>>>> 1feed5eb77d0297e982151d84d691506486c1eb8
     //        this.x = 100;
     //        this.getX = function () {
     //            console.log(this.x);
@@ -114,20 +128,32 @@
     //5、在构造函数模式中,我们创建的实例是单独的个体,而且在函数体中通过this.xxx=xxx给实例增加的属性都是自己私有的属性,每一个实例之间的属性是不一样的
     function Fn() {
         this.x = 100;
+<<<<<<< HEAD
         this.getX = function () {  //这个this是f1的124行
+=======
+        this.getX = function () {
+>>>>>>> 1feed5eb77d0297e982151d84d691506486c1eb8
             console.log(this.x);
         };
         //私有的属性
     }
     var f1 = new Fn;
     var f2 = new Fn;
+<<<<<<< HEAD
     f1.getX
     console.log(f1.getX === f2.getX);//->false
+=======
+    //console.log(f1.getX === f2.getX);//->false
+>>>>>>> 1feed5eb77d0297e982151d84d691506486c1eb8
 
     //in:用来检测某一个属性是否属于这个对象,它既可以检测当前对象的私有的属性,也可以检测公有的属性
     //console.log("getX" in f1);//->true
 
+<<<<<<< HEAD
     //hasOwnProperty:用来检测某 一个属性是否属于这个对象的私有的属性,不管公有还是没有,只要私有的没有返回false,有的话返回true
+=======
+    //hasOwnProperty:用来检测某一个属性是否属于这个对象的私有的属性,不管公有还是没有,只要私有的没有返回false,有的话返回true
+>>>>>>> 1feed5eb77d0297e982151d84d691506486c1eb8
     //console.log(f1.hasOwnProperty("getX"));//->true
 
     //思考题:
