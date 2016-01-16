@@ -6,6 +6,7 @@
 </head>
 <body>
 <script type="text/javascript">
+    //JSON类型的数据：这句话是错的，没有Json这种类型;   json是一种数据格式
     //1、json是一种"数据格式",它的作用是用来进行前后台数据交互使用的
     //如果属性名没有用“”包起来,它就是一个普通的对象；如果属性名用“”包起来,我们就把它称之为json格式的对象；->所以操作json格式的对象和操作普通对象没有任何的区别
     var ary = [
@@ -37,7 +38,7 @@
     //var obj=JSON.parse(str);
     //console.log(obj);
     //在IE6~7下报错: SCRIPT5009: “JSON”未定义 ->不兼容使用eval处理:严谨的写法需要把字符串用一个小括号包起来
-    //console.log(eval("(" + str + ")"));
+    //console.log(eval("(" + str + ")"));  更严谨的方法，
 </script>
 </body>
 </html>

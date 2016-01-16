@@ -106,7 +106,8 @@
     var frg = document.createDocumentFragment();//->创建了一个文档碎片:临时存储我们动态创建的元素,最后都创建完成了,我们在统一一次性把文档碎片放到页面中
     for (var i = 0; i < ary.length; i++) {
         var curData = ary[i];
-        var n = (i + 4), num = n < 10 ? "0" + n : n;
+        var n = (i + 4);//当前索引从第四个开始
+        var num = n < 10 ? "0" + n : n;  //m等于  n小于10的时候前面加个0， 大于10就不加0
         var oLi = document.createElement("li");
         oLi.innerHTML = "<span>" + n + "</span>" + curData["title"];
         frg.appendChild(oLi);
@@ -114,7 +115,7 @@
     oUl.appendChild(frg);
     frg = null;
 
-
+    changeBg();
     //DOM回流和重绘:
     //回流(reflow):只要HTML结构发生改变(位置、增加、删除...)，浏览器都需要从新的计算结构,从新的进行页面的渲染;
     //重绘(replan):一个元素的样式(背景颜色...)发生改变,浏览器只需要重新的渲染当前这个元素即可

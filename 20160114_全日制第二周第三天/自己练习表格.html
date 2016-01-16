@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>表格排序</title>
+    <link type="text/css" rel="stylesheet" href="css/tab.css"/>
+</head>
+<body>
+<div>
+    <p>（5） 被点击的元素</p>
+    <p> 1把行变成数组</p>
+    <p> 2把body里第二行进行排序</p>
+    <p> 3转化为数字类型</p>
+    <p> 4按钮中转</p>
+    <p> 6创建文档碎片</p>
+    <p> 7循环碎片，后插入body</p>
+    <p> 8清空，上色</p>
+    <p> 9（自定义属性）按钮中转</p>
+    <p> 10点击实现</p>
+</div>
+<!--在一个table中,我们的thead只能有一个,而tbody可以有多个-->
+<div class="box">
+    <table id="tab" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <!--想让谁排序就给谁加class="cursor"-->
+            <th class="cursor">姓名</th>
+            <th class="cursor">年龄</th>
+            <th class="cursor">分数</th>
+            <th>性别</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--实现奇数偶数行变色,只需要让奇数行的class='bg0' 让偶数行的class='bg1'-->
+        <!--<tr class="bg0">
+            <td>赵守涛</td>
+            <td>38</td>
+            <td>83</td>
+            <td>男</td>
+        </tr>-->
+        </tbody>
+    </table>
+</div>
+
+<!--引入JS的顺序要根据之间的依赖关系依次的来引入-->
+<script charset="utf-8" type="text/javascript" src="js/json.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript">
+    //获取结束
+    var tab = document.getElementById("tab")
+    var tHend = tab.tHead;    //整个head
+    var tBody = tab.tBodies[0];  //正个body
+    var oTd = tHend.rows[0].cells; //head第一行 的 列
+    var oBtr = tBody.rows; //body 的行
+
+
+    //
+    function json() {
+        var fig = document.createDocumentFragment()
+        for (var i = 0; i < jsonAry.length; i++) {
+            var cur = jsonAry[i]
+            cur.sex = cur.sex === 0 ? "男" : "女";
+            var tr = document.createElement("tr")
+
+            for (var key in cur) {
+                var td = document.createElement("td");
+                td.innerHTML = cur[key];
+                tr.appendChild(td);
+            }
+            fig.appendChild(tr)
+        }
+        tBody.appendChild(fig)
+        fig = null
+    }
+    json()
+
+    function color() {
+        for (var i = 0; i < oBtr.length; i++) {
+            oBtr[i].className = "bg" + (i % 2)
+        }
+    }
+    color()
+
+    //    进行排序
+
+   function sotrAry(){
+       oTd[2].flag *=-1
+       var ary = utils.listToArray(oBtr)
+
+       ary.sort(function(a,b){
+           var curIn = a.cells[2].innerHTML;
+           var NextIn = b.cells[2].innerHTML;
+           var curInnum = parseFloat(curIn);
+           var NextInnum = parseFloat(NextIn);
+           return (curInnum-NextInnum)*oTd[2].flag
+       })
+       var fiy = document.createDocumentFragment();
+       for(var i = 0; i < ary.length; i++){
+           fiy.appendChild(ary[i])
+       }
+       tBody.appendChild(fiy)
+       fiy = null
+       color()
+   }
+    oTd[2].flag =-1
+    oTd[2].onclick = function(){
+        sotrAry()
+    }
+
+</script>
+</body>
+</html>

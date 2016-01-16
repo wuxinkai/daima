@@ -20,6 +20,7 @@
             console.log(this.x);
         },
         getY: function () {
+            this.y = 200;
             console.log(this.y);
         }
     };
@@ -39,7 +40,7 @@
     f1.getX();//找到的是私有的getX方法,里面的this->f1  console.log(f1.x)->100
     f1.__proto__.getX();//找到的是公有的getX方法,里面的this->f1.__proto__("."前面是它), console.log(f1.__proto__.x)->undefined
     f2.getY();//this->f2 console.log(f2.y)->200
-    Fn.prototype.getY();//this->Fn.prototype console.log(Fn.prototype.y)->undefined
+    Fn.prototype.getY();//this->Fn.prototype console.log(Fn.prototype.y)->发现自己空间有个this.y是200结果在找到了自己的里面的200
 </script>
 </body>
 </html>

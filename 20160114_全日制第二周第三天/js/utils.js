@@ -15,7 +15,7 @@ var utils = {
         return ary;
     },
     //toJSON:把json格式的字符串转换为json格式的对象
-    toJSON: function (str) {
+    toJSON: function (str) {  //toJSON：jQuery就是这样写的
         var obj = null;
         try {
             obj = JSON.parse(str);

@@ -35,8 +35,10 @@
 
     //姓名 ->"何殿杰".localeCompare("王彦珍")
     //localeCompare:按照字母在26个字母表中的顺序进行比较,"a".localeCompare("b") ->-1  "b".localeCompare("a") ->1  "a".localeCompare("a") ->0 如果第一个字母相等则继续比较第二个字母...
-    ary.sort(function (a, b) {
-        return a.name.localeCompare(b.name);
+    ary.sort(function (a, b) {  //执行sort方法，并且给他传递一个参数，匿名函数的this，是window，sort方法的this是ary
+        return a.name.localeCompare(b.name); //匿名方法一般会执行ary.length-1次，这和我们的冒泡思想类似一共有五个数我们只需要把四个最大的数一次放到最后
+
+//        localeCompare非数字之间的比较；把需要比较的而转化为字母，
     });
     console.log(ary);
 
@@ -49,6 +51,9 @@
     //3、return a-b;(实现的升序)
     //每一次的返回值，不是非必须写a-b的,只要返回一个大于0或者<=0的数字即可;返回一个>0的数,a和b交换位置;返回一个<=0的数,a和b的位置不变;
     //例如：return 1 ->返回的是一个恒>0的数,每一次都交换位置,这样的排序后的结果和排序前正好倒过来排列了,相当于reverse;
+
+
+//   、return a-b 每一次不一定非要写a-b我们的目的是返回一个大于0还是小于0 的数来确定当前项和后一项的是否交换位置
 </script>
 </body>
 </html>
