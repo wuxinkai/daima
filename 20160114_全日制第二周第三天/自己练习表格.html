@@ -8,14 +8,23 @@
 <body>
 <div>
     <p>（5） 被点击的元素</p>
+
     <p> 1把行变成数组</p>
+
     <p> 2把body里第二行进行排序</p>
+
     <p> 3转化为数字类型</p>
+
     <p> 4按钮中转</p>
+
     <p> 6创建文档碎片</p>
+
     <p> 7循环碎片，后插入body</p>
+
     <p> 8清空，上色</p>
+
     <p> 9（自定义属性）按钮中转</p>
+
     <p> 10点击实现</p>
 </div>
 <!--在一个table中,我们的thead只能有一个,而tbody可以有多个-->
@@ -46,34 +55,31 @@
 <script charset="utf-8" type="text/javascript" src="js/json.js"></script>
 <script charset="utf-8" type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript">
-    //获取结束
-    var tab = document.getElementById("tab")
-    var tHend = tab.tHead;    //整个head
-    var tBody = tab.tBodies[0];  //正个body
-    var oTd = tHend.rows[0].cells; //head第一行 的 列
-    var oBtr = tBody.rows; //body 的行
+    var tab = document.getElementById("tab");
+    var tHead = tab.tHead;
+    var tBody = tab.tBodies[0];
+    var oHtr = tHead.rows[0].cells;
+    var oBtr = tBody.rows;
 
-
-    //
-    function json() {
-        var fig = document.createDocumentFragment()
+    function jsonA() {
+        var fiy = document.createDocumentFragment()
         for (var i = 0; i < jsonAry.length; i++) {
-            var cur = jsonAry[i]
+            var cur = jsonAry[i];
             cur.sex = cur.sex === 0 ? "男" : "女";
             var tr = document.createElement("tr")
 
             for (var key in cur) {
-                var td = document.createElement("td");
-                td.innerHTML = cur[key];
+                var td = document.createElement("td")
+                td.innerHTML = cur[key]
                 tr.appendChild(td);
             }
-            fig.appendChild(tr)
+            fiy.appendChild(tr)
         }
-        tBody.appendChild(fig)
-        fig = null
+        tBody.appendChild(fiy)
+        fiy = null;
     }
-    json()
-
+    jsonA()
+    //换色
     function color() {
         for (var i = 0; i < oBtr.length; i++) {
             oBtr[i].className = "bg" + (i % 2)
@@ -81,30 +87,28 @@
     }
     color()
 
-    //    进行排序
-
-   function sotrAry(){
-       oTd[2].flag *=-1
-       var ary = utils.listToArray(oBtr)
-
-       ary.sort(function(a,b){
-           var curIn = a.cells[2].innerHTML;
-           var NextIn = b.cells[2].innerHTML;
-           var curInnum = parseFloat(curIn);
-           var NextInnum = parseFloat(NextIn);
-           return (curInnum-NextInnum)*oTd[2].flag
-       })
-       var fiy = document.createDocumentFragment();
-       for(var i = 0; i < ary.length; i++){
-           fiy.appendChild(ary[i])
-       }
-       tBody.appendChild(fiy)
-       fiy = null
-       color()
-   }
-    oTd[2].flag =-1
-    oTd[2].onclick = function(){
-        sotrAry()
+    //
+    function sortList() {
+        oHtr[2].flag *= -1;
+        var ary = utils.listToArray(oBtr);
+        ary.sort(function (a, b) {
+            var cur = a.cells[2].innerHTML;
+            var next = b.cells[2].innerHTML;
+            var curIn = parseFloat(cur);
+            var nextIn = parseFloat(next);
+            return (curIn - nextIn)*oHtr[2].flag
+        });
+        var fiy = document.createDocumentFragment();
+        for(var i=0;i<ary.length; i++){
+            fiy.appendChild(ary[i])
+        }
+        tBody.appendChild(fiy)
+        fiy = null;
+        color()
+    }
+    oHtr[2].flag = -1;
+    oHtr[2].onclick = function(){
+        sortList()
     }
 
 </script>

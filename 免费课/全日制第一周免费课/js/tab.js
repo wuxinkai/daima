@@ -6,16 +6,16 @@
 
 //1、想要操作谁就先获取谁:我们想要操作的是#tab下的三个li个三个div
 var oTab = document.getElementById("tab");
-var oLis = oTab.getElementsByTagName("li");
-var oDivs = oTab.getElementsByTagName("div");
+    var oLis = oTab.getElementsByTagName("li");
+    var oDivs = oTab.getElementsByTagName("div");
 
 //2、制定一个功能方法实现我们的选项卡切换
-function tabChange(curIndex) {
-    //1)首先把三个li和对应的div的class都清空
-    for (var i = 0; i < oLis.length; i++) {
-        oLis[i].className = null;
-        oDivs[i].className = null;
-    }
+    function tabChange(curIndex) {
+        //1)首先把三个li和对应的div的class都清空
+        for (var i = 0; i < oLis.length; i++) {
+            oLis[i].className = null;
+            oDivs[i].className = null;
+        }
 
     //2)在让当前点击的这个li和对应的div有选中的样式
     //但是此时制定方法,我们并不知道当前用户点击的是哪一个li,我们需要定义一个形参变量来设置入口,用户点击的时候告诉我们点击的是哪一个li

@@ -6,11 +6,7 @@
 </head>
 <body>
 <script type="text/javascript">
-    //1、获取一个字符串中出现次数最多的字符和对应的次数,例如:var str = "zhufengpeixun2015yangfanqihang";问哪几个字符出现的次数最多,一共有多少次? 执行两次，参数有两个， arguments和esec得到的结果是一样的，   每一次捕获匿名函数就会执行一次，不仅执行还传递参数值，
-
-//    匿名函数的返回值：
-//    return 我们return的就是把当前捕获的内容替换成什么，
-
+    //1、获取一个字符串中出现次数最多的字符和对应的次数,例如:var str = "zhufengpeixun2015yangfanqihang";问哪几个字符出现的次数最多,一共有多少次?
     var str = "zhufengpeixun2015yangfanqihang", obj = {};
     //首先统计每一个字符出现的次数
     str.replace(/\w/g, function () {
@@ -107,11 +103,6 @@
     //var url = window.location.href;//获取当前页面的地址,下面我们假设一个地址,来看一下方法编写的正确性
     url = "http://kbs.sports.qq.com/kbsweb/game.htm?mid=1467588&age=18";
     console.log(url.queryURLParameter());
-
-
-
-//    匿名函数多少次执行
-//    数组有多少个就执行多少次
 </script>
 </body>
 </html>
