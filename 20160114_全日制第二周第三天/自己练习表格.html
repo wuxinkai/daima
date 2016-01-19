@@ -55,61 +55,83 @@
 <script charset="utf-8" type="text/javascript" src="js/json.js"></script>
 <script charset="utf-8" type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript">
+
+
+
+
     var tab = document.getElementById("tab");
     var tHead = tab.tHead;
-    var tBody = tab.tBodies[0];
-    var oHtr = tHead.rows[0].cells;
-    var oBtr = tBody.rows;
+    var tBbody = tab.tBodies[0];
+    var tHtr = tHead.rows[0].cells;
+    var tBtr = tBbody.rows;
 
-    function jsonA() {
+
+    function Bindjson() {
         var fiy = document.createDocumentFragment()
         for (var i = 0; i < jsonAry.length; i++) {
             var cur = jsonAry[i];
             cur.sex = cur.sex === 0 ? "男" : "女";
-            var tr = document.createElement("tr")
-
+            var tr = document.createElement("tr");
             for (var key in cur) {
-                var td = document.createElement("td")
-                td.innerHTML = cur[key]
+                var td = document.createElement("td");
+                td.innerHTML = cur[key];
                 tr.appendChild(td);
             }
+            ;
             fiy.appendChild(tr)
         }
-        tBody.appendChild(fiy)
+        tBbody.appendChild(fiy);
         fiy = null;
     }
-    jsonA()
-    //换色
-    function color() {
-        for (var i = 0; i < oBtr.length; i++) {
-            oBtr[i].className = "bg" + (i % 2)
+    Bindjson()
+    function Color() {
+        for (var i = 0; i < tBtr.length; i++) {
+            tBtr[i].className = "bg" + (i % 2)
         }
     }
-    color()
+    Color()
 
-    //
-    function sortList() {
-        oHtr[2].flag *= -1;
-        var ary = utils.listToArray(oBtr);
+
+    function sortList(n) {
+        var _this = this
+        _this.flag *= -1;
+        var ary = utils.listToArray(tBtr);
         ary.sort(function (a, b) {
-            var cur = a.cells[2].innerHTML;
-            var next = b.cells[2].innerHTML;
+            var cur = a.cells[n].innerHTML;
+            var next = b.cells[n].innerHTML;
             var curIn = parseFloat(cur);
             var nextIn = parseFloat(next);
-            return (curIn - nextIn)*oHtr[2].flag
+
+
+            if(isNaN(curIn)||isNaN(nextIn)){
+                return (cur.localeCompare(next))*_this.flag
+            }
+            return (curIn - nextIn) * _this.flag
         });
+
         var fiy = document.createDocumentFragment();
-        for(var i=0;i<ary.length; i++){
+        for (var i = 0; i < ary.length; i++) {
             fiy.appendChild(ary[i])
         }
-        tBody.appendChild(fiy)
+        tBbody.appendChild(fiy);
         fiy = null;
-        color()
+        Color()
     }
-    oHtr[2].flag = -1;
-    oHtr[2].onclick = function(){
-        sortList()
+
+    for(var i=0; i<tHtr.length; i++){
+        var curTh = tHtr[i];
+        if(curTh.className==="cursor"){
+            curTh.flag = -1;
+            curTh.index = i;
+            curTh.onclick = function () {
+                sortList.call(this, this.index)
+            }
+        }
+
     }
+
+
+
 
 </script>
 </body>
