@@ -18,7 +18,11 @@
 
     //捕获:exec ->把当前字符串中所有和正则相匹配的字符都获取出来
     //    var reg = /\d+/;
+<<<<<<< HEAD
     //    console.log(reg.exec("zhufeng2016"));//->["2016", index: 7, input: "zhufeng2016"] 捕获到的是一个数组,第一项存储的是我们和正则匹配的内容,index是我们捕获的字符在字符串中开始的索引位置,
+=======
+    //    console.log(reg.exec("zhufeng2016"));//->["2016", index: 7, input: "zhufeng2016"] 捕获到的是一个数组,第一项存储的是我们和正则匹配的内容,index是我们捕获的字符在字符串中开始的索引位置,input原始的字符串
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
 
 
     //3、一个正则是由什么组成的?
@@ -35,6 +39,7 @@
     //和数组对象都不一样,正则中的两种方式是有区别的
     //->实例创建:我们的元字符都是以字符串的方式传递进来的
 
+<<<<<<< HEAD
     //1)对于转译字符\来说, \字符,所以遇到\我们都在给它前面加一个\即可
 //        var reg = /^\d+$/;
 //        console.log(reg.test("2016"));//->true
@@ -42,6 +47,15 @@
 //        reg = new RegExp("^\d+$");
 //        console.log(reg.test("2016"));//->false
 //        console.log(reg.test("\ddddd"));//->true ->因为实例创建我们传递进来的是字符串,所以写的\d不是代表一个0-9的数字,而是一个字符\和一个字符d,+是让d出现一到多次
+=======
+    //1)对于转译字符\来说,在实例创建中只能代表一个\字符,所以遇到\我们都在给它前面加一个\即可
+    //    var reg = /^\d+$/;
+    //    console.log(reg.test("2016"));//->true
+    //
+    //    reg = new RegExp("^\d+$");
+    //    console.log(reg.test("2016"));//->false
+    //    console.log(reg.test("\ddddd"));//->true ->因为实例创建我们传递进来的是字符串,所以写的\d不是代表一个0-9的数字,而是一个字符\和一个字符d,+是让d出现一到多次
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
     //
     //    reg = new RegExp("^\\d+$");
     //    console.log(reg.test("2016"));//->true
@@ -63,10 +77,17 @@
     //console.log(reg.test("zhufeng2016"));//->true
     //console.log(reg.test("20zhufeng16"));//->true
 
+<<<<<<< HEAD
 //    reg = /^\d+$/;//->只能是一个或者多个0-9之间的数字
 //    console.log(reg.test("zhufeng2016"));//->false
 //    console.log(reg.test("2016"));//->true
 //    console.log(reg.test("2"));//->true ->^、$只代表的是以xxx开头或者结尾,但是在字符串中它是不占任何的位置的
+=======
+    //reg = /^\d+$/;//->只能是一个或者多个0-9之间的数字
+    //console.log(reg.test("zhufeng2016"));//->false
+    //console.log(reg.test("2016"));//->true
+    //console.log(reg.test("2"));//->true ->^、$只代表的是以xxx开头或者结尾,但是在字符串中它是不占任何的位置的
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
     //console.log(reg.test("20zhufeng16"));//->false
 
     //2)关于.、\的知识
@@ -74,9 +95,15 @@
     //console.log(reg.test("0.9"));//->true
     //console.log(reg.test("0|9"));//->true
 
+<<<<<<< HEAD
 //    reg = /^0\.\d$/;//->\.把具有特殊意义的.转换为只能代表一个小数点的意思
 //    console.log(reg.test("0.9"));//->true
 //    console.log  (reg.test("0|9"));//->false
+=======
+    //reg = /^0\\.\d$/;//->\.把具有特殊意义的.转换为只能代表一个小数点的意思
+    //console.log(reg.test("0.9"));//->true
+    //console.log(reg.test("0|9"));//->false
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
 
     //reg = /^http:\/\/www$/; ->"http://www"
 
@@ -110,19 +137,34 @@
     //    console.log(reg.test("19"));//->false
 
     //4)[]
+<<<<<<< HEAD
     //a、在中括号中出现的字符都是代表本身意思的,例如:[.]不是任意字符, .
 //        var reg = /^[0-9a-zA-Z]+$/;//->0-9或者a-z或者A-Z三个范围中的一个出现一到多次
 //        reg = /^[.]+$/;
 //        console.log(reg.test("@@"));//->false
 //        console.log(reg.test("..."));//->true
 
+=======
+    //a、在中括号中出现的字符都是代表本身意思的,例如:[.]不是任意字符,而是只代表.
+    //    var reg = /^[0-9a-zA-Z]+$/;//->0-9或者a-z或者A-Z三个范围中的一个出现一到多次
+    //    reg = /^[.]+$/;
+    //    console.log(reg.test("@@"));//->false
+    //    console.log(reg.test("..."));//->true
+    //
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
     //    reg = /^[+-]$/;
     //    console.log(reg.test("+"));//->true
     //    console.log(reg.test("-"));//->true
     //
+<<<<<<< HEAD
         reg = /^[\d]$/;//->出现\d、\n、\s...代表的还是本身的特殊意义
         console.log(reg.test("d"));//->false
         console.log(reg.test("9"));//->true
+=======
+    //    reg = /^[\d]$/;//->出现\d、\n、\s...代表的还是本身的特殊意义
+    //    console.log(reg.test("d"));//->false
+    //    console.log(reg.test("9"));//->true
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
 
     //b、在中括号中写一个两位及以上的数,不是代表两位数,而是或者的意思,例如:/^[10]$/,代表的不是10而是1或者0
     //    var reg = /^[10-65]$/;

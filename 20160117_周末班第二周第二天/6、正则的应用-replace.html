@@ -29,7 +29,11 @@
     //2、replace在项目中我们一般都是基于正则来替换的
     //->str.replace(reg,newStr)
     //->原理:先让正则在字符串中进行匹配和捕获,把正则每一次捕获到的内容,替换成我们新的内容
+<<<<<<< HEAD
 //    var str = "zf2015zf2016";
+=======
+    var str = "zf2015zf2016";
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
     //    str = str.replace(/zf/g, "珠峰");
     //    console.log(str);//->"珠峰2015珠峰2016"
 
@@ -49,6 +53,7 @@
     //    });
     //->这个操作其实就是我们str = str.replace(/zf/g, "珠峰")内核实现的原理
 
+<<<<<<< HEAD
 //
 //        var str = "459876";
 //        var ary = ["零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"];
@@ -74,6 +79,30 @@
     //    str = str.replace(reg, function () {
     //        //arguments[0] ->"{0}"   //匹配的是当前的大正则
     //        //arguments[1] ->"0"    //匹配的是小正则
+=======
+
+    //    var str = "459876";
+    //    var ary = ["零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"];
+    //    var reg = /\d/g;
+    //    str = str.replace(reg, function () {
+    //        //console.dir(arguments);
+    //        //1 ->"4" ->"肆" ary[4]
+    //        //2 ->"5" ->"伍" ary[5]
+    //        var val = parseFloat(arguments[0]);
+    //        return ary[val];
+    //    });
+    //    console.log(str);//->"肆伍玖捌柒陆"
+
+
+    //实战2：模板引擎实现的简易原理
+    //    var ary = ["令狐冲", "25", "china", "独孤九剑"];
+    //    var str = "my name is {0}，my age is {1}，i com from {2}，i can do {3}~~";
+    //    //->"my name is 令狐冲，my age is 25，i com from china，i can do 独孤九剑~~";
+    //    var reg = /{(\d)}/g;
+    //    str = str.replace(reg, function () {
+    //        //arguments[0] ->"{0}"
+    //        //arguments[1] ->"0"
+>>>>>>> 4d3b98d7f2009d796be38d27f33c51d6da43c335
     //        return ary[arguments[1]];
     //    });
     //    console.log(str);//->"my name is 令狐冲，my age is 25，i com from china，i can do 独孤九剑~~"

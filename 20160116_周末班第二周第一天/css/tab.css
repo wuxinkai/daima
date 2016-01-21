@@ -18,6 +18,8 @@ body, div, table, thead, tbody, tr, th, td {
     box-shadow: 3px 3px 10px 0 #999;
 }
 
+table{border-collapse: collapse;}
+
 #tab thead tr, #tab tbody tr {
     height: 35px;
     line-height: 35px;

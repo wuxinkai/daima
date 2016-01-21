@@ -8,6 +8,13 @@
 <script charset="utf-8" type="text/javascript" src="js/utils.js"></script>
 <script charset="utf-8" type="text/javascript">
     //    var str = '[{"name":"张三","age":25},{"name":"李四","age":18},{"name":"王五","age":32},{"name":"赵六","age":23}]';
+
+    var ary = utils.toJSON(str){
+        ary.sort(function(a,b){
+            return parseFloat(a.age- b.age)
+        })
+    }
+
     //    var ary = utils.toJSON(str);
     //    ary.sort(function (a, b) {
     //        return parseFloat(a.age) - parseFloat(b.age);
