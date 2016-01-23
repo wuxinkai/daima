@@ -75,7 +75,8 @@
     //    console.log(center.offsetParent);//->outer
 
 
-    //2、在真实的项目中,我们也不清楚都哪些元素设置position了,为了方便js处理计算,我们一般不管你的父级参照物是谁,都获取距离body的偏移
+    //2、在真实的项目中,我们也不清楚都哪些元素设置position了,为了方便js处理计算,我们一般不管你的父级参照物是谁,都获取距离body的偏移； body没有父级参照物；
+//    我们不知道那些定位那些没有定位，我们项目中通常获取的都是当前元素的距离body的偏移量（）
     outer.style.position = "relative";
     inner.style.position = "relative";
     //->center的父级参照物是inner,inner的父级参照物是outer,outer的父级参照物body,body的父级参照物null
