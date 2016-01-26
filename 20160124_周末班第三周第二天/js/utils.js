@@ -76,7 +76,7 @@ utils.prev = function prev(curEle) {
 //prevAll:获取当前元素的所有的哥哥元素节点
 utils.prevAll = function prevAll(curEle) {
     //this->utils
-    var ary = [], pre = this.prev(curEle);
+    var ary = [], pre = this.prev(curEle);  //prev 借用上面的获取一个弟弟方法：
     while (pre) {
         ary.unshift(pre);
         pre = this.prev(pre);
