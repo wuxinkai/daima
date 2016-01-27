@@ -7,15 +7,15 @@
 <body>
 <script type="text/javascript">
     //回调函数:把函数A定义的部分当做一个值传递给函数B,在函数B执行过程中,把函数A执行了
-    //    function A() {//->xxxfffaaa
-    //        console.log("A");
-    //    }
-    //    function B(callBack) {
-    //        //->callBack:xxxfffaaa
-    //        console.log("B");
-    //        typeof callBack === "function" ? callBack() : null;
-    //    }
-    //    B(A);//->B(xxxfffaaa)
+//        function A() {//->xxxfffaaa
+//            console.log("A");
+//        }
+//        function B(callBack) {
+//            //->callBack:xxxfffaaa
+//            console.log("B");
+//            typeof callBack === "function" ? callBack() : null;  //这里会执行代码A
+//        }
+//        B(A);//->B(xxxfffaaa)
 
 
     //2、回调函数的应用
@@ -30,7 +30,7 @@
     //    }
     //    ary.sort(fn);
 
-    //->把匿名函数当做一个值,传递给我们的setTimeout这个方法,在setTimeout中根据规律执行了匿名函数
+    //->把匿名函数当做一个值,传递给我们的setTimeout这个方法,  匿名函数
     //    window.setTimeout(function () {
     //
     //    }, 1000);
