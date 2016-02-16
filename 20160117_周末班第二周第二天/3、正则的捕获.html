@@ -23,14 +23,14 @@
     //->reg.lastIndex:下一次正则捕获的开始查找的索引位置 ->正则的懒惰新就是因为默认情况下lastIndex值都是0,我们不管执行几次exec,都是从字符串的开始位置查找,那么每一次捕获到的都是第一个符合的内容
 
     //->如何解决正则的懒惰性?->在正则末尾增加修饰符g
-    //    var reg = /\d+/g;//->new RegExp("\\d+", "g");
-    //    var str = "zhufeng2015peixun2016,2017 is good year,2018 is good good year~~";
-    //    var res = reg.exec(str);
-    //    console.log(res);//->["2015"...]
-    //
-    //    console.log(reg.lastIndex);//->11
-    //    res = reg.exec(str);
-    //    console.log(res);//->["2016"...]
+        var reg = /\d+/g;//->new RegExp("\\d+", "g");
+        var str = "zhufeng2015peixun2016,2017 is good year,2018 is good good year~~";
+        var res = reg.exec(str);
+        console.log(res);//->["2015"...]
+
+        console.log(reg.lastIndex);//->11
+        res = reg.exec(str);
+        console.log(res);//->["2016"...]
 
     //想要捕获一个字符串中所有和正则匹配的,我们首先需要加一个全局修饰符g,解决捕获的懒惰性,然后想要捕获几次就执行几次exec(可以用while循环)
     //    var reg = /\d+/g;

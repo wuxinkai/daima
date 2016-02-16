@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function Fn(num){
+        this.name = num;
+//        在内置原型上方法
+        Fn.prototype.getx=function(){
+
+        }
+    }
+//    （1） 自己创建的公有属性（内置的就没有了）
+//    注意点：
+//     （1）自己创建的没有constructor（我们可以自己添加）
+//     （2）一个prototype只能指向一个地址,他会把浏览器自带的给覆盖
+
+//    创建之前保存原来的（浏览器默认的公有属性）
+    var pro =Fn.prototype  // (1)创建之前保存原来的（浏览器默认的公有属性）
+    Fn.prototype={
+        //  （3）自己创建的没有constructor（我们可以自己添加）
+//    如果不添加就指向object类，我们要手动添加constructor
+        constructor:Fn,
+
+        getx:function(){
+
+        },
+        setx:function(){
+
+        },
+//浏览器默认的公有属性
+        recover:function(){
+//  （2）把原来的继承过来，如果我们自己创建了会把原来的覆盖，如果想让原来的也有我们创建的也有，就应用用，
+//    原理：新的创建后，我们把原来的一个个的添加到新的里面
+            for(var key in pro){ //循环老数组
+//   （3）如果我们继承了公有的把我们自己写的覆盖了怎么办，（1）我们把自己写的改个名字
+//    知识点：怎么修改重复的属性名，
+//          先判断自己这里有没有
+                if(key in this){
+                    //重新设置的属性名,   重复属性名
+                    this["my"+key]=this[key]  //把自己的属性名给了，新的属性名
+                    this[key]=null; //自己写的就没有用了，删除掉就行了
+                }
+                //新数组           把老数组的属性给了新数组；
+                this[key]=pro[key]
+            }
+        }
+    }
+
+    var f1=new Fn(100);
+    Fn.prototype.recover()  //34-39行代码
+    f1.mysetx();
+
+</script>
+</body>
+</html>

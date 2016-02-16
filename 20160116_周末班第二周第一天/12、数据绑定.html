@@ -61,14 +61,16 @@
 <script type="text/javascript">
     var oUl = document.getElementById("ul1"), oLis = oUl.getElementsByTagName("li");
     //给默认的三个li绑定鼠标滑过变颜色事件
-    for (var i = 0; i < oLis.length; i++) {
-        oLis[i].onmouseover = function () {
-            this.style.backgroundColor = "yellow";
-        };
-        oLis[i].onmouseout = function () {
-            this.style.backgroundColor = "";
-        };
-    }
+   function color(){
+       for (var i = 0; i < oLis.length; i++) {
+           oLis[i].onmouseover = function () {
+               this.style.backgroundColor = "yellow";
+           };
+           oLis[i].onmouseout = function () {
+               this.style.backgroundColor = "";
+           };
+       }
+   }
 
     //把json-bind.js中的7条数据绑定到#ul1中
     //1、动态创建DOM的方式
@@ -109,7 +111,7 @@
     }
     oUl.appendChild(frg);
     frg = null;
-
+color()
     //DOM的回流和重绘
     //回流(reflow):当页面中DOM结构发生改变(删除、增加、位置移动了...),浏览器需要从新的计算整个页面的最新DOM结构
     //重绘:当前页面中的某一个元素的样式(背景颜色...)发生了改变,浏览器需要把这个元素从新的渲染一遍

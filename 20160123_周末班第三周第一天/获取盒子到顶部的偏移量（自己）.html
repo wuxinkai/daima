@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{ margin: 0; padding: 0;list-style: none; margin:  0 auto}
+        #box,#box1{width: 800px; height: 100px;background: red}
+        #box1{ margin-top:100px;background: green }
+    </style>
+</head>
+<body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div id="box"></div>
+<div id="box1"></div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript">
+    var ele = document.getElementById("box");
+//    var boxHeight = utils.offset(ele).top+ele.offsetHeight ;//box底边距离顶部的距离 (1)ele.offsetHeight;是本身的高度，  offset(ele).top是盒子顶部到，body边原的距离,窗口改变也不会影响距离，
+//    console.log(boxHeight)
+
+//    获取浏览器的可视高度  (浏览器滚动条滚出去高度 + 当前可视窗口的高度)
+//     (document.documentElement.scrollTop||document.body.scrollTop),滚动条滚动高度
+//    (document.documentElement.clientHeight||document.body.clientHeight) 屏幕的大小
+//    浏览器滚动条滚出去高度 + 当前可视窗口的高度，都是可改变的， （不变的值）要比（变的值)大，在判断的时候，(变的值)不断去改变，去超过（固定不变的值））
+//    var winBottom =(document.documentElement.scrollTop||document.body.scrollTop)+(document.documentElement.clientHeight||document.body.clientHeight)
+//    console.log(winBottom)
+
+
+
+
+
+
+
+    window.onscroll = function(){
+        //屏幕和滚动距离
+        var winBottom =(document.documentElement.scrollTop||document.body.scrollTop)+(document.documentElement.clientHeight||document.body.clientHeight)
+        console.log(winBottom)
+//      目标点，
+        var boxHeight = utils.offset(ele).top+ele.offsetHeight
+        console.log(boxHeight)
+        if(boxHeight <=winBottom){
+            alert(1)
+        }
+    }
+
+</script>
+</html>

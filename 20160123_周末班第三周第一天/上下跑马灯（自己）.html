@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body, div, span {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        #inner {
+            width: 200px;
+            height: 300px;
+            overflow: scroll;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 30px;
+            border: 1px dashed #08BECE;
+
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="inner">
+        新版经理人论坛上线了：亲爱的用户，为了更好的提供服务，神州英才推出了全新经理人论坛平台。从即日起面向网站所有的会员朋友们开放公测！上线的社区平台，有全新的读版、读帖页样式，增添了更多的交互功能，关注用户需求和使用感受。
+        新版经理人论坛上线了：亲爱的用户，为了更好的提供服务，神州英才推出了全新经理人论坛平台。从即日起面向网站所有的会员朋友们开放公测！上线的社区平台，有全新的读版、读帖页样式，增添了更多的交互功能，关注用户需求和使用感受。
+        新版经理人论坛上线了：亲爱的用户，为了更好的提供服务，神州英才推出了全新经理人论坛平台。从即日起面向网站所有的会员朋友们开放公测！上线的社区平台，有全新的读版、读帖页样式，增添了更多的交互功能，关注用户需求和使用感受。
+
+    </div>
+
+
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript">
+    var ele = document.getElementById("inner");
+        var dircetion =1
+    ~function () {
+        function init() {
+            var val1 = ele.scrollTop;  //在累加之前保存一个值，
+            ele.scrollTop += dircetion;
+            var val2 = ele.scrollTop; //再累加之后保存一个值
+            if (val1 === val2) {
+                dircetion *= -1
+            }
+            window.setTimeout(arguments.callee,15)
+        }
+        init();
+    }();
+</script>
+</body>
+</html>

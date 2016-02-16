@@ -60,7 +60,6 @@
                 var curL = inner.scrollLeft;//->加之前
                 inner.scrollLeft = curL + 1;
                 var nowL = inner.scrollLeft;//->加之后
-
                 if (curL === nowL) {//->两个值相等说明已经到头了
                     inner.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;" + innerVal;
                 }

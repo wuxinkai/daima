@@ -7,18 +7,18 @@
 <body>
 <script type="text/javascript">
     //第4题:
-    //    var i = 5;
+    //    var i = 5;// 11 17 23
     //    function fn() {
     //        i += 5;
     //        return function (n) {
     //            console.log(n + (i++));
     //        }
     //    }
-    //    var f = fn();
-    //    f(5);
-    //    fn()(10);
-    //    fn()(10);
-    //    f(5);
+    //    var f = fn();  //这里执行了fn，就把i的值给算出来了，
+    //    f(5); //15
+    //    fn()(10);//26
+    //    fn()(10);//32
+    //    f(5);//这行不用执行fn的代码直接执行return的代码
 
     //第5题:
     var num = 10;  var obj = {num: 15};

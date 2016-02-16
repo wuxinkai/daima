@@ -29,48 +29,48 @@
 //            }
 //        }
 //        var f = fn(10);  //这行代码只和31行和34行有联系
-//        f(20);//
-//        fn(20)(40);//  执行一个关闭一个
-//        fn(30)(50);//
-//        f(30);//
+//        f(20);//30
+//        fn(20)(40);//60  执行一个关闭一个
+//        fn(30)(50);//80
+//        f(30);//41
 
     //2、
-        var i = 10;
-        function fn() {
-            return function (n) {
-                console.log(n + (++i));
-            }
-        }
-        var f = fn();
-        f(20);
-        fn()(20);
-        fn()(30);
-        f(30);
+//        var i = 10;
+//        function fn() {
+//            return function (n) {
+//                console.log(n + (++i));
+//            }
+//        }
+//        var f = fn();
+//        f(20);//31
+//        fn()(20);//32
+//        fn()(30);//43
+//        f(30);//44
 
-    //1、
-    function fn(i) {
-        return function (n) {
-            console.log(n + (i++));
-        }
-    }
-    var f = fn(10);
-    f(20);
-    fn(20)(40);
-    fn(30)(50);
-    f(30);
-
-    //2、
-    var i = 10;
-    function fn() {
-        return function (n) {
-            console.log(n + (++i));
-        }
-    }
-    var f = fn();
-    f(20);
-    fn()(20);
-    fn()(30);
-    f(30);
+//    //1、
+//    function fn(i) {
+//        return function (n) {
+//            console.log(n + (i++));
+//        }
+//    }
+//    var f = fn(10);
+//    f(20);
+//    fn(20)(40);
+//    fn(30)(50);
+//    f(30);
+//
+//    //2、
+//    var i = 10;
+//    function fn() {
+//        return function (n) {
+//            console.log(n + (++i));
+//        }
+//    }
+//    var f = fn();
+//    f(20);
+//    fn()(20);
+//    fn()(30);
+//    f(30);
 
 </script>
 </body>

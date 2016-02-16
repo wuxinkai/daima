@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var str="timer is 2012-4-06 12:30:30 ; timer is 1998-10-25 12:12:20; timer is 1985-11-25 05:13:20"
+
+    var reg = /(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{1,2}):(\d{1,2})/g;
+    //2012,年是4位数，为了方便查找分组,
+    // 04,月，出现有可能是01或者1，写两位， 日和月一样
+    //\s+ 日和时间中间可能有1到多个空格，
+    function allExe(reg,str){
+        var a=[];
+        var result =null;
+        if(!reg.global) return reg.exec(str);
+        while(result=reg.exec(str)){
+            a.push(result)
+        }
+        return a
+    }
+    var a= allExe(reg,str)
+    console.log(a)
+
+////    网址的查询  主要知识点就是排除     \D 和 [^0-9]表示的意思是一样的
+//    var str="www.zhufengpeixun.com/viewer.do?courseId=js&courseId2=css";
+//    //左边不能出现问号，？问号左面表示主域名后面的那些内容  不能有等号，等号是键和值的关系， 不能有&号&号是每对键和值的连接符
+//    function urlToJson(str){
+//        var reg = /([^?=&]+)=([^=?&]+)/g;
+//        //等号左边不包含
+//        //[^?=&]是正则的排除法，将?=& 问号 等号 &号排除
+//        var str1 = "{"
+//        var result =null;
+//        while(result =reg.exec(str)){
+//
+//        str1+='"'+result[1]+'":"'+ result[2]+'"';
+//        }
+//        str1+="}";
+//        return str1
+//    }
+//console.log(urlToJson(str))
+//    //返回值{"courseId":"js"}
+</script>
+</body>
+</html>

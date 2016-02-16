@@ -11,8 +11,8 @@
     var obj = {
         num: 20,//->obj的属性名->obj.num才能获取值
         fn: (function (num) {
-            this.num *= 2;   //15行执行后才执行的14行  window下的num才改变的
-            num += 10;// 注意执行顺序  先传参数   预解释  再执行  传参先给num 所以是20
+            this.num *= 2;
+            num += 10;// 注意执行顺序  先传参数   预解释  再执行  传参先给num 所以是
             return function () {
                 this.num *= 3;   //
                 num += 1;

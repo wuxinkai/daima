@@ -22,6 +22,9 @@
 
         var temp = new A;//->创建A的一个实例temp,它是一个对象数据类型,temp就拥有了A这个类的私有和公有的属性和方法 x:100 getX:function...
         for (var key in temp) {//->for in即可以循环temp私有的,也可以循环公有的
+            if(key==="constructor"){ //constructor不用存
+                continue
+            }
             this[key] = temp[key];//->第一次 b.x=temp.x=100 ...
         }
         temp = null;

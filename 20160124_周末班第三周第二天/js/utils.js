@@ -56,6 +56,11 @@ utils.offset = function offset(curEle) {
         l += p.offsetLeft;
         p = p.offsetParent;
     }
+    //和下面一样效果
+    //var obj = {};
+    //obj.top = l;
+    //obj.left = t;
+    //return obj;
     return {top: t, left: l};
 };
 
@@ -191,6 +196,9 @@ utils.getElementsByClass = function getElementsByClass(strClass, context) {
     }
     return ary;
 };
+
+
+
 
 
 //https://github.com/zhufengpeixun/zhufengDom.git

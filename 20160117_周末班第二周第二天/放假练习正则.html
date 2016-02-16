@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+    //（1）时候有连续的数字出现在字符串里
+//    var reg =/\d+/;  //匹配多个连续出现的数组；
+//    var str = "abcdefg"; //和上面不匹配     （只要有数字就是true）
+//    console.log(reg.test(str))  //查看是否匹配，结果是false
+
+////    （2）验证一个完整的整数字符串  只有数字的就的用^ $两个符号了
+//        var reg =/^\d+$/;  //必须是完整的数组
+////        var str = "ab123455cdefg"; //false
+//         var str = "123456"; //true  一个字母都不能有
+//         console.log(reg.test(str))
+
+////    （3）原子（没特殊意义的字符）
+//        var reg =/^-a\d+$/;
+//        var str = "-a123456"; //true  -和a代表的就是  普通原子，没有什么特殊的意思
+//        console.log(reg.test(str))
+
+//    （4）或者出现，以+出现或者以-出现也有可能不出现  用中括号里面放+-  和问号代表出现0-1次,问号只有跟在原子[]的后面才表示量词
+//    var reg =/^[+-]?\d+$/;
+//    var str = "-123456"; //true  -和a代表的就是  普通原子，没有什么特殊的意思
+//    var str1 = "+123456"; //true  -和a代表的就是  普通原子，没有什么特殊的意思
+//    var str1 = "+-123456"; //flase  只能出现0-1次
+//    console.log(reg.test(str))
+//    console.log(reg.test(str1))
+
+//    （5）不能以0开头  （有可能是1位数就不能用+号了） 需要*号（*号是0到多次）
+//    var reg =/^[+-]?[167823459]\d*$/;
+//    var str = "-123456"; //true
+//    var str1 = "0123456"; //false  以0开头了
+//    console.log(reg.test(str))
+//    console.log(reg.test(str1))
+
+//    （6）和5的内容一样 简写了1-9
+//        var reg =/^[+-]?[1-9]\d*$/;
+//        var str = "-123456"; //true
+//        var str1 = "0123456"; //false  以0开头了
+//        console.log(reg.test(str));
+//        console.log(reg.test(str1))
+
+//    （7）既能匹配整数也能匹配整数后面的小数
+//    var reg =/^[+-]?[1-9]\d*(\.\d+)?$/;   //.是有特殊意义的所以用\转译一下，\d+是点后面出现数组1到多次，小数有可能出现也有可能不出现 加？，（）括号里的叫小正则，也是分组， ？代表出现0-1次
+//    var str = "-123.456";
+//    console.log(reg.test(str));
+
+   // （8）既能匹配整数也能匹配0.几后面的小数
+//    var reg =/^[+-]?[1-9]\d*(?:\.\d+)?$|^[-+]?0\.\d+/; // |代表两个正则选一个(左右是完整的两个正则)，0也可以写成 \d，  ?:在这里只想匹配一下，不想捕获
+//    var str = "-123.456"; //true
+//    var str1 = "0.2";  //true
+//    console.log(reg.test(str));
+//    console.log(reg.test(str1));
+
+
+//    中括号的意思
+//    var reg =/^[1-99]$/   //这个不代表1-99，而代表1-9 和9的两位数
+
+
+    //（9）匹配空字符串
+    var reg = /^\d*$/; //*匹配0-多次   ？是0-1次
+    var reg1 = /^\d{5}$/; //
+    var str ="12345"
+    console.log(reg.test(str))
+    console.log(reg1.test(str));//只能匹配5个   {2，5}匹配2到5个 {2，}匹配2到无线次
+
+//（二）正则定义的方式
+//    var str="aacbbAb";
+////（1）正则字面量
+//    var reg1 =/ab/i;   //正则直接量方式
+//    console.log(reg1.test(str)); //不匹配  reg1的/ab/是连在一起的，str的aacbb是没有联系在一起的, 虽然Ab连续出现了但A是大写的，
+////    解决办法：加i忽略大小写         i m g是模式修正符，i是忽略大小写， g是全局查找（在匹配的时候没有意义）， m是多行查找
+//
+////  （2）构造函数
+//    var reg2=new RegExp("ab","img") ;//构造函数 和上年内容意思一样，
+////    （2.1）在构造函数的转译字符
+//    var reg3=/\d+/;
+//    var reg4=new RegExp("\d+") ; //构造函数中的\d代表转译字符的意思 ,只是匹配一个d
+//    var reg5=new RegExp("\\d+"); //如果想表示\d的用\\d,两个斜杠
+////    （2.2）字符串拼接
+//    var d="3-9";
+//    var reg6=new RegExp("["+d+"]+"); //用变量的方式匹配，3-9之间出现多次
+
+
+
+//    （三）正则的匹配
+//    (1)贪婪匹配的去处
+//    var reg =/\d{2,5}?/;  //?出现在量词后面就是非贪婪匹配
+//    var str ="45356677898797564322"
+//    console.log(reg.exec(str))
+
+//    （2）//前面有字母，后面有字母，中间是数字，i是忽略大小写
+//    var reg =/[a-z]+(\d+)[a-z]+/i;   //(\d+)的小正则也被捕获出来了， ?:小正则就会消失
+//    var str ="234xsaxcdd6778987asdasdasd";
+//    console.log(reg.exec(str))//正则捕获有三部分内容，需要捕获的正则，括号里的小正则，还有整个大正则
+//
+////    （3）条件表达式
+//    var reg =/[a-z]+(\d+)(?=asd)[a-z]+/i;   //(?=asd)数字的后面有等于asd的我们就捕获，如果不是就等于null，相当于条件运算      (?!asd)相反如果不是asd的可以匹配
+//    var str ="234xsaxcdd6778987asdasdasd";
+//    console.log(reg.exec(str))
+
+
+
+//  （四） |先的作用
+    var reg = /^i come from (china|ameriea|france|german|canada)$/;//表示出现每一个个单词都是一个整体，只要是其中一个就行，
+//    解决办法：用开阔括起来；表示i come from是一部分，从（）里5选1
+//    var str="i come from australia";
+//    var str="i come from france";
+//    console.log(reg.test(str))
+
+//    匹配中文：
+//    var chinareg = /^[\u4e00-\u9fa5]+$/; //表示所以的中文，
+//    var chinareg1 = /^[^\u4e00-\u9fa5]+$/; // 在中括号里加^表示取反的意思，就是除了中文都可以
+//    var str="吴鑫凯";
+//    console.log(chinareg.test(str))
+
+//    不能出现数字
+//    var reg = /\D/  //表示非数字
+//   // var reg = /^[^0-9]+$/ 表示非数字
+//    var str="fhdnmcd"
+//    console.log(reg.test(str))
+//
+////    单词的边界和学习mach方法
+//    var reg = /\b[a-z]+\b/g  //把所有的完整单词都捕获出来  ，如果不加g，匹配完第一个他就不走了 ，\b写了两次，写左边表示左边界，写右边表示右边界
+//    var str="i come from australia one-two" //one-two在英文中 - 号也算把单词分开 ？也属于分词
+//    var a=str.match(reg)  //match()是字符串的方法
+//    console.log(a)
+//
+////    分组的引用：
+//    var str = "toot"; //foot, toor abba
+//    var reg=/^(\w)(\w)\2\1$/; //(\w)(\w)表示fo两个字母 \2表示出现在第三个位置的要和第二个字母相同，\1表示出现在第四个位置要和第一个字母相同, ()有分组才会有引用，没有分组\2\1就没有意义  引用分组不能加?:，会把分组屏蔽的
+//
+////    验证一个正则是否为空
+////    \s表示一切不可见的字符，看不到的都叫\s
+//    var reg = /^\s*$/  //不可见的字符出现0到多次；并且以不可见的字符开头和和结尾；
+//    var str="    ";  //回车和空格
+//    console.log(reg.test(str))
+
+</script>
+</body>
+</html>

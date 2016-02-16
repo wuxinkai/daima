@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+//    call和appay可以任意修改this指向
+    function Fn(){
+        this.x=100; //私有的
+    }
+    Fn.prototype.x=200;  //公有的
+    Fn.prototype.getx=function(){
+        console.log(this.x)  //函数还没执行不知道函数是谁
+    };
+    var f=new Fn;
+    f.getX() //方法名执行前面有点，执行的是 Fn 底下的getx，  console.log(this.x)  就是f.x = 先找私有的，再找公有的 ，私有上有this.x=100;  结果就是100
+    f.__proto__.getx(); // this是f.__proto__ ，直接查找公有的console.log(this.x)  Fn.prototype.x=200就是200
+
+    //查找公有上的this问题
+//    先把this搞定（遵循第三条规律，看函数名执行前面有没有点，没有就是window）
+//    啥都不用管，按照原型查找机制，把结果计算出来，
+</script>
+</body>
+</html>

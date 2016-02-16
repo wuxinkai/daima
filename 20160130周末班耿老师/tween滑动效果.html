@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #warp{position: relative; width: 405px;height: 30px;margin:0 auto;overflow: hidden}
+        .inner{width: 405px;list-style: none;height: 30px;margin: 0;padding: 0;line-height: 30px;}
+        .inner li{float: left;width: 100px;height: 30px;text-align: center;line-height: 30px;font-size: 14px;font-weight: bold; background: #CCCCCC;}
+        .inner li a{text-decoration: none}
+        /*小盒子*/
+        #float {position: absolute;top: 0px;left: 0px; width: 100px;height: 30px;overflow: hidden;background:#f63}
+        #float .inner{ position: absolute;top: 0px;left: 0px;}
+        #float .inner li{background: #f60; }
+        #float .inner li a{color: #ffffff;font-size: 14px; }
+    </style>
+</head>
+<body>
+<div id="warp">
+    <ul class="inner">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">珠峰培训</a></li>
+        <li><a href="#">tween动画</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <div id="float">
+        <ul class="inner" id="ul2">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">珠峰培训</a></li>
+            <li><a href="#">tween动画</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="tween.js"></script>
+<script type="text/javascript">
+
+    function move(target){
+        var f =document.getElementById("float");
+        var inner =document.getElementById("ul2");
+        var nSpeed=0;
+        flex();
+        function flex(){
+            window.clearInterval( f.timer);
+            nSpeed+=(target- f.offsetLeft)/8;
+            nSpeed*=0.93;
+            f.style.left = f.offsetLeft+nSpeed+"px";
+            inner.style.left = inner.offsetLeft-nSpeed+"px";
+            if(Math.abs(nSpeed)<0.5&&Math.abs(target- f.offsetLeft)<0.5){
+
+            }else{
+                f.timer=  window.setInterval(flex,30);
+            }
+
+        }
+    }
+
+    var oLi = document.getElementById("warp").getElementsByTagName("li");
+    oLi[0].onmouseover =function(){move(0);};
+    oLi[1].onmouseover =function(){move(100);};
+    oLi[2].onmouseover =function(){move(200);};
+    oLi[3].onmouseover =function(){move(300);};
+</script>
+</body>
+</html>

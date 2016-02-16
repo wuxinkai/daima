@@ -6,6 +6,9 @@
     <link type="text/css" rel="stylesheet" href="css/tab.css"/>
 </head>
 <body>
+
+
+
 <!--
     1、不能只操作一个,需要操作多个(class='tab'),所有需要把所有具有这个样式的都获取到 getElementsByClassName(在IE6~8下不兼容)
 
@@ -179,7 +182,14 @@
         </ul>
     </div>
 </div>
+<!--
+       自我总结：
+       （1）设置一个大盒子（tab），放所有的内容
+       （2）放按钮的盒子 （tabTitle）按钮（tabTitle）当前样式（select），
+       （3）和切换的盒子都放在里面（tabCon）点击后显示的样式（select）
 
+
+-->
 <script charset="utf-8" type="text/javascript" src="js/utils.min.js"></script>
 <script charset="utf-8" type="text/javascript">
     ~function () {

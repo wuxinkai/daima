@@ -59,15 +59,16 @@
 
     //2、关于构造函数模式中的细节问题
     //1)this问题
-    //    function Fn() {
-    //        this.x = 100;//this->当前Fn这个类的一个实例f,因为构造函数模式中的this.xxx=xxx中的this就是当前类的实例
-    //        this.getX = function () {
-    //            console.log(this.x);
-    //        }
-    //    }
-    //    var f = new Fn();
-    //    console.log(f.x);
-    //    f.getX();//->this是f,因为getX方法执行前面有".","."前面是f,所以this就是f
+        function Fn() {
+            this.x = 100;//this->当前Fn这个类的一个实例f,因为构造函数模式中的this.xxx=xxx中的this就是当前类的实例
+            this.getX = function () {
+                console.log(this.x);  //100
+            }
+        }
+        var f = new Fn(); //this的第四条
+        console.log(f.x);
+        //this的第三条原则，
+        f.getX();//->this是f,因为getX方法执行前面有".","."前面是f,所以this就是f
 
     //2)关于一个函数的多面性
     //Fn在这里既是一个类,也是一个普通的函数
@@ -78,9 +79,9 @@
 
     //        var num = 10;  //私有的变量和实例是没有任何的关系的
 
-    //        var num = 10;
+    //        var num = 10;  //造作的是作用域的属性 num在外面是娶不到的
 
-    //        this.x = 100;
+    //        this.x = 100;  //操作的是实例
     //        this.getX = function () {
     //            console.log(this.x);
     //        }
@@ -126,22 +127,22 @@
     //    console.log(f instanceof Fn);//->false
 
     //5、在构造函数模式中,我们创建的实例是单独的个体,而且在函数体中通过this.xxx=xxx给实例增加的属性都是自己私有的属性,每一个实例之间的属性是不一样的
-    function Fn() {
-        this.x = 100;
-
-        this.getX = function () {  //这个this是f1的124行
-
-        this.getX = function () {
-
-            console.log(this.x);
-        };
-        //私有的属性
-    }
-    var f1 = new Fn;
-    var f2 = new Fn;
-
-    f1.getX
-    console.log(f1.getX === f2.getX);//->false
+//    function Fn() {
+//        this.x = 100;
+//
+//        this.getX = function () {  //这个this是f1的124行
+//
+//        this.getX = function () {
+//
+//            console.log(this.x);
+//        };
+//        //私有的属性
+//    }
+//    var f1 = new Fn;
+//    var f2 = new Fn;
+//
+//    f1.getX
+//    console.log(f1.getX === f2.getX);//->false
 
     //console.log(f1.getX === f2.getX);//->false
 
@@ -160,6 +161,13 @@
     //        //return true/false;
     //    }
     //    var res = hasPubProperty(f1, "getX");
+
+    //(自己)检测一个对象是公有属性·
+    function hasPubProperty(obj, attr){
+        //首先需要是当前对象的一个属性（in检测返回true），并且还不能是私有的属性（hasOwnprototype检测返回false），这样只能是共有的了，两者缺一不可，
+        return (attr in obj) && (!obj.hasOwnProperty(attr))
+    }
+    var res = hasPubProperty(f1, "getX");
 </script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //验证类  (1)test
+//    var reg = /\d/   //一个数字，没说出现几次，出现位置，出现多少个
+//    var str="34339"
+//    console.log(reg.test(str))
+
+//    （2）test和g应用的问题
+//        var reg = /\d+/g   //
+//
+//        var str1="dvsd34339"  //true
+//        var str2="dsfgg1234339" //true
+//        console.log(reg.test(str1))
+//        console.log(reg.test(str2))
+//
+//        var str3="1234339dsfgg" //应该是true结果变成了false； 原因是lastIndex的值给修改了，lastIndex他会把第一次匹配的位置保存，当做第二次开始的起点
+//    console.log(reg.lastIndex) //开始从12的位置查找
+//        console.log(reg.test(str3))
+
+//    （3）连续出现三个位置都是数字，
+//    var reg = /(\d)(\d)(\d)/;
+//    var str = "abc345bnm";
+//    console.log(reg.test(str));
+//    console.log(RegExp.$1); //第一个分组内容,属于正则类上的实例
+//    console.log(RegExp.$2);//第二个分组内容
+//    console.log(RegExp.$3); //第三个分组内容
+
+//    （4）search
+//    var reg=/\d+/g  //加g对seach没有影响
+//    var str1 = "abc345bnm";
+//    var str2 = "abcbnm345";
+//    var str3 = "abcbnm";
+//    console.log(str1.search(reg))//3  是数组第一次出现的索引位置
+//    console.log(str2.search(reg))//6  是数组第一次出现的索引位置
+//    console.log(str3.search(reg))//-1  没有匹配到是
+
+//    （5）split
+//    var str1 = "中华人民共和国";
+////   问题，把每一个汉字都放到数组里；
+//    var a=str1.split("") //不能打空格
+//    console.log(a)
+////    如何把一个字符串快捷的分成数组
+//    var str2 = "2014-3-20 15:20:19";
+//    var a2= str2.split(/-| |:/); // 或-或空格或冒号
+//    console.log(a2)
+
+//    把字符串中的重复数字和数字重复的次数记录下来
+//    var str3 = "438493394830404";
+//    var a=str3.split("") //快捷的分解成数组
+//    a.sort()
+//    var str4=a.join("")
+////    console.log(str4)
+//    var strCount="";
+//    str4.replace(/(\d)\1+/g,function(s1,s2){
+////        s1代表出现是重复的哪一项，s1.lenght就是重复次数
+////        s2是重复的项
+//        strCount+=s2+"出现的次数"+s1.length+","
+//    })  //\d任意数字出现一次，\1就是引用这个数字（\1表示对括号里的引用） +号表示连续出现的数组
+//    console.log(strCount)
+
+
+//    捕获exec 天生具有懒惰性，可以捕获子正则
+//    var reg =/(\w)(\w)(\w)/g;
+//    var str = "www.zhufengpeixun.cn/bbsbb2016"
+////    var reg =/b+/g;
+//
+//    var result = reg.exec(str)  //返回的是一个数组，如果没有匹配到就是null
+//    console.log(result)
+////捕获分组方法
+//    function allExe(reg,str){
+//        var a=[];  //捕获的结果  一直到result等于null的时候就找不到了
+//        var result =null;
+//        if(!reg.global) return reg.exec(str);
+//        while(result=reg.exec(str)){
+//            a.push(result)
+//        }
+//        return a
+//    }
+//    console.log(allExe(reg,str))
+//
+//
+////    Mash方法
+//    var str = "www.zhufengpeixun.cn/bbsbb2016"
+//    var reg =/(\w)(\w)(\w)/g;
+//    var a=str.match(reg);  // 没有分组总正则匹配的内容
+//    console.log(a)
+
+//    匹配1=750
+//    var reg = /\b[1-9]\d{0,1}\b|\b[1-6]\d\d\b|\b750\b/;
+//    var str =800;
+//    console.log(reg.test(str))
+
+//     简写了1-多位(开头不能是0)
+//    var reg =/^[+-]?[1-9]\d*$/;
+//    var str = "-123456"; //true
+//    var str1 = "0123456"; //false  以0开头了
+//    console.log(reg.test(str));
+//    console.log(reg.test(str1))
+</script>
+</body>
+</html>
