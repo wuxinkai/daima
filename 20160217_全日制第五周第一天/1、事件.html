@@ -25,6 +25,20 @@
 <script type="text/javascript">
     //1、什么是事件?
     //->浏览器天生自带的一些行为:onclick、onmouseover(onmouseenter)、onmouseout(onmouseleave)、onmousemove、onmousedown、onmouseup、onmousewheel(鼠标滚轮滚动行为)、onscroll、onload、键盘相关的行为onkeydown、onkeyup、文本框的一些行为onblur(失去焦点)、onfocus(获取焦点)...
+    //onmouseover 属性在鼠标指针移动到元素上时触发
+    //onmouseenter 事件在鼠标指针移动到元素上时触发
+    //提示： onmouseenter 事件类似于 onmouseover 事件。 唯一的区别是 onmouseenter 事件不支持冒泡 。
+
+    //onmouseout 事件会在鼠标指针移出指定的对象时发生。
+    //onmouseleave 事件在鼠标移除元素时触发
+    //提示: onmouseleave 事件类似于 onmouseout 事件。 唯一的区别是 onmouseleave 事件不支持冒泡 。
+
+    //onmousemove 事件会在鼠标指针移动时发生。
+    //onmousedown 当在段落上按下鼠标按钮时执行一段 JavaScript：
+    //onmouseup:鼠标抬起时触发的事件。
+    //滚轮事件onmousewheel
+
+
     //->以上行为是天生就有的,不管有没有给这些行为绑定方法,当触发对应操作的时候,行为都会发生
     //->如果想在行为触发的时候做一些事情，我们只需要给行为绑定对应的方法即可"事件绑定"
     //    var outer = document.getElementById("outer");
@@ -46,7 +60,7 @@
     //        //type:事件行为类型"click"  srcElement:事件源 clientX/clientY...
     //    };
     //->当我们点击行为触发的时候,不仅仅把对应的函数执行了,而且浏览器还默认的给这个函数传递了一个参数值
-    outer.onclick = function (e) {
+    outer.onclick = function (e) {  //e鼠标事件对象
         //->关于事件对象MouseEvent的兼容性总结
         //1)事件对象本身
         //->标准浏览器中是浏览器默认给传递的一个参数的值,我们设置一个形参变量e就可以获取到事件对象了
