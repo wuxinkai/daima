@@ -117,12 +117,12 @@
 
         //->如果点击的是searchList下的a标签:
         if (tar.tagName.toLowerCase() === "a" && tar.parentNode.parentNode.id === "searchList") {
-            searchInp.value = tar.innerHTML;
+            searchInp.value = tar.innerHTML;  //<li><a>的内容把内容给了文本框
             searchList.style.display = "none";
             return;
         }
 
-        //->如果点击的是文本框：我们啥都不处理
+        //->如果点击的是文本框：我们啥都不处理 ；（点文本框的时候会显示一下，就隐藏）
         if (tar.id === "searchInp") {
             return;
         }
@@ -130,6 +130,10 @@
         //->其他的情况直接消失隐藏即可
         searchList.style.display = "none";
     };
+
+    //我们可以阻止一个容器中某些特殊的元素，让其不在委托的范围内，我们只要把这些不需要冒泡的阻止掉
+
+
 </script>
 </body>
 </html>

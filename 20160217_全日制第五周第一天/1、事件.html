@@ -82,6 +82,7 @@
             //->标准使用e.preventDefault() IE6~8使用e.returnValue = false
             e.preventDefault = function () {
                 e.returnValue = false;
+//                return false  也是可以阻止默认行为
             };
 
             //5)阻止冒泡传播的

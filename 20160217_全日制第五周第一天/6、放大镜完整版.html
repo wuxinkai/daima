@@ -35,7 +35,7 @@
             background: #000;
             opacity: 0.5;
             filter: alpha(opacity=50);
-            cursor: move;
+            cursor: move; /*变成可拖拽效果*/
         }
 
         #boxRight {
@@ -123,10 +123,10 @@
         //->赋值并且进行边界判断
         var imgTop = 0, imgLeft = 0;
 
-        if (left <= minLeft) {
-            mark.style.left = minLeft + "px";
+        if (left <= minLeft) { //得到的值比最小的还小
+            mark.style.left = minLeft + "px";  //就让他等于最小值
             imgLeft = minLeft;
-        } else if (left >= maxLeft) {
+        } else if (left >= maxLeft) {//最大的
             mark.style.left = maxLeft + "px";
             imgLeft = maxLeft;
         } else {
