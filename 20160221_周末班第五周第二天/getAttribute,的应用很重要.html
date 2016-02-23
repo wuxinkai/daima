@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<body>
+<a href="javascript:;" target="这是target里的内容（可以是文字，src地址）">这是a标签button点击后，让a标签的自定义属性target里面的内容，在p标签的innerHtml中显示，</a>，
+
+<p id="demo">请点击按钮来显示上面这个链接的 target 属性值。</p>
+
+<button onclick="myFunction()">getAttribute的作用</button>
+
+<script>
+    function myFunction() {
+        //点击事件执行myFunction（）方法，让当前元素的属性等于上面自定义的属性
+        var a=document.getElementsByTagName("a")[0]; //获取a标签，
+        var demo=document.getElementById("demo");
+            demo.innerHTML=a.getAttribute("target"); //让demo
+    }
+</script>
+
+</body>
+</html>

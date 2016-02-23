@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{ margin: 0; padding: 0; list-style: none;    font: 14px / 1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;  }
+        .wrapper{ position: relative;  height: 460px;; width:1226px;  overflow: hidden; margin: 50px auto;border: 1px solid #999; cursor: pointer}
+        .bannerOut{ width:1226px; height: 460px; }
+        .bannerOut ul{ position: relative}
+        .bannerOut ul li{position: absolute; left: 0px; top: 0px;}
+        .bannerOut ol{ width: 110px; height: 25px; position: absolute; right: 20px;bottom: 5px;}
+        .bannerOut ol li{cursor: pointer;float: left;background: #fff;
+            background: rgba(255,255,255,0.4);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#66ffffff", endColorstr="#66ffffff");
+            border-color: #757575;
+            border-color: rgba(0,0,0,0.4);
+            display: block;
+            width: 6px;
+            height: 6px;
+            margin: 0 5px;
+            border: 2px solid #fff;
+            border-color: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            text-align: left;
+            text-indent: -9999px;
+            overflow: hidden;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+        .bannerOut ol .current{ background: #000000;}
+        .bannerOut .left,.bannerOut .right { width: 41px; height: 69px; position:absolute; top: 50%; margin: -35px 0 0 0;background: #000000;z-index: 9999; opacity: 0.3; text-align: center; line-height: 40px;}
+        .bannerOut .right{ right: 10px;}
+        .bannerOut .left{ left: 250px;}
+
+        .bannerOut .left a{width: 100%;display:block;font-size: 30px; color: #ffffff; text-decoration: none; padding-top: 10px;}
+        .bannerOut .right a{width: 100% padding-top: 10px;display:block;font-size: 30px; color: #ffffff;text-decoration: none; padding-top: 10px;}
+            /*tab切换栏*/
+        .tabClone{ width: 234px;height: 460px; background: #000; position: absolute;left: 0px;top: 0px;z-index: 100;opacity: 0.5;filter:alpha(opacity=50);}
+        .tab{width: 234px;height: 460px; position: absolute;left: 0px;top: 0px;z-index: 1001}
+        .tabList{ margin-top: 20px;}
+        .tab .category-item{text-indent: 20px; width: 234px;height: 42px; line-height: 42px;}
+        .tab .category-item a{height: 42px;line-height: 42px;width: 100%;display: block; text-decoration: none;color: #fff;}
+        .tab .category-item a:hover{ background: #ff6700;color: #ffffff}
+        .category-item .children{ height: 458px; background: dodgerblue; position: absolute;left: 234px;top: 0px;display: none}
+        .children img{display: block;}
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="tabClone"></div>
+    <div class="tab">
+        <ul class="tabList" id="tabList">
+            <li class="category-item" id="li01">
+                <a href="javascript:;">手机 平板 电话卡</a>
+                <div class="children" id="div01"><img src="images/1.jpg" height="460"/></div>
+            </li>
+            <li class="category-item"  id="li02">
+                <a href="javascript:;">路由器 智能硬件</a>
+                <div class="children" id="div02"><img src="images/2.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li03">
+                <a href="javascript:;">移动电源 插线板</a>
+                <div class="children" id="div03"><img src="images/3.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li04">
+                <a href="javascript:;">耳机 音箱</a>
+                <div class="children" id="div04"><img src="images/7.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li05">
+                <a href="javascript:;">电池 存储卡</a>
+                <div class="children" id="div05"><img src="images/1.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li06">
+                <a href="javascript:;">保护套 后盖</a>
+                <div class="children" id="div06"><img src="images/3.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li07">
+                <a href="javascript:;"> 贴膜 其他配件</a>
+                <div class="children" id="div07"><img src="images/7.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li08">
+                <a href="javascript:;">米兔 服装</a>
+                <div class="children" id="div08"><img src="images/2.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li09">
+                <a href="javascript:;">箱包 其他周边</a>
+                <div class="children" id="div09"><img src="images/3.jpg" height="460"/></div>
+            </li>
+            <li class="category-item" id="li10">
+                <a href="javascript:;">箱包 其他周边</a>
+                <div class="children" id="div10"><img src="images/7.jpg" height="460"/></div>
+            </li>
+        </ul>
+    </div>
+    <div class="bannerOut con">
+        <ul>
+            <li><img src="images/T17QEgBj_T1RXrhCrK.jpg"  width="1226" height="460" alt=""/></li>
+            <li><img src="images/T1bYAvBjJv1RXrhCrK.jpg"  width="1226" height="460" alt=""/></li>
+            <li><img src="images/T1fUJ_BgWv1RXrhCrK.jpg" width="1226" height="460" alt=""/></li>
+            <li><img src="images/T1lVh_ByJv1RXrhCrK.jpg"  width="1226" height="460" alt=""/></li>
+            <li><img src="images/T1y3J_BXYv1RXrhCrK.jpg"   width="1226" height="460"alt=""/></li>
+        </ul>
+        <ol>
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+        <div class="left"><a href="javascript:;">&lt;</a></div>
+        <div class="right"><a href="javascript:;">&gt;</a></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    //tab切换栏
+    $('#tabList .category-item').hover(function(e) {
+        $(this).children('div').stop().show();
+    },function(){
+        $(this).children('div').stop().hide();
+    });
+    //banner图
+    $(function(){
+        var timer01 = null;
+        var num = 0;
+        function autoPlay(){
+            num++;
+            if(num > 4){
+                num = 0;
+            }
+            $('.con ul li').eq(num).stop().hide().fadeIn().siblings().hide();
+            $('.con ol li').eq(num).addClass('current').siblings().removeClass('current');
+        };
+        $('.con ul li').eq(0).css('display','block');
+        $('.con ol li').click(function(e) {
+            num = $(this).index();
+            $('.con ul li').eq($(this).index()).stop().hide().fadeIn().siblings().hide();
+            $(this).addClass('current').siblings().removeClass('current');
+        });
+        $('.right').click(function() {
+            autoPlay();
+        });
+        $('.left').click(function() {
+            num--;
+            if(num < 0){
+                num = 4;
+            }
+            $('.con ul li').eq(num).stop().hide().fadeIn().siblings().hide();
+            $('.con ol li').eq(num).addClass('current').siblings().removeClass('current');
+        });
+        //定时器效果
+        timer01 = setInterval(autoPlay,3000);
+        $('.con').hover(function(e) {
+            clearInterval(timer01);
+            timer01 = null;
+        },function(){
+            clearInterval(timer01);
+            timer01 = setInterval(autoPlay,3000);
+        });
+
+    })
+
+</script>
+</body>
+</html>
