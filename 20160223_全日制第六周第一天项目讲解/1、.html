@@ -192,7 +192,7 @@
             var cur = titleList[i];
             cur.index = i;
             cur.onmouseover = function () {
-                this.className = "show";
+                this.className = "show";  //通过索引来写的方法
                 imgList[this.index].className = "show";
 
                 for (var k = 0; k < titleList.length; k++) {
