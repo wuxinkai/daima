@@ -57,25 +57,25 @@
         move();
 
     //->我们在move执行的时候又调用了move自己执行,我们把自己调用自己的编程模式叫做"递归思想"
-    //面试题:获取1-100之间所有数的和,但是所有被3整除的都不进行相加
-    //->for循环
-    //    var total = null;
-    //    for (var i = 1; i <= 100; i++) {
-    //        if (i % 3 !== 0) {  //能被3整除的都进不了循环
-    //            total += i;
-    //        }
-    //    }
-    //    console.log(total);//->3367
+//    面试题:获取1-100之间所有数的和,但是所有被3整除的都不进行相加
+//    ->for循环
+//        var total = null;
+//        for (var i = 1; i <= 100; i++) {
+//            if (i % 3 !== 0) {  //能被3整除的都进不了循环
+//                total += i;
+//            }
+//        }
+//        console.log(total);//->3367
 
     //->递归
-    //    function sum(n) {
-    //        if (n === 1) {
-    //            return 1;
-    //        }
-    //        return n + sum(n - 1);
-    //    }
-    //    var total = sum(100);
-    //    console.log(total);
+//        function sum(n) {
+//            if (n === 1) {
+//                return 1;
+//            }
+//            return n + sum(n - 1);
+//        }
+//        var total = sum(100);
+//        console.log(total);
     //total = 100+sum(99) -> total = 100+99+sum(98) -> total = 100+99+98+sum(97) -> ... -> total = 100+99+98+97+...+2+sum(1) -> total = 100+99+98+97+...+2+1
 
 //    function sum(n) {

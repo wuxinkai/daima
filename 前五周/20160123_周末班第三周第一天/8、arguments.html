@@ -18,7 +18,7 @@
     }
 
     function fn2() {
-        //console.log(arguments.callee.caller);//->null 在全局作用域下执行的输出的结果是null
+        console.log(arguments.callee.caller);//->null 在全局作用域下执行的输出的结果是null
         //console.log(arguments.callee);//->fn2
         fn1();
     }
