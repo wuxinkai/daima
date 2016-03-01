@@ -6,18 +6,228 @@
 </head>
 <body>
 <script type="text/javascript">
-    var foo = 0;
-    var timer = setInterval(function () {
-        foo++;
-    }, 500);
-    while (1) {
-        if (foo == 10) {
-            clearInterval(timer);
-            break;
-        } else {
-            console.log(foo);
-        }
-    }
+//    (1)
+//    var foo = 0;
+//    var timer = setInterval(function () {
+//        foo++;
+//    }, 500);
+//    while (1) {
+//        if (foo == 10) {
+//            clearInterval(timer);
+//            break;
+//        } else {
+//            console.log(foo);
+//        }
+//    }
+
+// (2)
+//function fun(n,o) {
+//    console.log(o)
+//    return {
+//        fun:function(m){
+//            return fun(m,n);
+//        }
+//    };
+//}
+//var a = fun(0);  a.fun(1);  a.fun(2);  a.fun(3);//undefined,0,0,0,
+//var b = fun(0).fun(1).fun(2).fun(3);//undefined,0,1,2,3
+//var c = fun(0).fun(1);  c.fun(2);  c.fun(3);//undefined,0,1,2
+////问:三行a,b,c的输出分别是什么？
+
+
+//(3)
+//    var x = 1;
+//    var y = 0;
+//    var z = 0;
+//    function add(n) {
+//        n = n + 1;
+//    }
+//    y = add(x);
+//    function add(n) {
+//        n = n + 3;
+//    }
+//    z = add(x);
+//    s = y + z;
+//console.log(y,z,s)
+
+//    结果是undefined  undefined NaN
+//我们首先看function add，两个add都没有返回值，而我们知道，没有明确返回值的，全部返回undefined，所以，y和z都会是undefined，那么s自然也就不会是一个数字了，没错，s应该是NaN。
+
+//（4）
+//var x = 1;
+//var y = 0;
+//var z = 0;
+//function add(n){return n=n+1;}
+//y = add(x);
+//function add(n){return n=n+3;}
+//z = add(x);
+//s=y+z;
+//console.log(y,z,s)
+
+//    结果是 4  4 8
+//不错，y和z都是4，s是8，为什么y不是2而是4呢？因为在javascript中，直接通过function申明的函数，后面定义的，会影响到之前的引用
+
+
+//（5）
+//var x=function(){alert(1)};
+//x();
+//function x(){alert(3)};
+//x();
+// 结果两次都是1
+//后面的x()出来的也会是1。
+
+
+//（6）
+//window.val=1;
+//var json={
+//    val:10,
+//    dbl:function(){
+//        this.val*=2;
+//    }
+//}
+//json.dbl();
+//var dbl = json.dbl;
+//dbl();
+//json.dbl.call(window);
+//alert(window.val + json.val);
+//alert的结果？ 24
+
+//（7）
+//(function(){
+//    var val =1;
+//    var json ={
+//        val:10,
+//        dbl:function(){
+//            val*=2;
+//        }
+//    };
+//    json.dbl();
+//    alert(json.val+val);
+//})();
+//    结果是12
+
+//（8）
+//function C1(name){
+//    if(name) this.name = name;
+//}
+//function C2(name){
+//    this.name =name;
+//}
+//function C3(name){
+//    this.name = name ||'join';
+//}
+//C1.prototype.name='Tom';
+//C2.prototype.name='Tom';
+//C3.prototype.name='Tom';
+//alert(new C1().name)+(new C2().name)+(new C3().name);
+//    结果Tom
+
+//(9)
+//var test = (function(i){
+//    return function(){
+//        alert(i*=2);
+//    }
+//})(2);
+//test(5);
+//结果是什么？  4
+
+//(10)
+//var a=1;
+//var obj ={
+//"name":"tom"
+//}
+//function fn(){
+//    var a2 = a,
+//    obj2 = obj,
+//    a2 =a,
+//    obj2.name ="jack"
+//}
+//fn();
+//console.log(a);
+//console.log(obj); 报错
+
+//(11)
+//var a = 1;
+//function fn(a){
+//    console.log(a)
+//    var a = 2;
+//    function a(){}
+//}
+//fn(a)
+    //结果是 function a(){}
+//(12)
+//var foo = {
+//    bar: function () {
+//        console.log(this);
+//    }
+//};
+//foo.bar();
+//(foo.bar)();
+//
+//    //结果两个object
+
+//(13)
+//var foo={a:1,b:2},bar=[1,2,3];
+//var foo2=foo,bar2=bar;
+//foo2.a=3;
+//bar2[0]=4;
+//console.log(foo,bar);
+////结果  foo是 Object {a: 3, b: 2}  bar【4，2,3】
+
+//    （14）
+//var foo=0;
+//var timer=setInterval(function(){
+//    foo++;
+//},500);
+//while(1){
+//    if(foo==10){  clearInterval(timer);break;  }else{ console.log(foo); }
+//}
+//   结果是0  死循环  异步加载定时器不等底下就执行，
+
+
+
+//（15）
+//var num="abc123";
+//num=parseInt(num);
+//if(num==123){
+//    alert(123);
+//}else if(num==NaN){
+//    alert(NaN);
+//}else if(typeof num=='number'){
+//    alert('number')
+//}else{
+//    alert('str');
+//}
+//    结果是number
+
+//   （16）
+//var a=1,b='2';   var c=a>b?(a<b?a:b):(a==b?a:b);
+//    console.log(c)  //2
+
+//（17）
+//for(var i=0;i<10;i++){
+//    alert(i);
+//    break;
+//}
+//alert(i);
+////    结果是 0 0
+
+//结果是10
+//for(var i=0;i<10;i++){
+//    continue;
+//    alert(i);
+//}
+//alert(i);  //10
+
+var a=0;
+function fun(){
+    alert(a);
+    var a=10;
+}
+fun();
+alert(a);   //undefined 0
+
+
 </script>
 </body>
 </html>

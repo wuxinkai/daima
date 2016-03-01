@@ -31,19 +31,19 @@
     //->JS实现让当前的元素在屏幕居中的位置
     var box = document.getElementById("box");
     box.style.top = ((document.documentElement.clientHeight || document.body.clientHeight) - box.offsetHeight) / 2 + "px";
-    box.style.left = ((document.documentElement.clientWidth || document.body.clientWidth) - box.offsetWidth) / 2 + "px";
+    box.style.left = ((document.documentElement.clientWidth || document.body.clientWidth) - box.offsetWidth) / 2 + "px";  //这里写的属于行内样式
 
     zhufengEvent.on(box, "mousedown", down);
     function down(e) {
-        this["strX"] = e.pageX;
-        this["strY"] = e.pageY;
-        this["strL"] = parseFloat(this.style.left);
-        this["strT"] = parseFloat(this.style.top);
+        this["strX"] = e.pageX;  //开始的鼠标位置
+        this["strY"] = e.pageY;  //
+        this["strL"] = parseFloat(this.style.left); //所以在这里用style也能获取到
+        this["strT"] = parseFloat(this.style.top); //获取盒子的开始位置
 
         if (this.setCapture) {
             this.setCapture();
-            zhufengEvent.on(box, "mousemove", move);
-            zhufengEvent.on(box, "mouseup", up);
+            zhufengEvent.on(box, "mousemove", move); //事件会在鼠标指针移动时发生
+                zhufengEvent.on(box, "mouseup", up);//在用户鼠标按键被松开时执行
         } else {
             var _this = this;
             this.MOVE = function (e) {
@@ -59,7 +59,7 @@
     }
 
     function move(e) {
-        var curL = e.pageX - this["strX"] + this["strL"];
+        var curL = e.pageX - this["strX"] + this["strL"];  //鼠标移动当前的值 - 当前的值 + 盒子的值
         var curT = e.pageY - this["strY"] + this["strT"];
         var minL = 0, minT = 0, maxL = (document.documentElement.clientWidth || document.body.clientWidth) - this.offsetWidth, maxT = (document.documentElement.clientHeight || document.body.clientHeight) - this.offsetHeight;
         curL = curL < minL ? minL : (curL > maxL ? maxL : curL);

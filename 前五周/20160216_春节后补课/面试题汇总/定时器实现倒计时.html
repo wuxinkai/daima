@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">5</div>
+<script type="text/javascript">
+    var box =document.getElementById("box");
+    var boxIn= box.innerHTML;
+    function Move(){
+        boxIn--;
+        if(boxIn<=0){
+            return
+        }
+        box.innerHTML=boxIn
+    }
+    window.setInterval(Move,1000)
+</script>
+</body>
+</html>
