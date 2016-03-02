@@ -219,14 +219,22 @@
 //}
 //alert(i);  //10
 
-var a=0;
-function fun(){
-    alert(a);
-    var a=10;
-}
-fun();
-alert(a);   //undefined 0
+//var a=0;
+//function fun(){
+//    alert(a);
+//    var a=10;
+//}
+//fun();
+//alert(a);   //undefined 0
 
+var a=0,b=0;
+function A(a){
+    A=function(b){
+        alert(a+b++);
+    }
+    alert(a++);
+}
+A(1);A(2);   // 1 ,4
 
 </script>
 </body>
