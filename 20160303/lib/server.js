@@ -1,8 +1,8 @@
-var http = require("http");
-var url = require("url");
+var http = require("http");  //加载http
+var url = require("url");   //
 var fs = require("fs");
 
-var point = "1001";
+var point = "8080";
 var server = http.createServer(function (request, response) {
     //->request.url获取的是客户端向服务器端请求的地址,包含了问号传递进来的参数
     var urlObj = url.parse(request.url, true);
@@ -88,7 +88,7 @@ var server = http.createServer(function (request, response) {
     response.writeHead(404, {'content-type': 'text/html'});
     response.end(fs.readFileSync("./error.html", "utf8"));
 });
-server.listen(point, function () {
+server.listen(point, function () {  //point 端口号
     console.log("当前 [ " + point + " ] 端口已经开启!");
 });
 
