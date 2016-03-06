@@ -2,7 +2,7 @@ var http = require("http");  //加载http
 var url = require("url");   //
 var fs = require("fs");
 
-var point = "8080";
+var point = "23456";
 var server = http.createServer(function (request, response) {
     //->request.url获取的是客户端向服务器端请求的地址,包含了问号传递进来的参数
     var urlObj = url.parse(request.url, true);
@@ -45,7 +45,7 @@ var server = http.createServer(function (request, response) {
             userAge: userAge
         });
 
-        content = JSON.stringify(content);
+        content = JSON.stringify(content);   // 转化为字符串
         fs.writeFileSync("./userList.json", content, "utf8");
 
         //->把当前用户的详细信息返回给前端

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function max1(){
+        return 1
+    };
+    function max2(){
+        return 2
+    };
+    function max3(){
+        return 3
+    };
+
+    function getMax(){
+
+        var fns = [max1,max2,max3];
+        var max=fns[0]();  //执行的结果 1 2  3 其中一个
+        var maxFn=fns[0];  // function max3（）{} 这个方法
+
+        for(var i=1;i<fns.length;i++){
+            var val = fns[i]();
+            if(val>max){  //利用假设法，第一个和其他项比较：
+                max=val;   //数字的比较，
+                maxFn=fns[i] //方法的比较
+            }
+        }
+        getMax = maxFn;  //将上面的方法从写了， 让属性名等于19行的属性名，maxFn，变成我们想要的那个 function max3(){}
+        return max
+
+    }
+
+console.log(getMax())  //第一次走的是全部的内容
+console.log(getMax()) // 上一次执行是第三个最大， 32行把getMax=getMax3的值赋给了getMax()执行结果，上面代码都不用执行直接，得出我们想要的
+
+
+</script>
+</body>
+</html>
