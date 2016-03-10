@@ -37,6 +37,7 @@
 
     var obj=JSON.parse(str);
     console.log(obj);
+    console.log(typeof str);
     //在IE6~7下报错: SCRIPT5009: “JSON”未定义 ->不兼容使用eval处理:严谨的写法需要把字符串用一个小括号包起来
     //console.log(eval("(" + str + ")"));  更严谨的方法，
 </script>

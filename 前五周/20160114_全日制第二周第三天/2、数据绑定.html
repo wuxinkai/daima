@@ -89,33 +89,33 @@
     //弊端:循环一次,增加一次,引发一次DOM回流,我们循环了7次,浏览器需要重新计算7次结构...
 
     //2、字符串拼接的方式实现数据绑定(是我们现有项目中最常用的一种方式)
-    //    var str = "";
-    //    for (i = 0; i < ary.length; i++) {
-    //        var curData = ary[i];
-    //        var n = (i + 4), num = n < 10 ? "0" + n : n;
-    //        str += "<li>";
-    //        str += "<span>" + num + "</span>" + curData["title"];
-    //        str += "</li>";
-    //    }
-    //    oUl.innerHTML += str;//->oUl.innerHTML = oUl.innerHTML + str; 首先把之前三个li获取到,然后在和我们最新的七个进行字符串拼接,最后把拼接完成的重新的放回到我们的页面中
+        var str = "";
+        for (i = 0; i < ary.length; i++) {
+            var curData = ary[i];
+            var n = (i + 4), num = n < 10 ? "0" + n : n;
+            str += "<li>";
+            str += "<span>" + num + "</span>" + curData["title"];
+            str += "</li>";
+        }
+        oUl.innerHTML += str;//->oUl.innerHTML = oUl.innerHTML + str; 首先把之前三个li获取到,然后在和我们最新的七个进行字符串拼接,最后把拼接完成的重新的放回到我们的页面中
     //    changeBg();
     //弊端:如果在绑定之前有元素,我们给其绑定了一些事件操作,当我们重新的增加数据后,原有的元素绑定的事件都消失了->每一次绑定的时候,都是先把之前的当做字符串拿出来,和最新的进行拼接,最后在重新的放回到页面中,由于放回去的是字符串,浏览器需要重新的进行渲染,这样导致了之前绑定的事件都消失了;
     //优势:只最后统一添加了1次,引发一次回流...
 
     //3、使用文档碎片来处理数据绑定
     var frg = document.createDocumentFragment();//->创建了一个文档碎片:临时存储我们动态创建的元素,最后都创建完成了,我们在统一一次性把文档碎片放到页面中
-    for (var i = 0; i < ary.length; i++) {
-        var curData = ary[i];
-        var n = (i + 4);//当前索引从第四个开始
-        var num = n < 10 ? "0" + n : n;  //m等于  n小于10的时候前面加个0， 大于10就不加0
-        var oLi = document.createElement("li");
-        oLi.innerHTML = "<span>" + n + "</span>" + curData["title"];
-        frg.appendChild(oLi);
-    }
-    oUl.appendChild(frg);
-    frg = null;
-
-    changeBg();
+//    for (var i = 0; i < ary.length; i++) {
+//        var curData = ary[i];
+//        var n = (i + 4);//当前索引从第四个开始
+//        var num = n < 10 ? "0" + n : n;  //m等于  n小于10的时候前面加个0， 大于10就不加0
+//        var oLi = document.createElement("li");
+//        oLi.innerHTML = "<span>" + n + "</span>" + curData["title"];
+//        frg.appendChild(oLi);
+//    }
+//    oUl.appendChild(frg);
+//    frg = null;
+//
+//    changeBg();
     //DOM回流和重绘:
     //回流(reflow):只要HTML结构发生改变(位置、增加、删除...)，浏览器都需要从新的计算结构,从新的进行页面的渲染;
     //重绘(replan):一个元素的样式(背景颜色...)发生改变,浏览器只需要重新的渲染当前这个元素即可
