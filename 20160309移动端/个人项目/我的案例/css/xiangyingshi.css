@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html body{
+    width: 100%;
+    height: 100%;
+}
+.head{ width: 100%; height: 80px;position: fixed; box-shadow: 5px 5px 3px rgba(0,0,0,0.3); background: #ffffff }
+.headIn a{width: 100px;height: 100px;display: block; background: url("../images/adobe-icon_03.png") no-repeat;background-size:cover; float: left; margin-top:5px; }
+
+@media all and (min-width: 1000px){
+    .headIn{
+        width:1000px;
+        margin: 0 auto;
+    }
+    .headIn ul{ float: right;  line-height: 80px ;width: 30%}
+    .headIn li{ float: left; width: 20%; text-align: center}
+}
+.cont img{width: 250px;}
+.cont ul li{float: left;}

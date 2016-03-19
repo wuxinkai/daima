@@ -1,0 +1,179 @@
+*{ margin: 0; padding: 0 ;list-style: none;}
+html body{width: 100%;height: 100%; overflow: hidden}
+#main{ width: 640px; height: 1008px; position: relative; left: 50%;top: 0px; margin-left: -320px; transform-origin: top;-webkit-transform-origin: top; }
+
+#loading{ width: 100%; height: 100%; background: #000; }
+.loadBox{ position: absolute; top: 40%; height: 40px; border-radius: 5px; background: #ffffff;width: 80%;overflow: hidden; margin: 0 10%}
+
+.progress{ width: 0px; height: 40px; background-image: -webkit-linear-gradient(45deg,red 25%,green 50%, red 75%,green 100%); background-size:40px 40px; background-repeat: repeat-x;display: block ; transition:1s;-webkit-transition:1s  }
+
+#phone{ width: 100%; height: 100%; background: url("../img/phoneBg.jpg") no-repeat;position: absolute; z-index: 10; transition: 1s;-webkit-transition: 1s;}
+
+.phoneName{width: 262px; height: 89px;margin: 100px auto;background: url("../img/phoneHeadName.png") no-repeat ;}
+
+.answer{ width: 520px; height: 360px; position: absolute; left:50%;margin-left: -260px; bottom: 0; background: url("../img/phoneBtn.png") no-repeat}
+
+.answer .listen{width: 170px;height: 170px; position: absolute; left: 358px; top: 143px; border: 3px solid #50c1e9; border-radius: 50%;
+animation:moves 1s ease-in-out infinite;
+    z-index: -1;
+}
+
+
+@keyframes moves{
+    0%{
+        transform:scale(0.5)
+    -webkit-transform:scale(0.5)
+
+   }
+    100%{
+        transform:scale(1)
+    -webkit-transform:scale(1)
+    }
+}
+
+@-webkit-keyframes move{
+    0%{
+        transform:scale(0.5)
+        -webkit-transform:scale(0.5)
+
+    }
+
+    100%{
+        transform:scale(1)
+    -webkit-transform:scale(1)
+    }
+}
+
+.speaker{
+    width: 520px;
+    height: 659px;
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    margin-left: -260px;
+    background: url("../img/phoneKey.png") no-repeat;
+    -webkit-transform :translate(0,659px);
+    -webkit-transition:1s;
+}
+.hangUP{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 190px;
+    bottom: 37px;
+}
+
+/*--------三层--------------*/
+#massage{ width: 100%; height: 100%;position: absolute; z-index: 9; background:#999}
+#massage ul li{
+    max-width: 360px; min-width: 300px; padding: 25px; line-height: 40px;font-size: 30px; background: #ffffff; border: 2px solid #c1c1c1;
+    margin-bottom:30px ;
+   transform: translate(0,30px) ;
+    opacity: 0;
+}
+#massage ul li.left{
+    float: left;
+    left: -10px;
+}
+#massage ul li.right{
+    float: right;
+    right: 125px;
+}
+#massage ul li.left img:nth-child(1){
+    position: absolute;
+    left: -10px;
+}
+#massage ul li.right img:nth-child(1){
+    position: absolute;
+    right: -10px;
+}
+#massageText{
+    width: 640px; height: 88px; background: url("../img/messageText.png") no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+/*disic*/
+#cubeBox{width: 510px;height: 510px;position:absolute; left:50%;top:50%; margin-left:-265px;margin-top:-265px;transform-style: preserve-3d;-webkit-transform-style: preserve-3d;transform-origin: 255px 255px -255px}
+
+#massage ul {transition: 1s}
+#cube{ width: 640px; height: 100%; background: url("../img/cubeBg.jpg") no-repeat; position: absolute;z-index: 8; background-size:cover; }
+
+#cubeBox{
+    width: 510px;
+    height: 510px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -255px;
+    margin-top:-255px;
+    transform-style: preserve-3d; /*3d空间里展示的*/
+    -webkit-transform-style: preserve-3d; /*3d空间里展示的*/
+    transform: scale(0.7) rotateY(-135deg) rotateX(-45deg) ;
+    transform-origin: 255px 255px -255px;
+}
+#cubeBox li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    list-style: none;
+}
+#cubeBox li:nth-child(1){
+    background: url(../img/cubeImg1.png) no-repeat;
+    top:-510px;
+    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+}
+#cubeBox li:nth-child(2){
+    background: url(../img/cubeImg2.png) no-repeat;
+    top:510px;
+    transform-origin: top;
+    -webkit-transform-origin: top;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+}
+#cubeBox li:nth-child(3){
+    background: url(../img/cubeImg3.png) no-repeat;
+    left:-510px;
+    transform-origin: right;
+    -webkit-transform-origin: right;
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+}
+#cubeBox li:nth-child(4){
+    background: url(../img/cubeImg4.png) no-repeat;
+    left:510px;
+    transform-origin: left;
+    -webkit-transform-origin: left;
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+}
+#cubeBox li:nth-child(5){
+    background: url(../img/cubeImg5.png) no-repeat;
+    transform: translateZ(-510px);
+    -webkit-transform: translateZ(-510px);
+}
+#cubeBox li:nth-child(6){
+    background: url(../img/cubeImg6.png) no-repeat;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

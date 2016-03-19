@@ -10,7 +10,7 @@ var http = require("http");
 var url = require("url");
 var fs = require("fs");
 
-var server = http.createServer(function (request, response) {
+    var server = http.createServer(function (request, response) {
     //->request.url获取前端请求的地址
     //->url.parse URL这个方法库中提供了一个parse的方法,把我们的URL地址进行解析
     var urlObj = url.parse(request.url, true);
@@ -18,7 +18,7 @@ var server = http.createServer(function (request, response) {
     var pathquery = urlObj.query;
 
     //->说明是请求数据的那个接口
-    if (pathname === "/getInfo") {
+    if (pathname === "/getInfo")  {
         var count = pathquery.count;//->每页显示多少条
         var page = pathquery.page;//->当前是第几页
 
@@ -47,7 +47,7 @@ var server = http.createServer(function (request, response) {
             "totalPage": totalPage,
             "list": ary
         };
-        response.writeHead(200, {'content-type': 'application/json'});
+        response.writeHead(200, {'content-type': 'application/json'}); //请求头
         response.end(JSON.stringify(res));
         return;
     }
