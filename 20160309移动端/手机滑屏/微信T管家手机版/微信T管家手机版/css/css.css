@@ -1,0 +1,141 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+	font-family: "MicroSoft YaHei";
+}
+.container{
+	height: 100%;
+	-webkit-transition:all 1s ease 0s;
+	-webkit-transform:translateY(0%);
+}
+.page{
+	height: 100%;
+	background-color: pink;
+	position: relative;
+	overflow: hidden;
+}
+.page.page0{background-color: #CEDCE7;}
+.page.page1{background-color: #5F9CCB;}
+.page.page2{background-color: #F7F1DD;}
+.page.page3{background-color: #765045;}
+.page.page4{background-color: darkblue;}
+.page.page5{background-color: blue;}
+.page.page6{background-color: purple;}
+
+.page0 img.page0_01{
+	/*龙卷风*/
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	height: 50%;		/*约束图片的高度，让宽度自适应*/
+	-webkit-transform:translateX(-50%) scale(1);
+}
+.page0 img.page0_02{
+	/*企业营销进入微信时代*/
+	position: absolute;
+	top:55%;	/*让图片位于窗口的一半位置*/
+	left: 50%;
+	height: 25%;	/*约束图片的高度，让宽度自适应*/
+	-webkit-transform:translateX(-50%);
+}
+.page0 img.page0_02b{
+	/*开始体验按钮*/
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	-webkit-transform:translateX(-50%) ;
+ 
+}
+ 
+
+.page1 .page1_01{
+	/*手*/
+	position: absolute;
+	bottom: 0;
+	left: -30%;
+}
+.page1_03{
+	/*微信6亿用户，企业能不进军微信营销？*/
+	width: 360px;
+	height: 100px;
+	position: absolute;
+	top: 80px;
+	left: 10px;
+	color:#fff;
+}
+.page1_03 h3{
+	font-size: 30px;
+	font-weight: bold;
+}
+.page1_04{
+	font-size: 14px;
+	position: absolute;
+	top: 170px;
+	left: 10px;
+	color:#fff;
+}
+.page2_01{
+	color:orange;
+	font-size: 22px;
+	padding: 20px;
+	position: relative;
+	z-index: 2;
+}
+.page2_02{
+	/*文字盒子*/
+	font-size: 14px;
+	margin: 0 20px;
+	padding: 20px;
+	position: relative;
+	z-index: 2;
+	background: rgba(255,255,255,0.6);
+	box-shadow: 1px 1px 1px black;
+	border-radius: 20px;
+}
+.page2_02 h3{
+	font-size: 16px;
+	color:green;
+	margin-top: 20px;
+}
+.page2_02 p{
+	line-height: 200%;
+	margin-top: 6px;
+}
+.page2_03{
+	/*大花*/
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	margin-top: -170px;
+	margin-left: -180px;
+
+	z-index: 1;
+	-webkit-animation:xuanzhuan360 8s linear 0s infinite;
+}
+@-webkit-keyframes xuanzhuan360{
+	from{
+		-webkit-transform:rotate(0deg);
+	}
+	to{
+		-webkit-transform:rotate(360deg);
+	}
+}
+.page3{
+	padding: 10px;
+	overflow: hidden;
+}
+.page3  h3{
+	color:orange;
+	font-size: 30px;
+}
+.page3 dt{
+	margin-top: 10px;
+	color:white;
+	font-weight: bold;
+	font-size: 22px;
+}
+.page3 dd{
+	color:white;
+	font-size: 16px;
+	line-height: 150%;
+}

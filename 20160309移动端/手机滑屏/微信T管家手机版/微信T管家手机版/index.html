@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="page page0">
+			<img class="page0_01" src="images/page0_01.png" alt="">
+			<img class="page0_02" src="images/page0_02a.png" alt="">
+			<a href="#">
+				<img class="page0_02b" src="images/page0_02b.png" alt="">
+			</a>
+		</div>
+		<div class="page page1">
+			<img class="page1_01" src="images/page1_01.png" alt="">
+			<div class="page1_03">
+				<h3>
+					微信6亿用户，
+					<br />
+					企业能不进军微信营销？
+				</h3>
+			</div>
+			<div class="page1_04">
+				<p>中国11.46亿网民中，78%在使用手机上网</p>
+				<p>2013年截至7月底微信用户突破5亿</p>
+				<p>未来的营销</p>
+				<p>不需要太多的途径</p>
+				<p>只要让你的产品进入消费者的手机</p>
+				<p>就是最好的营销</p>
+				<p>抓住11亿用户，微信T管家马上创建您的微网</p>
+			</div>
+		</div>
+		<div class="page page2">
+			<div class="page2_01">
+				<h3>
+					移动营销手段
+					，未来触手可及！
+				</h3>
+ 			</div>
+			<div class="page2_02">
+				<h3>企业二维码名片</h3>
+				<p>
+					扫描二维码即可自动登陆网站，方便快捷。微信T管家
+					 
+					可自动生成独立产品的二维码，在样本册上印上
+					 
+					产品二维码，极速查询更为详细的内容。
+				</p>
+				<h3>互动营销</h3>
+				<p>
+					微信T管家通过针对企业产品或服务的在线意见反馈、
+					有奖问答、促销购买、优惠券、手机抽奖等，
+					实现互动营销，提升企业知名度，增强客户黏性。
+				</p>
+			</div>
+			<img class="page2_03" src="images/page2_03.png" alt="">
+		</div>
+		<div class="page page3">
+			<h3>微信T管家服务优势</h3>
+			<dl>
+				<dt>行业覆盖</dt>
+				<dd>微信T管家每月上线最新功能模块，降低您的运营成本，提高微信营销效果。</dd>
+				<dt>行业覆盖</dt>
+				<dd>微信T管家每月上线最新功能模块，降低您的运营成本，提高微信营销效果。</dd>
+				<dt>行业覆盖</dt>
+				<dd>微信T管家每月上线最新功能模块，降低您的运营成本，提高微信营销效果。</dd>
+				<dt>行业覆盖</dt>
+				<dd>微信T管家每月上线最新功能模块，降低您的运营成本，提高微信营销效果。</dd>
+			</dl>
+			<img class="page3_01" src="images/page3_01.png" alt="">
+			<img class="page3_01" src="images/page3_01.png" alt="">
+		</div>
+	</div>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript">
+		/*强哥简洁版*/
+		var $key = 0;
+		var W = $(window).height();
+		/*
+		 * 手指上滑动屏幕的时候
+		 */
+		document.addEventListener('swipeUp', function (event) {
+			event.preventDefault();
+			++$key>3?$key=3:$key
+			$(".container").css({"-webkit-transform":"translateY(" + -W * $key + "px)"},800);
+		}, false);
+ 
+		/*
+		 * 手指下滑动屏幕的时候
+		 */
+		document.addEventListener('swipeDown', function (event) {
+			event.preventDefault();
+			--$key<0?$key=0:$key
+			$(".container").css({"-webkit-transform":"translateY(" + -W * $key + "px)"},800);
+		}, false);
+	</script>
+</body>
+</html>

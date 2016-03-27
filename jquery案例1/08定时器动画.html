@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<style>
+    	div { width: 100px; height: 100px; border: 1px solid #000; background: #ccc; position:absolute; top: 50px; left: 0; }
+    </style>
+</head>
+
+<body>
+	<button>走你</button>
+	<button>停下</button>
+    <div>
+    
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+	var timer01 = null;
+	var num = 0;//初始值
+	var aBtn = document.getElementsByTagName('button');
+	var aDiv = document.getElementsByTagName('div');
+	aBtn[0].onclick = function(){
+		//开启定时器之前 要把之前的定时器关掉
+		clearInterval(timer01);
+		//alert(1)	
+		timer01 = setInterval(function(){
+			num+=3;//num = num + 10;
+			aDiv[0].style.left = num + 'px';
+		},30);//30是约定俗成的最小取值 
+	}
+	aBtn[1].onclick = function(){
+		//清除定时器
+		clearInterval(timer01);
+		timer01 = null;//触发js的垃圾回收机制
+	}
+	
+	
+	
+</script>
+
+
+
+
+
+
+
