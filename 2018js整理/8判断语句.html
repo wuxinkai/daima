@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    //（1） if、else if、else ->整个JS中最常用的一个判断,它能处理所有的判断需求
+    // &&:所有的小条件都成立,整个大条件才成立
+    // ||:只要有一个条件成立,整个大条件就成立
+       var num = 12;
+       if (num < 0) {
+           console.log("负数");
+       } else if (num >= 0 && num <= 10) {
+           console.log("0-10");
+       } else {
+           //以上条件都不成立
+           console.log("大于10");
+       }
+
+    //（2）三元运算符->简单的if、else条件处理
+       var number = 13;
+       //    if (number > 13) {
+       //        number++;//number+=1 number=number+1 ->在自身的基础上累加1
+       //    } else {
+       //        number--;
+       //    }
+       number > 13 ? number++ : number--;//->条件?条件成立执行:条件不成立执行;
+       console.log(number);//->12
+
+    //（3）switch case ->应用于一个变量在不同值情况下的不同的操作
+    num2 = "5"; //必须是三个等于号
+    switch (num2) {
+        case 0:
+            console.log(0);
+            break;
+        case 5:
+            console.log(5);
+            break;
+        case 10:
+            console.log(10);
+            break;
+        default://->相当于else,以上都不成立执行的代码
+            console.log("都不成立的情况下");
+    }
+</script>

@@ -12,44 +12,161 @@
             outline: none;
             cursor: pointer;
         }
-        #oDiv2{width: 100%;height: 100px;background: #CCCCCC}
+        #oDiv2{width: 100%;height: 100px;}
         #div1{background: darkblue;width: 200px;height: 100px;}
+        .font-white{color: #fff}
+
+
+
+        body, div, ul, li {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+
+            /*��ֹ�ȸ��webkit�ں˵��������,��ֹ�û�ѡ������*/
+            -webkit-user-select: none;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        #tab {
+            margin: 20px auto;
+            width: 500px;
+        }
+
+        #tab ul {
+            /*overflow: hidden; */
+            position: relative;
+            top: 1px;
+        }
+
+        #tab ul li {
+            float: left;
+            margin-right: 10px;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border: 1px solid green;
+            cursor: pointer;
+        }
+
+        #tab ul li.select {
+            background: wheat;
+            border-bottom: 1px solid wheat;
+        }
+
+
+        #tab div {
+            display: none;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            border: 1px solid green;
+            clear: both;
+        }
+
+        #tab div.select {
+            display: block;
+            background: wheat;
+        }
+
+
+
     </style>
 </head>
 <body>
 
-<div id="oDiv2">您好</div>
+<div id="oDiv2" style="background-color: white;">您好</div>
 <input type="button" value="按钮"/>
 <input type="button" value="按钮"/>
 <input type="button" value="按钮"/>
 <input type="button" value="按钮"/>
 <input type="button" value="按钮"/>
-    <script type="text/javascript">
-/*插入内容*/
-        var oDiv2=document.getElementById("oDiv2");
-        var txt =document.createTextNode("世界"); //创建文本内容
-        oDiv2.appendChild(txt);
-//循环数据绑定  插入事件
-        var inputBtn = document.getElementsByTagName('input');
-        for (var i=0; i<inputBtn.length;i++){
-          var curBtn = inputBtn[i];
-            curBtn.style.backgroundColor = "green"; //style设置颜色
-          //存值的方法
-          curBtn.cunzhi = i; //给每个点击按钮增加一个 自定义属性
-          curBtn.onclick =function (a) {
-              //this 代表当前的
-              // document.body.appendChild(this.cunzhi)
-              oDiv2.appendChild(this.cunzhi);
-          }
-          //闭包的方式
-          //   (function (i) {
-          //       curBtn.onclick =function () {
-          //           console.log(i)
-          //       }
-          //   })(i)
-        }
 
-//(一) DOM:document object model 文档对象模型 ->里面提供了JS操作页面上元素的相关的属性和方法
+
+<div id="tab">
+    <ul>
+        <li class="select">电影</li>
+        <li>电视剧</li>
+        <li>音乐</li>
+    </ul>
+    <div class="select">夏洛特烦恼</div>
+    <div>芈(mi)月传</div>
+    <div>Adele-hello</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" >
+
+    var oTab = document.getElementById("tab");
+    var oLis = oTab.getElementsByTagName("li");
+    var oDivs = oTab.getElementsByTagName("div");
+
+    function tabChange(curIndex) {
+        for (var i = 0; i < oLis.length; i++) { //清空所有样式
+            oLis[i].className = null;
+            oDivs[i].className = null;
+        }
+        oLis[curIndex].className = "select"; //给当前添加内容
+        oDivs[curIndex].className = "select";
+    }
+
+    for (var i = 0; i < oLis.length; i++) {
+        oLis[i].zhuFeng = i;
+        oLis[i].onclick = function () {
+            tabChange(this.zhuFeng);
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    /*插入内容*/
+    var oDiv2=document.getElementById("oDiv2");
+    var txt =document.createTextNode("世界"); //创建文本内容
+    oDiv2.appendChild(txt); //插入
+    //oDiv2.innerHTML='123'; //代码替换
+    //oDiv2.innerText='345'; //文本替换
+
+    oDiv2.onclick=function (ev) {
+        var bg = oDiv2.style.backgroundColor; //获取背景色
+        // if (bg === "white"){
+        //     oDiv2.style.backgroundColor='black';
+        //     oDiv2.style.color='#fff'
+        // }else {
+        //     oDiv2.style.backgroundColor='white';
+        //     oDiv2.style.color='#000'
+        // }
+
+        oDiv2.style.backgroundColor = (bg === "white" ? "black" : "white");
+    };
+
+    //循环数据绑定  插入事件
+    var inputBtn = document.getElementsByTagName('input');
+    for (var i=0; i<inputBtn.length;i++){
+        var curBtn = inputBtn[i];
+        curBtn.style.backgroundColor = "green"; //style设置颜色
+        curBtn.className="font-white";//增加class样式
+        //存值的方法
+        curBtn.cunzhi = i; //给每个点击按钮增加一个 自定义属性
+        curBtn.onclick =function (a) {
+            //this 代表当前的
+            // document.body.appendChild(this.cunzhi)
+            oDiv2.appendChild(this.cunzhi);
+        }
+        //闭包的方式
+        //   (function (i) {
+        //       curBtn.onclick =function () {
+        //           console.log(i)
+        //       }
+        //   })(i)
+    }
+    //DOM:document object model 文档对象模型  (document文档对象) 文档对象模型提供了,我们操作当前页面中元素标签所有的属性和方法
+    //BOM:browser object model 浏览器对象模型  提供了JS操作浏览器的所有的属性和方法  (window浏览器对象)
+
+    //(一) DOM:document object model 文档对象模型 ->里面提供了JS操作页面上元素的相关的属性和方法
     //document.getElementById("") ->文档中,通过元素的（ID）获取这个元素,document是限定了获取的范围,我们称它为上下文(context)
     //document.getElementsByTagName ->取一组元素集合 （标签）
     //document.getElementsByClassName ->在指定的范围内(context)通过元素的（样式类名）来获取一组元素集合
@@ -64,31 +181,29 @@
     //    document.querySelectorAll("div:nth-child(3)") 把div中的第三个div获取到
 
 
-//(二)获取当前浏览器屏幕的宽高
+    //(二)获取当前浏览器屏幕的宽高
     //var curW = document.documentElement.clientWidth || document.body.clientWidth;
     //var curH = document.documentElement.clientHeight || document.body.clientHeight;
 
 
-//(三)节点
-        //Node节点 ->页面中的所有东西都是节点
-        //元素标签:元素节点
-        //文字:文本节点
-        //注释:注释节点
-        //document
+    //(三)节点
+    //Node节点 ->页面中的所有东西都是节点
+    //元素标签:元素节点
+    //文字:文本节点
+    //注释:注释节点
+    //document
 
-        //1、childNodes ->获取当前元素的所有子节点
-        //2、children ->获取当前元素的所有元素子节点
-        //3、parentNode ->获取当前元素的父亲节点
-        //4、previousSibling ->获取上一个哥哥节点
-        //5、nextSibling ->获取下一个弟弟节点
-        //6、firstChild ->大儿子
-        //7、lastChild ->小儿子
+    //1、childNodes ->获取当前元素的所有子节点
+    //2、children ->获取当前元素的所有元素子节点
+    //3、parentNode ->获取当前元素的父亲节点
+    //4、previousSibling ->获取上一个哥哥节点
+    //5、nextSibling ->获取下一个弟弟节点
+    //6、firstChild ->大儿子
+    //7、lastChild ->小儿子
 
-        //1、createElement ->创建一个元素标签
-        var oDiv = document.createElement("div");//->创建一个div标签
-        oDiv.id = "div1"; //给标签添加属性
-        //2、添加到页面中
-        document.body.appendChild(oDiv); //appendChild把元素标签添加到容器的末尾
-    </script>
-</body>
-</html>
+    //1、createElement ->创建一个元素标签
+    var oDiv = document.createElement("div");//->创建一个div标签
+    oDiv.id = "div1"; //给标签添加属性
+    //2、添加到页面中
+    document.body.appendChild(oDiv); //appendChild把元素标签添加到容器的末尾
+</script>

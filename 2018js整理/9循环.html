@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
     <style type="text/css">
         body, ul, li {
             margin: 0;
             padding: 0;
+            font-family: "微软雅黑";
+            font-size: 14px;
         }
 
         ul, li {
@@ -16,8 +18,8 @@
         #ul1 {
             margin: 10px auto;
             padding: 20px;
-            width: 70%;
-            border: 1px dashed green;
+            width: 50%;
+            border: 1px dashed #999;
         }
 
         #ul1 li {
@@ -25,16 +27,16 @@
             line-height: 35px;
         }
 
-        #ul1 li.bg0 {
-            background: antiquewhite;
+        #ul1 li.c0 {
+            background: burlywood;
         }
 
-        #ul1 li.bg1 {
-            background: yellowgreen;
+        #ul1 li.c1 {
+            background: limegreen;
         }
 
-        #ul1 li.hover {
-            background: red;
+        #ul1 li.ho {
+            background:red;
         }
     </style>
 </head>
@@ -51,23 +53,46 @@
     <li>习近平出席田径世锦赛开幕式 会见奥委会主席</li>
     <li>缺水之城郑州洒水降尘治霾 日耗水量达3.5万吨</li>
 </ul>
+</body>
+</html>
 <script type="text/javascript">
     var oUl = document.getElementById("ul1");
     var oLis = oUl.getElementsByTagName("li");
-    //    for (var i = 0; i < oLis.length; i++) {
-    //        oLis[i].className = i % 2 === 0 ? "bg0" : "bg1";
-    //    }
     for (var i = 0; i < oLis.length; i++) {
-        oLis[i].className = "bg" + i % 2;
-        //实现鼠标滑过变颜色
-        oLis[i].oldClass = oLis[i].className;
-        oLis[i].onmouseover = function () {
+        oLis[i].className = "c" + i % 2;
+
+        oLis[i].oldClass = oLis[i].className; //将class值存储到oldClass这个属性上
+
+        oLis[i].onmouseover = function () { //改变样式
             this.className = "hover";
         };
-        oLis[i].onmouseout = function () {
-            this.className = this.oldClass;
+        oLis[i].onmouseout = function () {  //恢复样式
+            this.className = this.oldClass; //获取属性
         };
     }
+
+
+
+    for (var i = 0; i < 10; i++) {
+        if (i <= 5) {
+            i += 2;
+            continue;  //退出当前循环
+        } else {
+            break; //循环结束
+            i += 3;
+        }
+        console.log(i);
+    }
+    console.log(i);
+
+
+   // for in循环  遍历一个对象中所有的属性名和属性值的
+
+    var obj = {name: "王浩宇", age: 81, height: "138cm", weight: "170g"};
+    for (var key in obj) {
+        //每一次循环key存储的值是属性名
+        // console.log(key);
+        //console.log(obj.key);// (在for in循环中由于不知道属性名是否是数字,所以不能用obj.key的方式)
+        console.log(obj[key]);//->获取的是每一个属性名对应的属性值
+    }
 </script>
-</body>
-</html>

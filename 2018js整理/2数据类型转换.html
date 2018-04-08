@@ -35,5 +35,19 @@
 //布尔==数字  布尔转换为数字  true==1->true  true==2->false
 //null==undefined ->true   null===undefined ->false  null/undefined和其他的任何值都不相等  null==0->false
 //NaN==NaN ->false  NaN和任何的值(包括自己)都不相等
+//console.log(!![]);//->true  !! 转化为布尔类型
+
+
+//检测数据类型
+console.log(typeof 12);//->"number"    typeof缺点引用数据类型都是object
+//腾讯面试题:
+//console.log(typeof typeof typeof [12, 13]);//->"string"
+//typeof [12, 13] ->"object"
+//typeof "object" ->"string"
+//typeof "string" ->"string"
+
+//instanceof
+//constructor
+//Object.prototype.toString.call()
 
 </script>

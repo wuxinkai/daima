@@ -43,9 +43,27 @@
     //扩展:获取[n-m]之间的随机整数
     //Math.round(Math.random()*(m-n)+n)
 
+    //7、数字常用的一个方法
+    //toFixed->保留小数点后面的位数多少位
+    //var num = 3.141592653589723846;
+    //console.log(num.toFixed(2));//->保留小数点后两位
+
     //例如：获取[1-100]之间的随机整数
     //var ran = Math.round(Math.random() * (100 - 1) + 1);
     //console.log(ran);
+
+    //在[0-61]之间随机获取四个不重复的整数
+       var ary = [];
+       for (var i = 0; i < 4; i++) {
+           var ran = Math.round(Math.random() * 61);//->随机获取值
+           //判断我们本次循环得到的值是否在数组中存在,存在的话从新的获取,不存在的话才存进去
+           if (ary.indexOf(ran) > -1) {//->数组中已经存在这一项了
+               i--; //如果有这一项，就减去一项，从新循环
+               continue; //跳出当前循环
+           }
+           ary[ary.length] = ran;
+       }
+       console.log(ary);
 </script>
 
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var obj = {name: "姜章涛", age: 71, height: "128cm", weight: "170kg",num:'001',del:'删除',7:'可以是数字'};
+    //增加
+    obj.name2 = "王莹";//对象名.属性名=属性值
+    obj["age2"] = 18;//对象名["属性名"]=属性值
+    //修改
+    obj.num = "002";
+    console.log(obj);
+    //3、获取
+    console.log(obj.name);
+    console.log(obj["7"]);//数字的获取方式
+    //清空内容
+    obj.del = null;
+    //删除内容
+
+    //真删除:把属性名都删除了
+    delete obj.del;//->delete obj["num"]
+
+</script>

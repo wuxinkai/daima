@@ -29,19 +29,21 @@
 		if( infos[i][3] == "大一" ){  
 		   arr1[n] = infos[i];  //把数组等于大一的装到arr1中，
 		    document.write(arr1[n]+"<br/>");
-		   n=n+1;
+		   n=n+1; //装进去后加一
 		    
 		}  
    }
-   
-   document.write("大一人数: "+arr1.length+"<br/>");  
+
+   document.write("大一人数: "+arr1.length+"<br/><br/><br/><br/><br/>");
 
  //第二次筛选，找出都是女生的信息
-      for(var i=0;i<arr1.length;i++){ 
-        //这里可以用switch  
-		if(arr1[i][1]=='女')
-		{ document.write(arr1[i][0]+"<br/>");}
-	}     
+      for(var i=0;i<arr1.length;i++){
+        //这里可以用switch
+        if(arr1[i][1]=='女') { //arr1[i][1] 数组中的第一项
+            document.write("找出都是女生的信息: "+arr1[i][0]+"<br/>");
+        }
+      }
+    console.log(arr1)
 
  
   
