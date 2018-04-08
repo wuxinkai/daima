@@ -134,6 +134,7 @@ var timeModel = {
 };
 var listModel = {
     callback: function (jsonData, time) {
+        console.log(jsonData)
         if (jsonData["code"] !== 0) {
             return;
         }
@@ -169,6 +170,7 @@ var listModel = {
             dataType: "jsonp",
             jsonpCallback: "gameList",
             success: function () {
+                console.log(time)
                 _this.callback(arguments[0], time);
             }
         });

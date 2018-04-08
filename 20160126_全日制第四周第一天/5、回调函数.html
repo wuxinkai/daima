@@ -21,15 +21,15 @@
     //2、回调函数的应用
 
     //->把匿名函数当做一个值传递给方法sort,然后在sort方法执行的时候,把匿名函数也执行了
-    //    var ary = [12, 23, 24, 13, 24];
-    //    ary.sort(function (a, b) {
-    //        return a - b;
-    //    });
-    //    function fn(a, b) {
-    //        return a - b;
-    //    }
-    //    ary.sort(fn);
-
+//        var ary = [12, 23, 24, 13, 24];
+//        ary.sort(function (a, b) {
+//            return a - b;
+//        });
+//        function fn(a, b) {
+//            return a - b;
+//        }
+//        ary.sort(fn);
+//        console.log(ary)
     //->把匿名函数当做一个值,传递给我们的setTimeout这个方法,  匿名函数
     //    window.setTimeout(function () {
     //
@@ -70,10 +70,10 @@
     //    //第一次:"12px" 执行parseInt,并且传递三个值 parseInt("12px",0,...)
     //    //第二次:"23px" 执行parseInt,并且传递三个值 parseInt("23px",1,...)
     ary = ary.map(function (item, index) {
-        console.log(this);//->ary
+      //  console.log(this);//->ary
         return parseInt(item);
     }, ary);//->forEach、map第一个参数是回调函数,第二个参数是把回调函数中的this进行修改,不写默认是window,其他的写什么,回调函数中的this就是什么->回调函数中的this一般默认是window,但是我们是可以自己手动的控制和修改的
-    console.log(ary);
+  //  console.log(ary);
 </script>
 </body>
 </html>

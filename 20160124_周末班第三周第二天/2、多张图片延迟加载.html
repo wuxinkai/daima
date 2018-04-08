@@ -118,7 +118,7 @@
 
                 var curImgTop = utils.offset(curImg).top + curImg.offsetHeight, navigatorTop = utils.win("clientHeight") + utils.win("scrollTop");
                 if (curImgTop <= navigatorTop) {
-                    var oImg = new  ;
+                    var oImg = new Array() ;
                     oImg.src = curImg.getAttribute("trueImg");
                     oImg.onload = function () {
                         curImg.src = this.src;

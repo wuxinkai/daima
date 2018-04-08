@@ -37,6 +37,7 @@
 
 <script type="text/javascript">
     var p1 = document.getElementById("p1");
+    //如果要获取外部样式表中的设置，需要用到window对象的getComputedStyle()方法   在IE下可以用currentStyle，而在火狐下面我们需要用到getComputedStyle。
     console.log(window.getComputedStyle(p1, "::before").content);
 </script>
 </body>

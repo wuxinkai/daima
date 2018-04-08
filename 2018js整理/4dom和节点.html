@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        input {
+            width: 150px;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #999;
+            outline: none;
+            cursor: pointer;
+        }
+        #oDiv2{width: 100%;height: 100px;background: #CCCCCC}
+        #div1{background: darkblue;width: 200px;height: 100px;}
+    </style>
+</head>
+<body>
+
+<div id="oDiv2">您好</div>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+    <script type="text/javascript">
+/*插入内容*/
+        var oDiv2=document.getElementById("oDiv2");
+        var txt =document.createTextNode("世界"); //创建文本内容
+        oDiv2.appendChild(txt);
+//循环数据绑定  插入事件
+        var inputBtn = document.getElementsByTagName('input');
+        for (var i=0; i<inputBtn.length;i++){
+          var curBtn = inputBtn[i];
+            curBtn.style.backgroundColor = "green"; //style设置颜色
+          //存值的方法
+          curBtn.cunzhi = i; //给每个点击按钮增加一个 自定义属性
+          curBtn.onclick =function (a) {
+              //this 代表当前的
+              // document.body.appendChild(this.cunzhi)
+              oDiv2.appendChild(this.cunzhi);
+          }
+          //闭包的方式
+          //   (function (i) {
+          //       curBtn.onclick =function () {
+          //           console.log(i)
+          //       }
+          //   })(i)
+        }
+
+//(一) DOM:document object model 文档对象模型 ->里面提供了JS操作页面上元素的相关的属性和方法
+    //document.getElementById("") ->文档中,通过元素的（ID）获取这个元素,document是限定了获取的范围,我们称它为上下文(context)
+    //document.getElementsByTagName ->取一组元素集合 （标签）
+    //document.getElementsByClassName ->在指定的范围内(context)通过元素的（样式类名）来获取一组元素集合
+    //document.getElementsByName("data") 把页面中所有name='data'的都获取到
+    //document.documentElement ->获取整个HTML   document.body ->获取整个body
+
+    //context.querySelector/context.querySelectorAll ->通过选择器来获取一个/多个元素
+    //    document.querySelector("#div1") ->把ID为div1的元素获取到
+    //    document.querySelectorAll(".w1") ->把类名有w1的所有元素获取到
+    //    document.querySelectorAll("div") ->把标签名是div的都获取到
+    //    document.querySelectorAll("div[name='zhufeng']") ->把div中name是zhufeng的都获取到
+    //    document.querySelectorAll("div:nth-child(3)") 把div中的第三个div获取到
+
+
+//(二)获取当前浏览器屏幕的宽高
+    //var curW = document.documentElement.clientWidth || document.body.clientWidth;
+    //var curH = document.documentElement.clientHeight || document.body.clientHeight;
+
+
+//(三)节点
+        //Node节点 ->页面中的所有东西都是节点
+        //元素标签:元素节点
+        //文字:文本节点
+        //注释:注释节点
+        //document
+
+        //1、childNodes ->获取当前元素的所有子节点
+        //2、children ->获取当前元素的所有元素子节点
+        //3、parentNode ->获取当前元素的父亲节点
+        //4、previousSibling ->获取上一个哥哥节点
+        //5、nextSibling ->获取下一个弟弟节点
+        //6、firstChild ->大儿子
+        //7、lastChild ->小儿子
+
+        //1、createElement ->创建一个元素标签
+        var oDiv = document.createElement("div");//->创建一个div标签
+        oDiv.id = "div1"; //给标签添加属性
+        //2、添加到页面中
+        document.body.appendChild(oDiv); //appendChild把元素标签添加到容器的末尾
+    </script>
+</body>
+</html>

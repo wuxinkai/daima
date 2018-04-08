@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+//(一)把其他的数据类型转换为number类型
+    /*Number()->严格 转换为数字
+    parseFloat/parseInt ->非严格  如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN
+    isNaN(value) 如果value值不是数字类型的,它是首先调用Number转换为数字类型然后在判断是否为有效的数字
+    */
+    Number("12px"); //->NaN
+    parseInt("12.3px"); //->12
+    parseFloat("12.34px"); //->12.34
+    isNaN("12"); //->false
+
+// 把布尔类型转换为数字的话 true->1  false->0
+// null/undefined转换为数字 null->0  undefined->NaN  ，10+null=10   10+undefined=NaN
+//把[]转换为数字 首先调用数组的toString方法 [].toString() ->是空字符串 ， Number("") -> 0  结果空数组等于0
+
+// 只有0、NaN、null、undefined、"" 这五个转换为布尔类型的时候是false,其余的转换完成都是true
+
+//对象==对象  比较的是自己存储的内存地址,如果内存地址不一样就不相等
+//[]==[]->false 每一个空数组都是一个单独的内存地址
+//对象==字符串 调用toString方法,将对象转换为字符串  []==""->true
+//对象==布尔  对象转换为数字(toString-Number),布尔也转换为数字(true->1 false->0), []==false ->true , []->0 false->0 0==0->true
+//对象==数字 对象转换为数字  []==0->true   [].toString()->0
+
+//字符串==数字   字符串转换为数字  ""==0->true
+//布尔==数字  布尔转换为数字  true==1->true  true==2->false
+//null==undefined ->true   null===undefined ->false  null/undefined和其他的任何值都不相等  null==0->false
+//NaN==NaN ->false  NaN和任何的值(包括自己)都不相等
+
+</script>
