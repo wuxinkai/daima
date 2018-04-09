@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var str = "welcome to beijing good good study,day day up~~";
+    document.write(str.length); //长度
+    document.write(str[7]); //空格也算字符  字符串也可以用索引表示
+    document.write(str.charAt(0)); //返回对应的内容
+
+    // split把一个字符串按照指定的分隔符,拆分成数组中的每一项
+       var str2 = "12+23+34+45";
+       var newAry = str2.split("+");
+       console.log(newAry);//->["12", "23", "34", "45"]
+    //toLowerCase/toUpperCase ->把字符串中的字母进行大小写转换
+
+    //indexOf/lastIndexOf ->获取字符在字符串中第一次/最后一次出现位置的索引
+    var str3 = "welcome to z wo de pei xun";
+    console.log(str3.indexOf("e"));//->1
+    console.log(str3.lastIndexOf("e"));//->20
+
+    //substr截取字符串
+    // substr(n,m) 从索引n开始截取m个字符
+    //substring(n,m) 从索引n开始截取到索引为m处(不包含m)
+    //slice(n,m) 从索引n开始截取到索引为m处(不包含m) ->slice可以支持以负数作为索引
+    //var str = "welcome to z zhu feng pei xun";
+    //console.log(str.substr(2, 4));//->"lcom"
+    //console.log(str.substring(2, 4));//->"lc"
+    //console.log(str.slice(2, 4));//->"lc"
+    //console.log(str.substring(-4, -2));//->"" substring不持之以负数做索引
+    //console.log(str.slice(-4, -2));//-" x" str.slice(str.length-4,str.length-2) 出现是负数作为索引,是从最后往前面找,相当于用总长度加上负数的索引
+
+    // replace(old,new) ->用新的字符把老的字符替换掉; 每次只能替换一个
+    //    var str = "welcome to zhufeng";
+    //    str = str.replace("zhufeng", "珠峰");
+    //    console.log(str);//->"welcome to 珠峰"
+
+    //  使用正则客多次匹配
+    //  str = str.replace(/zhufeng/g, "珠峰");
+    //  console.log(str);//->"welcome to 珠峰 珠峰"
+
+//字符串拆分
+    var str4 = "2016-1-2 13:1:23";
+    //->"2016年01月02日 13时01分23秒"
+    var ary = str4.split(" ");//拆分  ->["2016-1-2", "13:1:23"]
+    var leftAry = ary[0].split("-");//二次拆分->"2016-1-2" ->["2016", "1", "2"]
+    var rightAry = ary[1].split(":");//二次拆分->"13:1:23" ->["13", "1", "23"]
+    var time = leftAry[0] + "年" + addZero(leftAry[1]) + "月" + addZero(leftAry[2]) + "日 " + addZero(rightAry[0]) + "时" + addZero(rightAry[1]) + "分" + addZero(rightAry[2]) + "秒";
+    console.log(time);
+    function addZero(value) {
+        //条件成立 走左边 不成立走右边
+        return value < 10 ? "0" + value : value;
+    }
+</script>

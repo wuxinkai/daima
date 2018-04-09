@@ -1,88 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a429ad23-9543-4f40-b7a3-95485a6239c8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/2018js整理/7对象.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/2018js整理/8判断语句.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/2018js整理/9循环.html" />
+    <list default="true" id="f719e369-9a79-4b2a-8011-72e18c1f54b8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/1、预解释.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/2、作用域链.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/2018js整理/10字符串.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/2018js整理/11date时间.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/2018js整理/倒计时和定时器.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/10、思考题.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/11、关于DOM中常用的方法.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/12、三个判断.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/13、开关灯.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/14、关于循环.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/15、function.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/16、选项卡.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/1、JS引入到页面中的几种常用的方式.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/2、关于js的引入方式.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/3、JS中常用的几种输出方式.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/4、JS的组成.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/5、数据类型.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/6、基本数据类型-number.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/7、数据类型-布尔.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/8、基本数据类型-字符串.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/9、引用数据类型-对象.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/JS中关于=的总结" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/JS免费课复习视频的地址.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/css/tab.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/css/test.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/for循环应用-隔行变色.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/js/tab.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/js/test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/oLis元素集合的样子.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/免费课考试内容" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/常用的css面试题.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/珠峰培训免费课随堂测试题(第一版).doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/第九期第一周免费课作业" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101全日制第一周免费课/选项卡扩展版.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/.idea/.name" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/.idea/变量进阶.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/3数字可以不按照顺序排列中间可以缺少.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/4数组筛选.html" afterPath="$PROJECT_DIR$/20160101变量数组的基础ke/4数组筛选.html" />
-      <change beforePath="$PROJECT_DIR$/20160101变量数组的基础ke/8定时器实现页面跳转.html" afterPath="$PROJECT_DIR$/20160101变量数组的基础ke/8定时器实现页面跳转.html" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/10、循环.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/11、DOM中常用的属性和方法.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/12、综合实战-开关灯.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/13、综合实战-开关灯升级.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/14、综合实战-奇数偶数行变色.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/15、综合实战-奇数偶数行变色.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/16、数据类型-function.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/17、综合实战-选项卡.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/2、JS组成.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/3、关于JS中常用到的输出方式.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/4、数据类型.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/5、基本数据类型-number.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/6、基本数据类型-boolean和string.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/7、引用数据类型-对象数据类型.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/8、基本数据类型和引用数据类型的本质区别.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/9、三个判断.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/css/tab.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/js/tab.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/js/tab备份.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/test.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/test2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/函数运行的原理.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/基本数据类型和引用数据类型的区别.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/总结-CSS面试题.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/总结-常用的前端开发工具.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/总结-等号的相关问题.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/珠峰培训免费课随堂测试题(第一版).doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/第九期第一周免费课作业.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160101周末班第一周免费课/通知-开课时间和考试安排.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/10、倒计时.html" afterPath="$PROJECT_DIR$/20160102_第三周免费课第二天/10、倒计时.html" />
-      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/11、定时器.html" afterPath="$PROJECT_DIR$/20160102_第三周免费课第二天/11、定时器.html" />
-      <change beforePath="$PROJECT_DIR$/2018js整理/2数据类型转换.html" afterPath="$PROJECT_DIR$/2018js整理/2数据类型转换.html" />
+      <change beforePath="$PROJECT_DIR$/20160101_第三周免费课第一天/6、复习-数组去重.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160101_第三周免费课第一天/7、Math.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160101_第三周免费课第一天/珠峰培训免费课随堂测试题(第一版).doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/10、倒计时.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/11、定时器.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/1、DOM.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/2、获取的方法详细解读.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/3、节点之间关系的属性.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/4、节点.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/5、DOM动态操作.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/6、字符串.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/7、格式化时间字符串.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/8、Date.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/9、时钟.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160102_第三周免费课第二天/预习" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/.idea/20160106_全日制第一周第一天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/1、复习免费课.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/2、复习-换肤.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/3、预解释.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/4、作用域链.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/Git实战管理.ppt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/git" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/git原理图.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/git更新讲义.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/作用域链.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/思考题.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160106_全日制第一周第一天/预解释1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/.idea/20160107_全日制第一周第二天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/1、练习题.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/1自己.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/2、预解释的注意点.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/3、闭包的应用.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/4、作用域链扩展.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/5、内存释放.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/6、综合练习题1.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/6、综合练习题1.html" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/7、this.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/8.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/8、综合练习题2.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/8、综合练习题2.html" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/js代码执行顺序.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/作业" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/作业第四题.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/最后上课一道题.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/珠峰培训正式课作业[第一周].doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160107_全日制第一周第二天/自己学习this.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/.idea/20160109_周末班第一周第一天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/10.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/10、综合面试题.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/1、预解释.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/2、作用域链.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/3、预解释是毫无节操的.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/4、上级作用域.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/4、上级作用域.html" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/5、什么时候使用闭包.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/5、什么时候使用闭包.html" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/6、JS内存释放.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/6、JS内存释放.html" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/7.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/7、关于内存释放的面试题.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/7、关于内存释放的面试题.html" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/8、this.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/8、this.html" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/9.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/9、投票.html" afterPath="$PROJECT_DIR$/1预结算,作用域链,闭包,this/9、投票.html" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/i++和++i的却别" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/作业" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160109_周末班第一周第一天/开课须知" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/.idea/20160110_周末班第一周第二天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/111.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/1、复习.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/2、单例模式.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/2、单例模式.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/3、工厂模式.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/3、工厂模式.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/4、构造函数模式.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/4、构造函数模式.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/5、基于构造函数模式的原型链模式.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/5、基于构造函数模式的原型链模式.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/6、学习原型有啥作用.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/6、学习原型有啥作用.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/7,批量设置prototype上的公有属性.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/7,批量设置prototype上的公有属性.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/8.原型上的this.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/8.原型上的this.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/9.原型之（大写的）Function.html" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/9.原型之（大写的）Function.html" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/git操作20160110.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/作业.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/作用.psd" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/作用.psd" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/作用画图.jpg" afterPath="$PROJECT_DIR$/2单例,工厂,构造,原型链/作用画图.jpg" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/珠峰培训正式课作业[第一周].doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/5自己.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/function基类.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/function基类.psd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160110_周末班第一周第二天/面向对象.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/.idea/20160112_全日制第二周第一天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/1、复习.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/2、prototype批量生产属性.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/2、复习.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/处罚.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/小测.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/课堂配图/1-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/课堂配图/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160112_全日制第二周第一天/课堂配图/2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/.idea/20160113_全日制第二周第二天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/参考/css/tab.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/参考/js/json.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/参考/js/tab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/参考/js/utils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160113_全日制第二周第二天/参考/表格排序.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160114_全日制第二周第三天/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160114_全日制第二周第三天/.idea/20160114_全日制第二周第三天.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160114_全日制第二周第三天/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160114_全日制第二周第三天/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160114_全日制第二周第三天/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20160114_全日制第二周第三天/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/2018js整理/3数组.html" afterPath="$PROJECT_DIR$/2018js整理/3数组.html" />
       <change beforePath="$PROJECT_DIR$/2018js整理/4dom和节点.html" afterPath="$PROJECT_DIR$/2018js整理/4dom和节点.html" />
-      <change beforePath="$PROJECT_DIR$/2018js整理/6Math方法.html" afterPath="$PROJECT_DIR$/2018js整理/6Math方法.html" />
+      <change beforePath="$PROJECT_DIR$/2018js整理/9循环.html" afterPath="$PROJECT_DIR$/2018js整理/9循环.html" />
       <change beforePath="$PROJECT_DIR$/2018js整理/数据类型.md" afterPath="$PROJECT_DIR$/2018js整理/数据类型.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -96,39 +168,63 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="编程挑战(参考代码).html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/编程挑战(参考代码).html">
+    <leaf>
+      <file leaf-file-name="8.原型上的this.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/8.原型上的this.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-517">
+            <state relative-caret-position="152">
+              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="7,批量设置prototype上的公有属性.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/7,批量设置prototype上的公有属性.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-363">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="4dom和节点.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018js整理/4dom和节点.html">
+      <file leaf-file-name="作用.psd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/作用.psd">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="作用画图.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/作用画图.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="8、表格排序原理.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/8、表格排序原理.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="974">
-              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="-567">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="9循环.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018js整理/9循环.html">
+      <file leaf-file-name="9、DOM映射.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/9、DOM映射.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="69" column="50" lean-forward="false" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+            <state relative-caret-position="-648">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018js整理/5.html">
+      <file leaf-file-name="2、数据绑定.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/20160114_全日制第二周第三天/2、数据绑定.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -137,61 +233,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1、DOM.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/1、DOM.html">
+      <file leaf-file-name="9.原型之（大写的）Function.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/9.原型之（大写的）Function.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2、获取的方法详细解读.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/2、获取的方法详细解读.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1305">
+            <state relative-caret-position="-39">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="10、倒计时.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/10、倒计时.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="55" column="59" lean-forward="true" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="9、时钟.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/9、时钟.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-855">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="11、定时器.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/11、定时器.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="数据类型.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018js整理/数据类型.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -208,8 +254,18 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>appendChild</find>
-      <find>oDiv</find>
+      <find>curBtn</find>
+      <find>box</find>
+      <find>getElementsByTagName</find>
+      <find>oLis</find>
+      <find>querySelectorAll</find>
+      <find>div1</find>
+      <find>insertBefore</find>
+      <find>str</find>
+      <find>count</find>
+      <find>oDiv4</find>
+      <find>innerHTML</find>
+      <find>constructor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,40 +274,35 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2018js整理/functin内容.html" />
-        <option value="$PROJECT_DIR$/20151230_function补课/1、复习.html" />
-        <option value="$PROJECT_DIR$/20151230_function补课/2、函数的运行机制.html" />
-        <option value="$PROJECT_DIR$/20151230_function补课/5、arguments.html" />
-        <option value="$PROJECT_DIR$/2018js整理/面试题.md" />
-        <option value="$PROJECT_DIR$/20151230_function补课/6、匿名函数.html" />
-        <option value="$PROJECT_DIR$/2018js整理/1,functin内容.html" />
-        <option value="$PROJECT_DIR$/20160101_第三周免费课第一天/2、复习-数据类型转换.html" />
-        <option value="$PROJECT_DIR$/2018js整理/3数组.html" />
-        <option value="$PROJECT_DIR$/2018js整理/4循环绑定数据.html" />
-        <option value="$PROJECT_DIR$/20160101_第三周免费课第一天/5、复习-引用数据类型的深入解读.html" />
-        <option value="$PROJECT_DIR$/20160101_第三周免费课第一天/8、DOM.html" />
-        <option value="$PROJECT_DIR$/2018js整理/4dom循环绑定数据.html" />
-        <option value="$PROJECT_DIR$/20160101_第三周免费课第一天/9、节点之间关系的属性.html" />
-        <option value="$PROJECT_DIR$/2018js整理/5.html" />
-        <option value="$PROJECT_DIR$/20160101_第三周免费课第一天/7、Math.html" />
-        <option value="$PROJECT_DIR$/20160101全日制第一周免费课/13、开关灯.html" />
-        <option value="$PROJECT_DIR$/20160101全日制第一周免费课/js/tab.js" />
-        <option value="$PROJECT_DIR$/2018js整理/2数据类型转换.html" />
-        <option value="$PROJECT_DIR$/2018js整理/7对象.html" />
-        <option value="$PROJECT_DIR$/2018js整理/8判断语句.html" />
-        <option value="$PROJECT_DIR$/20160101全日制第一周免费课/14、关于循环.html" />
-        <option value="$PROJECT_DIR$/20160101全日制第一周免费课/16、选项卡.html" />
-        <option value="$PROJECT_DIR$/20160101变量数组的基础ke/3数字可以不按照顺序排列中间可以缺少.html" />
-        <option value="$PROJECT_DIR$/20160101变量数组的基础ke/4数组筛选.html" />
-        <option value="$PROJECT_DIR$/20160101变量数组的基础ke/8定时器实现页面跳转.html" />
-        <option value="$PROJECT_DIR$/20160101周末班第一周免费课/3、关于JS中常用到的输出方式.html" />
-        <option value="$PROJECT_DIR$/2018js整理/数据类型.md" />
-        <option value="$PROJECT_DIR$/2018js整理/6Math方法.html" />
-        <option value="$PROJECT_DIR$/20160101周末班第一周免费课/10、循环.html" />
-        <option value="$PROJECT_DIR$/2018js整理/4dom和节点.html" />
         <option value="$PROJECT_DIR$/2018js整理/9循环.html" />
-        <option value="$PROJECT_DIR$/20160102_第三周免费课第二天/10、倒计时.html" />
+        <option value="$PROJECT_DIR$/20160101_第三周免费课第一天/6、复习-数组去重.html" />
+        <option value="$PROJECT_DIR$/20160102_第三周免费课第二天/3、节点之间关系的属性.html" />
+        <option value="$PROJECT_DIR$/20160102_第三周免费课第二天/5、DOM动态操作.html" />
+        <option value="$PROJECT_DIR$/2018js整理/4dom和节点.html" />
+        <option value="$PROJECT_DIR$/2018js整理/字符串.html" />
+        <option value="$PROJECT_DIR$/2018js整理/3数组.html" />
+        <option value="$PROJECT_DIR$/20160102_第三周免费课第二天/7、格式化时间字符串.html" />
+        <option value="$PROJECT_DIR$/20160102_第三周免费课第二天/8、Date.html" />
+        <option value="$PROJECT_DIR$/2018js整理/11date时间.html" />
+        <option value="$PROJECT_DIR$/2018js整理/10字符串.html" />
         <option value="$PROJECT_DIR$/20160102_第三周免费课第二天/11、定时器.html" />
+        <option value="$PROJECT_DIR$/2018js整理/倒计时和定时器.html" />
+        <option value="$PROJECT_DIR$/20160106_全日制第一周第一天/思考题.html" />
+        <option value="$PROJECT_DIR$/20160106_全日制第一周第一天/1、复习免费课.html" />
+        <option value="$PROJECT_DIR$/20160107_全日制第一周第二天/自己学习this.html" />
+        <option value="$PROJECT_DIR$/20160107_全日制第一周第二天/6、综合练习题1.html" />
+        <option value="$PROJECT_DIR$/20160107_全日制第一周第二天/2、预解释的注意点.html" />
+        <option value="$PROJECT_DIR$/20160109_周末班第一周第一天/2、作用域链.html" />
+        <option value="$PROJECT_DIR$/20160106_全日制第一周第一天/3、预解释.html" />
+        <option value="$PROJECT_DIR$/20160109_周末班第一周第一天/1、预解释.html" />
+        <option value="$PROJECT_DIR$/20160109_周末班第一周第一天/9、投票.html" />
+        <option value="$PROJECT_DIR$/20160107_全日制第一周第二天/3、闭包的应用.html" />
+        <option value="$PROJECT_DIR$/20160109_周末班第一周第一天/5、什么时候使用闭包.html" />
+        <option value="$PROJECT_DIR$/20160107_全日制第一周第二天/5、内存释放.html" />
+        <option value="$PROJECT_DIR$/20160109_周末班第一周第一天/6、JS内存释放.html" />
+        <option value="$PROJECT_DIR$/20160110_周末班第一周第二天/4、构造函数模式.html" />
+        <option value="$PROJECT_DIR$/2018js整理/数据类型.md" />
+        <option value="$PROJECT_DIR$/20160110_周末班第一周第二天/5、基于构造函数模式的原型链模式.html" />
       </list>
     </option>
   </component>
@@ -261,10 +312,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="29" />
+    <option name="y" value="89" />
     <option name="width" value="1440" />
-    <option name="height" value="807" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -292,17 +344,22 @@
             <path>
               <item name="daima" type="b2602c69:ProjectViewProjectNode" />
               <item name="daima" type="462c0819:PsiDirectoryNode" />
+              <item name="2单例,工厂,构造,原型链" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="daima" type="b2602c69:ProjectViewProjectNode" />
+              <item name="daima" type="462c0819:PsiDirectoryNode" />
               <item name="2018js整理" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daima" type="b2602c69:ProjectViewProjectNode" />
               <item name="daima" type="462c0819:PsiDirectoryNode" />
-              <item name="20160101_第三周免费课第一天" type="462c0819:PsiDirectoryNode" />
+              <item name="20160113_全日制第二周第二天" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daima" type="b2602c69:ProjectViewProjectNode" />
               <item name="daima" type="462c0819:PsiDirectoryNode" />
-              <item name="20160102_第三周免费课第二天" type="462c0819:PsiDirectoryNode" />
+              <item name="20160114_全日制第二周第三天" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,6 +373,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\A学习盘\daima\20160109_周末班第一周第一天" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -337,39 +399,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a429ad23-9543-4f40-b7a3-95485a6239c8" name="Default" comment="" />
-      <created>1523170075423</created>
+      <changelist id="f719e369-9a79-4b2a-8011-72e18c1f54b8" name="Default" comment="" />
+      <created>1523239979484</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1523170075423</updated>
-      <workItem from="1523170076615" duration="11319000" />
-      <workItem from="1523187446057" duration="10773000" />
+      <updated>1523239979484</updated>
+      <workItem from="1523239981149" duration="20278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22092000" />
+    <option name="totallyTimeSpent" value="20278000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="807" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21527778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1844609" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -380,19 +441,61 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/9、引用数据类型-对象.html">
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/2、作用域链.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/10、思考题.html">
+    <entry file="file://$PROJECT_DIR$/20160106_全日制第一周第一天/3、预解释.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/1、预解释.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-972">
+          <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160109_周末班第一周第一天/3、预解释是毫无节操的.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1377">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/4、上级作用域.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160107_全日制第一周第二天/4、作用域链扩展.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160109_周末班第一周第一天/i++和++i的却别">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -400,63 +503,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/11、关于DOM中常用的方法.html">
+    <entry file="file://$PROJECT_DIR$/20160109_周末班第一周第一天/10、综合面试题.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="197">
+          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/12、三个判断.html">
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/9、投票.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+        <state relative-caret-position="-108">
+          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018js整理/8判断语句.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/13、开关灯.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/14、关于循环.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/15、function.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/for循环应用-隔行变色.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-549">
-          <caret line="40" column="12" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="40" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/JS中关于=的总结">
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/8、this.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -464,7 +527,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/JS免费课复习视频的地址.txt">
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/5、什么时候使用闭包.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1439">
+          <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160107_全日制第一周第二天/3、闭包的应用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/6、JS内存释放.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160107_全日制第一周第二天/5、内存释放.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/6、综合练习题1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-856">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/8、综合练习题2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -472,116 +575,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/常用的css面试题.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/选项卡扩展版.png">
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/4.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/16、选项卡.html">
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/5自己.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/1、复习.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="251">
+          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101全日制第一周免费课/css/tab.css">
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/111.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101_第三周免费课第一天/7、Math.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/3数字可以不按照顺序排列中间可以缺少.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/4数组筛选.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/5条件判断，变量做比较.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/6做个计算器.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
+        <state relative-caret-position="-1539">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/7利用字符串分割获取值.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-980">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/8定时器实现页面跳转.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="25" column="135" lean-forward="false" selection-start-line="25" selection-start-column="135" selection-end-line="25" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/9实现表格的添加.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1065">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/2、JS组成.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="44" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/3、关于JS中常用到的输出方式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/1.html">
+    <entry file="file://$PROJECT_DIR$/1预结算,作用域链,闭包,this/7、关于内存释放的面试题.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -589,143 +614,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018js整理/2数据类型转换.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/4、数据类型.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="28" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/function基类.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018js整理/6Math方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/课堂配图/function基类.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/5、基本数据类型-number.html">
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/2、单例模式.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/6、基本数据类型-boolean和string.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-481">
+        <state relative-caret-position="-1296">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/7、引用数据类型-对象数据类型.html">
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/3、工厂模式.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-745">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/8、基本数据类型和引用数据类型的本质区别.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/9、三个判断.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1126">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101变量数组的基础ke/编程挑战(参考代码).html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/10、循环.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/12、综合实战-开关灯.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-301">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/13、综合实战-开关灯升级.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="-559">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2018js整理/数据类型.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="567">
+          <caret line="45" column="55" lean-forward="false" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018js整理/4dom和节点.html">
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/4、构造函数模式.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="974">
-          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="165" column="27" lean-forward="false" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/14、综合实战-奇数偶数行变色.html">
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/5、基于构造函数模式的原型链模式.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1133">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="584">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="67" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/15、综合实战-奇数偶数行变色.html">
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/6、学习原型有啥作用.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="68" selection-end-column="10" />
+        <state relative-caret-position="125">
+          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018js整理/9循环.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="69" column="50" lean-forward="false" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2018js整理/5.html">
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/git操作20160110.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -733,15 +685,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/16、数据类型-function.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1119">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20160101周末班第一周免费课/17、综合实战-选项卡.html">
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/作业.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -749,41 +693,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/1、DOM.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/作用.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/2、获取的方法详细解读.html">
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/作用画图.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160110_周末班第一周第二天/面向对象.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1305">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/11、定时器.html">
+    <entry file="file://$PROJECT_DIR$/20160112_全日制第二周第一天/1、复习.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="-370">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/10、倒计时.html">
+    <entry file="file://$PROJECT_DIR$/20160112_全日制第二周第一天/处罚.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="55" column="59" lean-forward="true" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20160102_第三周免费课第二天/9、时钟.html">
+    <entry file="file://$PROJECT_DIR$/20160112_全日制第二周第一天/2、prototype批量生产属性.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-855">
+        <state relative-caret-position="-19">
+          <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/9.原型之（大写的）Function.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/8.原型上的this.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2单例,工厂,构造,原型链/7,批量设置prototype上的公有属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-363">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160112_全日制第二周第一天/小测.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160112_全日制第二周第一天/2、复习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/参考/表格排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/参考/js/json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/参考/js/tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/参考/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/8、表格排序原理.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160113_全日制第二周第二天/9、DOM映射.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160114_全日制第二周第三天/2、数据绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

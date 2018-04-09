@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //作用域链：在私有作用域中出现一个变量,我们首先看它是否为私有的变量
+    //1)如果是私有的则和外面的都没有任何的关系,操作的都是私有的；
+    //2)如果不是私有的变量，则往当前作用域的上一级作用域进行查找，上级没有在向上查找，直到找到window为止...假设找到的是window下的,那么在当前的私有作用域中我们操作的都是window下的变量
+
+    console.log(n, m);//->undefined undefined  只是声明没有赋值，只有在执行的时候才赋值
+    var n = 100;
+    var m = "珠峰";
+    function fn() {
+        console.log(n, m);//->undefined "珠峰"    在私有作用域中预解释时var了一个n，但没赋值，
+        var n = 200; //先在私有作用域下查找，发现有带 var =n的  但是在预解释阶段带var的只声明不赋值，所以就是undefined
+        m = "培训";  //没有带avr的都全局的
+        console.log(n, m);//->200 "培训"   要求执行这行代码所以 才会把上面的n m赋值
+    }
+    fn();  //这行代码在预解释阶段，没有执行， 预解释完了才执行，
+    console.log(n, m);//->100 "培训"
+
+
+    //疑问?如果在私有作用域中的变量不是私有的，往上一级作用域找...一直找到window，如果window下也没有呢?
+
+    //    function fn() {
+    //        console.log(n);//->Uncaught ReferenceError: n is not defined 如果是获取,我们会出现浏览器异常错误,n不存在
+    //    }
+    //    fn();
+
+    //    function fn() {
+    //        n = 100;//->如果window下也没有,我们相当于在私有作用域中给window下增加了一个叫做n的变量,赋值为100,不会报错,操作的还是window下的n
+    //    }
+    //    fn();
+    //    console.log(n);//->100
+</script>
+</body>
+</html>

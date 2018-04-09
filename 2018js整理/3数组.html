@@ -9,6 +9,39 @@
 </body>
 </html>
 <script type="text/javascript">
-    var ary = [12, 23, 34, 45, 56, 67, 78];
+    //数组去重
+    // 数组塌陷问题->删除当前项,后面每一项的索引都要提前一位,但是我们的循环i++还在继续,这样的话会造成有一项是比较不上的
+    var ary = [1, 2, 3, 2, 3, 2, 3, 4, 2, 1, 3, 2, 5];
+    var obj = {};
+       // for (var i = 0; i < ary.length; i++) {
+       //     var cur = ary[i];
+       //     if (obj[cur] == cur) {//->{}属性名不能相同
+       //         ary.splice(i, 1);
+       //         i--;
+       //         continue;
+       //     }
+       //     obj[cur] = cur;
+       // }
+       // console.log(ary);
+    //解决数组塌陷问题
+    //我不删除当前项,我把最后一项的值赋给当前项,我在把最后一项删除
+    for (var i = 0; i < ary.length; i++) {
+        var cur = ary[i];
+        if (obj[cur] == cur) { //对象里属性名不能相同的规则
+            ary[i] = ary[ary.length - 1];//->用最后一项的值替换我们当前要删除的这一项
+            ary.length--;//->删除数组最后一项
+            i--;
+            continue;
+        }
+        obj[cur] = cur;
+    }
 
+    //join->按照指定的分隔符把数组拆分成字符串
+       var ary2 = [12, 23, 34, 45];
+       var str2 = ary2.join("+");
+       console.log(str2);//->"12+23+34+45"
+
+    // split把一个字符串按照指定的分隔符,拆分成数组中的每一项
+    var newAry = str2.split("+");
+      console.log(newAry);//->["12", "23", "34", "45"]
 </script>
