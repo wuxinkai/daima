@@ -16,8 +16,8 @@
         b();
         return b;
     }
-    var c = a();
-    c();
+    var c = a(); //a第一个执行 11，存值
+    c(); //第二个执行 12   都是在闭包里面执行的
     alert(n);
 </script>
 </body>
