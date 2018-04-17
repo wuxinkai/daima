@@ -42,5 +42,12 @@
     //    }
     //    console.log(ary);
 </script>
+<script type="text/javascript">
+    var oUl = document.getElementById("ul1");
+    var oLis = oUl.getElementsByTagName("li");
+
+    var ary = utils.listToArray(oLis);
+    console.log(ary);//->ary中每一项存储的都是当前对应的每一个li元素对象
+</script>
 </body>
 </html>
