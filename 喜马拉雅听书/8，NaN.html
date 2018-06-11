@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    // NAN != NAN  不是一个有效数字
+    // 只有 0/0 的时候是NAN，
+    // 2/0 其它数字除以0 返回无穷 Infinity
+    // isNaN() 判断传入的这个值，能不能转换为数字，
+    // parseInt()  parseInt("10");	函数可解析一个字符串，并返回一个整数。
+    //
+
+    //Number()、parseInt()、parseFloat()的区别：
+    //Number()的强制类型转换与parseInt()和parseFloat()方法的处理方式相似，
+    //只是它转换的是整个值，而不是部分值。parseInt()和parseFloat()方法只转换第一个无效字符之前的字符串。\
+    //如“3.4.5”被转换成“3.4”，
+
+    /*
+    parseInt("1234blue");   //returns    1234
+    parseInt("0xA");   //returns    10
+    parseInt("22.5");   //returns    22
+    parseInt("blue");   //returns    NaN
+
+    parseFloat("1234blue");   //returns    1234.0
+    parseFloat("0xA");   //returns    NaN
+    parseFloat("22.5");   //returns    22.5
+    parseFloat("22.34.5");   //returns    22.34
+    parseFloat("0908");   //returns    908
+    parseFloat("blue");   //returns    NaN
+
+    Boolean("");   //false    –    empty    string
+    Boolean("hi");   //true    –    non-empty    string
+    Boolean(100);   //true    –    non-zero    number
+    Boolean(null);   //false    -    null
+    Boolean(0);   //false    -    zero
+    Boolean(new    Object());   //true    –    object
+
+
+    Number(false)    0
+    Number(true)    1
+    Number(undefined)    NaN
+    Number(null)    0
+    Number( "5.5 ")    5.5
+    Number( "56 ")    56
+    Number( "5.6.7 ")    NaN
+    Number(new    Object())    NaN
+    Number(100)    100
+    */
+</script>

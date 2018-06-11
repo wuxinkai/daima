@@ -84,7 +84,7 @@
     //offset:获取任意元素距离body的偏移量{left:左偏移,top:上偏移} ->jQuery中的offset方法也是相同意思
     function offset(curEle) {
         var t = curEle.offsetTop, l = curEle.offsetLeft, p = curEle.offsetParent;
-        while (p) {
+        while (p) {  //while 是个循环语句，只要p有值就会来累加
             //在标准的IE8浏览器中,我们不需要单独的加边框,因为在IE8中的offsetTop偏移量已经把边框算在内了
             if (navigator.userAgent.indexOf("MSIE 8.0") === -1) {
                 //->当前浏览器不是IE8
@@ -97,7 +97,6 @@
         }
         return {top: t, left: l};
     }
-
     var obj = offset(center);
     console.log(obj);
 </script>

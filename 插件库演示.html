@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="插件库的封装.js"></script>
+</head>
+<body>
+    <div id="box" class="classBox1 classBox2 classBox3 classBox4 classBox5">
+
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var box  =document.getElementById('box');
+   var hsaName = utils.hasClass(box,'classBox');
+    utils.hasClass(box,'classBox3');
+    console.log(hsaName)
+</script>

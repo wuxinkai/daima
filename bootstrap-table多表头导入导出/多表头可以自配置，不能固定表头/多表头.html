@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .box{
+            width:1000px;
+            margin:40px auto;
+        }
+        #myTable .table>thead>tr>th{
+            vertical-align: inherit;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="myTable" style="margin-bottom: 30px">
+    <table class="table table-bordered">
+
+    </table>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var columns = [
+        {
+            title: '姓名',
+            key: 'name'
+        },
+        {
+            title: '年龄',
+            key: 'age'
+        },
+        {
+            title: '爱好',
+            key: 'like',
+            children: [
+                {
+                    title: '看书',
+                    key: 'like1',
+                    children: [
+                        {
+                            title: '名著',
+                            key: 'book1'
+                        },
+                        {
+                            title: '小说',
+                            key: 'book2'
+                        }
+                    ]
+                },
+                {
+                    title: '打球',
+                    key: 'like2',
+                    children: [
+                        {
+                            title: '篮球',
+                            key: 'ball1'
+                        },
+                        {
+                            title: '排球',
+                            key: 'ball2'
+                        }, {
+                            title: '足球',
+                            key: 'ball3',
+                            children: [
+                                {
+                                    title: '足球1',
+                                    key: 'ball31'
+                                },
+                                {
+                                    title: '足球2',
+                                    key: 'ball32'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ];
+    var trs = [];
+        start = new Date().getTime(); //时间戳
+    foo(columns);
+    function pushTrs(arr) {
+        var rank = arr[0].rank;
+        if(trs[rank]){
+            $.merge( trs[rank], arr )
+        }else{
+            trs[rank]=arr;
+        }
+    }
+    function render() {
+        var $thead = $('<thead></thead>');
+        var len = trs.length;
+        for (var i = 0; i < trs.length; i++) {
+            var $tr = $('<tr></tr>');
+            for (var j = 0 ; j < trs[i].length; j++) {
+                var $th = $('<th>'+ trs[i][j].title +'</th>');
+                $th.attr('colspan',trs[i][j].colspan);
+                if(trs[i][j].rowspan){
+                    $th.attr('rowspan',trs[i][j].rowspan);
+                }else{
+                    $th.attr('rowspan',len-trs[i][j].rank);
+                }
+                $tr.append($th);
+            }
+            $thead.append($tr);
+        }
+        $('#myTable table').append($thead);
+        end = new Date().getTime();
+        console.log(end-start);
+    }
+    function foo(arr, parent) {
+        for (var i = 0; i < arr.length; i++) {
+            len = arr[i].children ? arr[i].children.length : 0;
+            arr[i].rank = parent ? parent.rank + 1 : 0;
+            if (len > 0) {//children 存在
+                arr[i].rowspan = 1; //在属性上设置值 表格单元横跨1行的表格
+                foo(arr[i].children, arr[i]); //调用自身传入第二个参数，从新循环
+            } else {//children 不存在
+                arr[i].colspan = 1; //colspan 属性规定单元格可横跨的列数。
+            }
+            if (parent) {//parent的colspan为children的colspan总和
+                parent.colspan = parent.colspan ? parent.colspan : 0;
+                parent.colspan += arr[i].colspan;
+            }
+        }
+        pushTrs(arr);
+        if(arr[0].rank == 0){//最后一次递归结束
+            render();
+        }
+    }
+</script>

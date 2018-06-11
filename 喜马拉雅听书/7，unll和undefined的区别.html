@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>null 是现在没有未来可能会有，undefined 是不肯能会有，有就是报错</p>
+</body>
+</html>
+<script type="text/javascript">
+    //(1)Undefined类型只有一个值，即undefined。当声明的变量还未被初始化时，变量的默认值为undefined。
+    var oValue;
+    console.log(oValue == undefined); //output "true";
+
+    //(2)Null类型也只有一个值，即null。null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+    //不存在id为"notExistElement"的DOM节点时，这段代码显示为"true"
+    console.log(null == document.getElementById('notExistElement'));
+
+    //(3)null 和 undefined的数据类型
+    console.log(typeof undefined); // undefined的类型为Undefined；
+    console.log(typeof null); //null的类型Object  ,JavaScript最初实现的一个错误，后来被ECMAScript沿用下来,在今天我们可以解释为，null即是一个不存在的对象的占位符，但是在实际编码时还是要注意这一特性。
+
+    //(4)null 和undefined 相等  ECMAScript认为undefined是从null派生出来的，所以把它们定义为相等的
+    console.log(null == undefined);
+    console.log(null === undefined); //不全等
+    console.log( typeof null == undefined); //类型不相等
+
+</script>
+<script type="text/javascript">
+    //将undefined 转为数字是NAN
+
+           var a = undefined;
+           var res = Number(a);
+           document.write(a+"转为数值类型为->"+res);
+    //将 null转为数字是0
+    var b = null;
+    var bIn = Number(b);
+    document.write(a+"转为数值类型为->"+bIn);
+
+
+    //用法  声明变量 用null
+    //检查一个对象是否存在  === undefined ，判断函数是否存在，参数是否传进来，
+    //检查一个值是否为空的时候  null
+    // 不要在赋值的时候使用nudefind
+
+    // 后台返回值  要么是空  要么是null 这个时候 用隐士类型转换，  == null 这样判断，
+
+
+ //null是关键字， nudefind虽然叫未定义，但是他已经定义了，
+
+ </script>

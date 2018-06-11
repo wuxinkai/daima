@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    //字符串有方法是转对对象之后执行
+    var str="Hello World!";
+    //内容没有被释放
+    console.log(str.toUpperCase()) ;
+   document.write(str.toUpperCase());
+
+
+    var a= 'abcd'; //执行的时候会先转成 对象
+    // a.len =4; //执行的时候调用对象的方法，执行完毕，会关闭方法，临时变量都清空
+    // console.log(a.len); //undefinde
+
+    //内存被释放
+    a.toUpperCase(); //转为大写，其实还是小写的，先把变量转为对象，然后计算,运算完对象不会报存，被释放掉了
+    document.write(a);
+    console.log(a) //abcd
+
+
+    // 可变的类型和不可变的类型，基础数据类型都是不可变的（基础类型改变就从新赋值），只有对象是可以改变的，
+    // 认识两个独立的对象都是不相等的，相等：都是对象的地址对比，
+    // typeof 返回值都是字符串， undefinde Boolean string function object number  没有null，null也是object类型
+    //
+
+    //js中的优先级，分为15等级，
+</script>

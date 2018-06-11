@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    //严格模式"use strict"; 兼容ie10
+    // (1)设计到代码合并  一个用严格模式，另一个不用严格模式，结果都不会用严格模式
+    // (2)普通函数function(){} this 指向全局
+    // (3)构造函数 ，如果忘了加new，this不再指向全局对象，而是报错。
+    function f(){
+        "use strict";
+        this.a = 1;
+    };
+    f();// 报错，this未定义
+
+    // (4)严格模式下无法删除变量。只有configurable设置为true的对象属性，才能被删除。
+    "use strict";
+    var x;
+    delete x; // 语法错误
+    var o = Object.create(null, {'x': {
+            value: 1,
+            configurable: true
+        }});
+    delete o.x; // 删除成功
+
+    // (5)对象不能有重名的属性
+    "use strict";
+    var o = { //正常模式下，如果对象有多个重名属性，最后赋值的那个属性会覆盖前面的值。严格模式下，这属于语法错误
+        p: 1,
+        p: 2
+    }; // 语法错误
+
+    // (6)函数不能有重名的参数
+    "use strict";    //正常模式下，如果函数有多个重名的参数，可以用arguments[i]读取。严格模式下，这属于语法错误。
+    function f(a, a, b) { // 语法错误
+        return ;
+    }
+</script>

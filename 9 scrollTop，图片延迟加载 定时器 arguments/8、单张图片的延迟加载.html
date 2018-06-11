@@ -44,6 +44,7 @@
         if (imgFir.isLoad) return;//->如果条件成立说明imgFir.isLoad的结果是true,图片加载完成了,下面的代码就不在重新的执行了(防止重复加载)
 
         var curT = document.documentElement.scrollTop || document.body.scrollTop;//->获取当前浏览器滚动条卷去的高度
+        console.log(winH + curT,imgDis);
         if ((winH + curT) >= imgDis) {//->说明当前的图片已经完全出现在视野中,开始加载我们的真实图片地址
             var trueImg = imgFir.getAttribute("trueImg");
             var oImg = new Image;

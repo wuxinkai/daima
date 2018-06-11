@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>break用于完全结束一个循环，跳出循环体。不管是哪种循环，一旦在循环体中遇到break，系统将完全结束循环，开始执行循环之后的代码。 break不仅可以结束其所在的循环，还可结束其外层循环。</p>
+<p>continue的功能和break有点类似，区别是continue只是中止本次循环，接着开始下一次循环。而break则是完全中止循环。</p>
+<P>return 程序返回，不再执行下面的代码(结束当前的方法 直接返回) </P>
+</body>
+</html>
+
+<script type="text/javascript">
+    //break: 直接跳出 当前 的循环，从当前循环外面开始执行,忽略循环体中任何其他语句和循环条件测试。
+    // 它只能跳出一层循环，如果你的循环是嵌套循环，那么你需要按照你嵌套的层次，逐步使用break来跳出。
+    function myBreak() {
+        for(var i = 0; i < 5; i++) {
+            if(i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+    }
+    myBreak(); // 0 1 2
+
+   //continue: 终止当前的一次循环过程，其 不 跳出循环,而是继续往下判断循环条件执行语句。
+   //只能结束循环中的一次过程,但不能终止循环继续进行。
+    function myContinue() {
+        for(var i = 0; i < 5; i++) {
+            if(i == 3) {
+                continue;
+            }
+            console.log(i);
+        }
+    }
+    myContinue(); // 0 1 2  4
+
+    //return 从当前的方法中退出,返回到该调用的方法的语句处,继续执行
+    function myReturn() {
+        for(var i = 0; i < 5; i++) {
+            if(i == 3) {
+                return i;
+            }
+            console.log(i);
+        }
+    }
+    var s = myReturn();
+    console.log("返回我想要的那个数: " + s); //0 1 2 返回我想要的那个数: 3
+
+</script>

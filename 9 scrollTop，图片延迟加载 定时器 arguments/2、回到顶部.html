@@ -101,6 +101,7 @@
     function scrollMove() {
         var curT = document.documentElement.scrollTop || document.body.scrollTop;
         var winH = document.documentElement.clientHeight || document.body.clientHeight;
+        console.log(curT,winH)
         if (curT >= (winH / 2)) {
             goTo.style.display = "block";
         } else {

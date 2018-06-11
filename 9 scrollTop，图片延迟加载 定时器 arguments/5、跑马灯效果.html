@@ -60,20 +60,22 @@
 
     }
    var timer= setInterval(function () {
-        var oldL = inner.scrollLeft;
-        inner.scrollLeft += 1;
-        var newL = inner.scrollLeft;
+        var oldL = inner.scrollLeft; //这个是老的，
+        inner.scrollLeft += 1; //在这里加1
+        var newL = inner.scrollLeft; //新的比老的多1
+
+        //console.log(oldL , newL);
         if (oldL === newL) {//加之前的值和加之后的值一模一样,说明加没起到作用,到头了->在把之前的内容向末尾增加一遍,这样就可以继续向后走了,从而实现我们的无缝衔接跑马灯
             inner.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;" + val;
         }
     }, 10);
 
     inner.onmousemove = function(){
-        clearInterval(timer)
+        clearInterval(timer);
         timer = null;
     };
     inner.onmouseout = function(){
-        clearInterval(timer)
+        clearInterval(timer);
         timer= setInterval(function () {
             var oldL = inner.scrollLeft;
             inner.scrollLeft += 1;

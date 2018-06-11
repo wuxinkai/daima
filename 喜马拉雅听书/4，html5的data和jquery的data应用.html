@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+<!--简单单词：-->
+<div id="testDiv" data-cd="24">
+    Click Here
+</div>
+
+<!--使用驼峰命名（需要特定注意的地方）：-->
+<div id="testDiv2" data-cartCd="34543">
+    Click Here
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    /*html5*/
+    var testDiv = document.getElementById('testDiv');
+    console.log('html5: '+testDiv.dataset.cd);
+
+    var testDiv2 = document.getElementById('testDiv2');
+    console.log('html5: '+testDiv2.dataset.cartcd);//注意是“cartcd”,不管是不是驼峰命名，一切都是小些。
+
+    /*jquery*/
+    console.log('jquery: '+$('#testDiv').data('cd'));
+
+    console.log('jquery: '+$('#testDiv2').data('cartcd'));//同上面一样，注意是“cartcd”,不管
+</script>

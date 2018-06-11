@@ -1,0 +1,16 @@
+[
+    {"name":"滚筒1","mideaNum":"110","mideaPercent":"121%","panasonicNum":"110","panasonicPercent":"219%"},
+    {"name":"滚筒2","mideaNum":"210","mideaPercent":"229%","panasonicNum":"210","panasonicPercent":"229%"},
+    {"name":"滚筒3","mideaNum":"310","mideaPercent":"329%","panasonicNum":"310","panasonicPercent":"239%"},
+    {"name":"滚筒4","mideaNum":"410","mideaPercent":"429%","panasonicNum":"410","panasonicPercent":"249%"},
+    {"name":"滚筒5","mideaNum":"510","mideaPercent":"529%","panasonicNum":"510","panasonicPercent":"259%"},
+    {"name":"滚筒6","mideaNum":"610","mideaPercent":"629%","panasonicNum":"610","panasonicPercent":"269%"},
+    {"name":"滚筒7","mideaNum":"710","mideaPercent":"729%","panasonicNum":"710","panasonicPercent":"279%"},
+    {"name":"滚筒8","mideaNum":"810","mideaPercent":"829%","panasonicNum":"810","panasonicPercent":"289%"},
+    {"name":"滚筒9","mideaNum":"910","mideaPercent":"929%","panasonicNum":"910","panasonicPercent":"299%"},
+    {"name":"滚筒1","mideaNum":"110","mideaPercent":"129%","panasonicNum":"110","panasonicPercent":"219%"},
+    {"name":"滚筒2","mideaNum":"210","mideaPercent":"229%","panasonicNum":"210","panasonicPercent":"229%"},
+    {"name":"滚筒3","mideaNum":"310","mideaPercent":"329%","panasonicNum":"310","panasonicPercent":"239%"},
+    {"name":"滚筒5","mideaNum":"510","mideaPercent":"529%","panasonicNum":"510","panasonicPercent":"259%"},
+    {"name":"波轮5","mideaNum":"59","mideaPercent":"258%","panasonicNum":"150","panasonicPercent":"295%"}
+]

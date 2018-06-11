@@ -46,7 +46,6 @@ var timeModel = {
             var cur = ary[i];
             cur["weekday"] = cur["weekday"] || "--";
             cur["date"] = cur["date"] || "2015-01-01";
-
             str += "<li class='cursor left' time='" + cur["date"] + "'>";
             str += "<span class='list-top'>" + cur["weekday"] + "</span>";
             str += "<span class='list-bot'>" + cur["date"].myFormatTime("{1}-{2}") + "</span>";
@@ -114,7 +113,6 @@ var timeModel = {
         this.timeUl.children("li").click(function () {
             $(this).addClass("select").siblings().removeClass("select");
             listModel.init($(this).attr("time"));
-
             $index = $(this).index() - 3;
             _this.timeUl.animate({left: -$index * 105}, 500);
         });
@@ -134,7 +132,7 @@ var timeModel = {
 };
 var listModel = {
     callback: function (jsonData, time) {
-        console.log(jsonData)
+        console.log(jsonData);
         if (jsonData["code"] !== 0) {
             return;
         }
@@ -145,7 +143,6 @@ var listModel = {
             var cur = jsonData[i];
             cur["leftGoal"] = cur["leftGoal"] == 0 ? "" : cur["leftGoal"];
             cur["rightGoal"] = cur["rightGoal"] == 0 ? "" : cur["rightGoal"];
-
             str += "<li>";
             str += "<div class='conList-left left'><span class='w80 left'>" + cur["startTime"].myFormatTime("{3}:{4}") + "</span><span class='w140 left'>" + cur["matchDesc"] + "</span></div>";
             str += "<div class='conList-center left'>";
@@ -170,7 +167,7 @@ var listModel = {
             dataType: "jsonp",
             jsonpCallback: "gameList",
             success: function () {
-                console.log(time)
+                console.log(time);
                 _this.callback(arguments[0], time);
             }
         });
