@@ -19,11 +19,11 @@
     </style>
 </head>
 <body>
-<div id="myTable" style="margin-bottom: 30px">
-    <table class="table table-bordered">
+    <div id="myTable" style="margin-bottom: 30px">
+        <table class="table table-bordered">
 
-    </table>
-</div>
+        </table>
+    </div>
 </body>
 </html>
 <script type="text/javascript">
@@ -110,6 +110,7 @@
                 }
                 $tr.append($th);
             }
+
             $thead.append($tr);
         }
         $('#myTable table').append($thead);
@@ -125,6 +126,9 @@
                 foo(arr[i].children, arr[i]); //调用自身传入第二个参数，从新循环
             } else {//children 不存在
                 arr[i].colspan = 1; //colspan 属性规定单元格可横跨的列数。
+
+                // for (var i = 0; i < arr.length; i++) {
+
             }
             if (parent) {//parent的colspan为children的colspan总和
                 parent.colspan = parent.colspan ? parent.colspan : 0;
