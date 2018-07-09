@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    // var myObject ={
+    //     foo:'bar',
+    //     fuc:function () {
+    //         var self =  this;
+    //         console.dir(this); // 看执行方法前面有没有点 有点  点前面是谁this就是谁
+    //         console.log(this.foo);//当前没有向上级作用于查找
+    //         console.log(self.foo); //也是向上级作用于查找
+    //         (function () {
+    //             console.dir(this); //  自执行函数地下的this  都是window
+    //             console.log(this.foo); //
+    //             console.log(self.foo);
+    //         }())
+    //     }
+    // }
+    // myObject.fuc();
+
+    var fullName = 'language';
+    var obj = {
+        fullName:'javascript',
+        prop:{
+            getFullName:function(){
+                console.dir(this);
+                return this.fullName;
+            }
+        }
+    }
+    console.log(obj.prop.getFullName());
+    var test = obj.prop.getFullName;
+    console.log(test()); //test 前面没有点 所以是nudefind
+    
+</script>

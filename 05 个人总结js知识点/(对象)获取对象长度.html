@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var bookAuthors = {
+        "Farmer": "12345",
+        "Out": "678910",
+        "The": "11213141",
+        "Poetic": "234233"
+    };
+
+    function countProperties (obj) {
+        var count =0;
+        for (var property in obj){
+            if(Object.prototype.hasOwnProperty.call(obj,property)){ //Object 原型上的 hasOwnProperty 属性
+                count++
+            }
+        }
+        return count;
+    }
+
+    var bookCount  =countProperties(bookAuthors);
+    console.log(bookCount)
+
+
+
+    var book= {
+        Farmer1: "12345",
+        Out2: "678910",
+        The3: "11213141",
+        Poetic4: "234233"
+    };
+
+    var arr = Object.keys(book); //将属性名转换成数组
+    let arr2 = Array.from(book);
+    console.log(arr.length)
+    console.log(arr2)
+
+</script>

@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var jsonData=[
+        {
+            "Id": "1e4e129457794cf2ac00ca2b8323445a",
+            "Pid": "0000",
+            "Org_No": "zjxtjt",
+            "Org_Name": "中交信通集团公司",
+            "Address": "北京市",
+            "Children": [
+                {
+                    "Id": "902fcadd7d9848d296b824f71f6e9230",
+                    "Pid": "1e4e129457794cf2ac00ca2b8323445a",
+                    "Org_No": "zjxtjtqzx",
+                    "Org_Name": "集团中心",
+                    "Address": "集团中心",
+                    "Children": [
+                        {
+                            "Id": "8e6e9e2a5aa843b3bfeb48cb3856637f",
+                            "Pid": "902fcadd7d9848d296b824f71f6e9230",
+                            "Org_No": "101",
+                            "Org_Name": "北京市",
+                            "Address": "北京市",
+                            "Children": [
+                                {
+                                    "Id": "78d799bd408c403f86e43ef19ada2681",
+                                    "Pid": "8e6e9e2a5aa843b3bfeb48cb3856637f",
+                                    "Org_No": "10101",
+                                    "Org_Name": "中交信通北京市分公司",
+                                    "Address": "北京市西城区",
+                                    "Children": [
+                                        {
+                                            "Id": "51d2101466214a60bea0735fc6676a1c",
+                                            "Pid": "78d799bd408c403f86e43ef19ada2681",
+                                            "Org_No": "1010101",
+                                            "Org_Name": "领导层",
+                                            "Address": "北京市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "2d6de7516544426498771e412c8eb04c",
+                                            "Pid": "78d799bd408c403f86e43ef19ada2681",
+                                            "Org_No": "1010102",
+                                            "Org_Name": "综合部",
+                                            "Address": "北京市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "da231758b47f4eebbbe548dd678024f3",
+                                            "Pid": "78d799bd408c403f86e43ef19ada2681",
+                                            "Org_No": "1010103",
+                                            "Org_Name": "财务部",
+                                            "Address": "北京市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "f528cb1f891141acac08fe39879e5cb0",
+                                            "Pid": "78d799bd408c403f86e43ef19ada2681",
+                                            "Org_No": "1010104",
+                                            "Org_Name": "规划部",
+                                            "Address": "北京市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "778169f3235841fe91dd9e6a907cf887",
+                                            "Pid": "78d799bd408c403f86e43ef19ada2681",
+                                            "Org_No": "1010105",
+                                            "Org_Name": "运维部",
+                                            "Address": "北京市",
+                                            "Children": []
+                                        },
+                                    ]
+                                },
+                                {
+                                    "Relation_id": "8e6e9e2a5aa843b3bfeb48cb3856637f",
+                                    "IsUser": true,
+                                    "Id": "f92993ddff7f4ac7939f0449b5ecff98",
+                                    "Pid": "8e6e9e2a5aa843b3bfeb48cb3856637f",
+                                    "Org_No": null,
+                                    "Org_Name": "马一硕",
+                                    "Address": null,
+                                },
+                                {
+                                    "Relation_id": "8e6e9e2a5aa843b3bfeb48cb3856637f",
+                                    "IsUser": true,
+                                    "Id": "a1d7595178ac458c9c3ceaeb99052a3e",
+                                    "Pid": "8e6e9e2a5aa843b3bfeb48cb3856637f",
+                                    "Org_No": null,
+                                    "Org_Name": "qq",
+                                    "Address": null,
+                                }
+                            ]
+                        },
+                        {
+                            "Id": "7d71b0954f7941dab6aac920fde8247f",
+                            "Pid": "902fcadd7d9848d296b824f71f6e9230",
+                            "Org_No": "102",
+                            "Org_Name": "上海市",
+                            "Address": "上海市",
+                            "Children": [
+                                {
+                                    "Id": "040d2f5572644289bbb66db287759f5f",
+                                    "Pid": "7d71b0954f7941dab6aac920fde8247f",
+                                    "Org_No": "10201",
+                                    "Org_Name": "中交信通上海市分公司",
+                                    "Address": "上海市",
+                                    "Children": [
+                                        {
+                                            "Id": "d1e0f54b256d4b60b42e521acf1baed0",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020101",
+                                            "Org_Name": "领导层",
+                                            "Address": "上海市",
+                                            "Children": [
+                                                {
+                                                    "Relation_id": "d1e0f54b256d4b60b42e521acf1baed0",
+                                                    "IsUser": true,
+                                                    "Id": "3f6c08edc87446c4a1f350b8833b278b",
+                                                    "Pid": "d1e0f54b256d4b60b42e521acf1baed0",
+                                                    "Org_No": null,
+                                                    "Org_Name": "wzy",
+                                                    "Address": null,
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Id": "8e44de7cd1894be683aa9013e530a8f1",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020102",
+                                            "Org_Name": "综合部",
+                                            "Address": "上海市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "8911e9e71170408eaf236d9b16f514fe",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020103",
+                                            "Org_Name": "财务部",
+                                            "Address": "上海市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "3c15ff9517ff4e9599624fe930c01021",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020104",
+                                            "Org_Name": "规划部",
+                                            "Address": "上海市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "1de582e5eaa54168acf345a050ae1e47",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020105",
+                                            "Org_Name": "运维部",
+                                            "Address": "上海市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "c0b52ac5b0cc47bfb6b5b7fa68cef6f7",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020106",
+                                            "Org_Name": "工程部",
+                                            "Address": "上海市",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "f3f0c5a7ab2e42868ede354943438383",
+                                            "Pid": "040d2f5572644289bbb66db287759f5f",
+                                            "Org_No": "1020107",
+                                            "Org_Name": "市场部",
+                                            "Address": "上海市",
+                                            "Children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Relation_id": "7d71b0954f7941dab6aac920fde8247f",
+                                    "IsUser": true,
+                                    "Id": "81506799b3094f7d8cdba8d7ef711762",
+                                    "Pid": "7d71b0954f7941dab6aac920fde8247f",
+                                    "Org_No": null,
+                                    "Org_Name": "机房人员17",
+                                    "Address": null,
+                                    "Children": null
+                                }
+                            ]
+                        },
+                        {
+                            "Id": "197cd68f4540485192e0ed4a40a8051f",
+                            "Pid": "902fcadd7d9848d296b824f71f6e9230",
+                            "Org_No": "103",
+                            "Org_Name": "广东省",
+                            "Address": "广东省",
+                            "Children": [
+                                {
+                                    "Id": "6301e345864b42259090c374c9c46b97",
+                                    "Pid": "197cd68f4540485192e0ed4a40a8051f",
+                                    "Org_No": "10301",
+                                    "Org_Name": "中交信通广东省分公司",
+                                    "Address": "广东省",
+                                    "Children": [
+                                        {
+                                            "Id": "89997525c37441da9aff60f894229453",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030101",
+                                            "Org_Name": "领导层",
+                                            "Address": "广东省",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "47093d80f0864d2c805e77599c60c279",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030102",
+                                            "Org_Name": "综合部",
+                                            "Address": "广东省",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "93364cf55f8048ca9f280e9adb81fab4",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030103",
+                                            "Org_Name": "财务部",
+                                            "Address": "广东省",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "088b8e58babc4e478a67cc9672b84136",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030104",
+                                            "Org_Name": "规划部",
+                                            "Address": "广东省",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "b070ca8432f74e468f04b89a87003751",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030105",
+                                            "Org_Name": "运维部",
+                                            "Address": "广东省",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "153386548da54316803d06b3e3ee3417",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030106",
+                                            "Org_Name": "工程部",
+                                            "Address": "广东省",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "c4b3653b0c464165b9122dac01e107d2",
+                                            "Pid": "6301e345864b42259090c374c9c46b97",
+                                            "Org_No": "1030107",
+                                            "Children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Relation_id": "197cd68f4540485192e0ed4a40a8051f",
+                                    "IsUser": true,
+                                    "Id": "7625b9d9d1c44d1bb6175b93762033ee",
+                                    "Pid": "197cd68f4540485192e0ed4a40a8051f",
+                                    "Org_No": null,
+                                    "Org_Name": "机房人员13",
+                                    "Address": null,
+                                    "Children": null
+                                }
+                            ]
+                        },
+                        {
+                            "Id": "4055dac6d1c248f6a28ebb0e272d2da0",
+                            "Pid": "902fcadd7d9848d296b824f71f6e9230",
+                            "Org_No": "104",
+                            "Org_Name": "重庆市",
+                            "Address": "重庆市",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "重庆市",
+                            "Company_Short": null,
+                            "Org_Type": "1",
+                            "Children": [
+                                {
+                                    "Id": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                    "Pid": "4055dac6d1c248f6a28ebb0e272d2da0",
+                                    "Org_No": "10401",
+                                    "Org_Name": "中交信通重庆市分公司",
+                                    "Address": "重庆市",
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": "中交信通重庆市分公司",
+                                    "Company_Short": null,
+                                    "Org_Type": "1",
+                                    "Children": [
+                                        {
+                                            "Id": "1d05d4caeea644d88cf94bdcdac92250",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040101",
+                                            "Org_Name": "领导层",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "8b03daebb7b34de0941875cff28de0d0",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040102",
+                                            "Org_Name": "综合部",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "82b83ea42e9d4b5e960a641e694280a3",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040103",
+                                            "Org_Name": "财务部",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "0d587b9ff8e649c291698eac29120343",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040104",
+                                            "Org_Name": "规划部",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "9ccdb0cb5575426cb7657dfee78a5fcc",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040105",
+                                            "Org_Name": "运维部",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "3006385396524e008ea6aef305a5cde1",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040106",
+                                            "Org_Name": "工程部",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        },
+                                        {
+                                            "Id": "8f48c659b4884bb49878b47b341f2486",
+                                            "Pid": "b16e164b4efa4d73bd64bc708cfd7ffa",
+                                            "Org_No": "1040107",
+                                            "Org_Name": "市场部",
+                                            "Address": "重庆市",
+                                            "Province_Id": null,
+                                            "City_Id": null,
+                                            "Area_Id": null,
+                                            "Company": "集团中心",
+                                            "Company_Short": null,
+                                            "Org_Type": "2",
+                                            "Children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Relation_id": "4055dac6d1c248f6a28ebb0e272d2da0",
+                                    "IsUser": true,
+                                    "Id": "264ebdb76525424ca59dc371328d1632",
+                                    "Pid": "4055dac6d1c248f6a28ebb0e272d2da0",
+                                    "Org_No": null,
+                                    "Org_Name": "机房人员5",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        },
+                    ]
+                },
+                {
+                    "Id": "426a7b02209242de9fd1f209acf15699",
+                    "Pid": "1e4e129457794cf2ac00ca2b8323445a",
+                    "Org_No": "zjxtjtzhb",
+                    "Org_Name": "综合部",
+                    "Address": "北京",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "中交信通集团公司",
+                    "Company_Short": null,
+                    "Org_Type": "2",
+                    "Children": [
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "284d9b1583a04a41a67e92b9e946385e",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "刘  颖",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        },
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "468c790571814280ba36301b5141bf48",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "杨钧涵",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        },
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "4ce5a37624084b6aba2d42e94ec30c2b",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "程  键",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        },
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "8d742943614e407abf7582b410d47142",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "陈  霞",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        },
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "31ebe24378a4464a8d38868178c21aec",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "王  茜",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        },
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "c47a5f142bc84da1b0e92b04fffdd873",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "李云飞",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        },
+                        {
+                            "Relation_id": "426a7b02209242de9fd1f209acf15699",
+                            "IsUser": true,
+                            "Id": "f44ad6ba64854d31b6d5290082441a10",
+                            "Pid": "426a7b02209242de9fd1f209acf15699",
+                            "Org_No": null,
+                            "Org_Name": "马佳怡",
+                            "Address": null,
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": null,
+                            "Company_Short": null,
+                            "Org_Type": null,
+                            "Children": null
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            "Id": "6d226c4faa794ba7bbb41c52184bb3ea",
+            "Pid": "0000",
+            "Org_No": "zjggj",
+            "Org_Name": "浙江高管局",
+            "Address": "浙江",
+            "Province_Id": null,
+            "City_Id": null,
+            "Area_Id": null,
+            "Company": "浙江高管局",
+            "Company_Short": null,
+            "Org_Type": "0",
+            "Children": [
+                {
+                    "Id": "e7766118bf214a2c84c18190376af980",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "jxsjtgsglyxgs",
+                    "Org_Name": "嘉兴市佳通高速公路管理有限公司",
+                    "Address": "嘉兴市",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "嘉兴市佳通高速公路管理有限公司",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "3b5991d3e6014c2195005ac81eb5c0c8",
+                            "Pid": "e7766118bf214a2c84c18190376af980",
+                            "Org_No": "zhejiangsheng01",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "嘉兴市佳通高速公路管理有限公司",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "3b5991d3e6014c2195005ac81eb5c0c8",
+                                    "IsUser": true,
+                                    "Id": "d9592e7da8094284a4c44925578914be",
+                                    "Pid": "3b5991d3e6014c2195005ac81eb5c0c8",
+                                    "Org_No": null,
+                                    "Org_Name": "周剑",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "092381888414469f870bcaa6180e4cf4",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "jzsgljgsb",
+                    "Org_Name": "江浙省公路局高速办",
+                    "Address": "江浙省",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "江浙省公路局高速办",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "48647276031247aa9ffc576510975c49",
+                            "Pid": "092381888414469f870bcaa6180e4cf4",
+                            "Org_No": "zhejiangsheng02",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "江浙省公路局高速办",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "48647276031247aa9ffc576510975c49",
+                                    "IsUser": true,
+                                    "Id": "a2cfd4678afc4f7085be42271566fcfb",
+                                    "Pid": "48647276031247aa9ffc576510975c49",
+                                    "Org_No": null,
+                                    "Org_Name": "赵云飞",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "9f725eafb67f47c88ec968702be12b9d",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "zjhhygsglgfgs",
+                    "Org_Name": "浙江沪杭甬高速公路股份有限公司",
+                    "Address": "浙江",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "浙江沪杭甬高速公路股份有限公司",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "cdf13280517147518cfa66feb458e8e1",
+                            "Pid": "9f725eafb67f47c88ec968702be12b9d",
+                            "Org_No": "zhejiangsheng03",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "浙江沪杭甬高速公路股份有限公司",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "cdf13280517147518cfa66feb458e8e1",
+                                    "IsUser": true,
+                                    "Id": "e0d6049f4f88435b9ca85f80320f4a3d",
+                                    "Pid": "cdf13280517147518cfa66feb458e8e1",
+                                    "Org_No": null,
+                                    "Org_Name": "季文秀",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "a5a2bf44972a46ffb6f1d05eeacbb148",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "zsjnbbcgsgl",
+                    "Org_Name": "招商局宁波北仑港高速公路有限公司",
+                    "Address": "浙江",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "招商局宁波北仑港高速公路有限公司",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "1e8621c9a47640bfba4187c4c43c0bdb",
+                            "Pid": "a5a2bf44972a46ffb6f1d05eeacbb148",
+                            "Org_No": "zhengjiangsheng04",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "招商局宁波北仑港高速公路有限公司",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "1e8621c9a47640bfba4187c4c43c0bdb",
+                                    "IsUser": true,
+                                    "Id": "f7d8be138c534f0d9b5512be0ce21ce8",
+                                    "Pid": "1e8621c9a47640bfba4187c4c43c0bdb",
+                                    "Org_No": null,
+                                    "Org_Name": "高鹏",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "7cb0f360f5064772b3db2ef586e5caff",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "zjwzytwnbeq",
+                    "Org_Name": "浙江温州甬台温高速公路有限公司宁波二期",
+                    "Address": "浙江",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "浙江温州甬台温高速公路有限公司宁波二期",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "809c658ea94d43d09a94eea61a850bf4",
+                            "Pid": "7cb0f360f5064772b3db2ef586e5caff",
+                            "Org_No": "zhengjiangsheng05",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "浙江温州甬台温高速公路有限公司宁波二期",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "809c658ea94d43d09a94eea61a850bf4",
+                                    "IsUser": true,
+                                    "Id": "59e9a5bd74f64ea2834fb44721ccbbda",
+                                    "Pid": "809c658ea94d43d09a94eea61a850bf4",
+                                    "Org_No": null,
+                                    "Org_Name": "林波",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "bb24d622f0e94ff1b0f7ea19daed722a",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "zjwzytwtzeq",
+                    "Org_Name": "浙江温州甬台温高速公路有限公司台州二期",
+                    "Address": "浙江",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "浙江温州甬台温高速公路有限公司台州二期",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "6c6804e79909414f9454c7b518b454bb",
+                            "Pid": "bb24d622f0e94ff1b0f7ea19daed722a",
+                            "Org_No": "zhengjiangsheng06",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "浙江温州甬台温高速公路有限公司台州二期",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "6c6804e79909414f9454c7b518b454bb",
+                                    "IsUser": true,
+                                    "Id": "1fd834ade23c4c4a8707b7a6d67f7edf",
+                                    "Pid": "6c6804e79909414f9454c7b518b454bb",
+                                    "Org_No": null,
+                                    "Org_Name": "邓亮",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "91081a82c5674a1c8b39916be3563eb3",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "zjwzytwtzyq",
+                    "Org_Name": "浙江温州甬台温高速公路有限公司台州一期",
+                    "Address": "浙江",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "浙江温州甬台温高速公路有限公司台州一期",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "e98fd6460b9d43c995856c32a6cca490",
+                            "Pid": "91081a82c5674a1c8b39916be3563eb3",
+                            "Org_No": "zhengjiangsheng07",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "浙江温州甬台温高速公路有限公司台州一期",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "e98fd6460b9d43c995856c32a6cca490",
+                                    "IsUser": true,
+                                    "Id": "caf271bfe8544e7ab24023d800c15b27",
+                                    "Pid": "e98fd6460b9d43c995856c32a6cca490",
+                                    "Org_No": null,
+                                    "Org_Name": "卢祖理",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "cad0ec5e43bc4a97bae46fb4c36b072c",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": "zjwzytwwzd",
+                    "Org_Name": "浙江温州甬台温高速公路有限公司温州段",
+                    "Address": "浙江",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "浙江温州甬台温高速公路有限公司温州段",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "08db701812184dd4a6f59f6a98dcf8c6",
+                            "Pid": "cad0ec5e43bc4a97bae46fb4c36b072c",
+                            "Org_No": "zhengjiangsheng08",
+                            "Org_Name": "浙江省",
+                            "Address": "浙江省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "浙江温州甬台温高速公路有限公司温州段",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "08db701812184dd4a6f59f6a98dcf8c6",
+                                    "IsUser": true,
+                                    "Id": "7d1e0bb8c99c4f0183fd507aa302ba49",
+                                    "Pid": "08db701812184dd4a6f59f6a98dcf8c6",
+                                    "Org_No": null,
+                                    "Org_Name": "阙彪",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Relation_id": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "IsUser": true,
+                    "Id": "16c5e5bd1a7146d2ad581222bfd94682",
+                    "Pid": "6d226c4faa794ba7bbb41c52184bb3ea",
+                    "Org_No": null,
+                    "Org_Name": "浙江管理员",
+                    "Address": null,
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": null,
+                    "Company_Short": null,
+                    "Org_Type": null,
+                    "Children": null
+                }
+            ]
+        },
+        {
+            "Id": "da684bfe493349e286ec2281a9a8cc2e",
+            "Pid": "0000",
+            "Org_No": "jxs(hbbg)",
+            "Org_Name": "江西省厅信息中心/高速公路联网管理中心/应急中心（合并办公）",
+            "Address": "江西",
+            "Province_Id": null,
+            "City_Id": null,
+            "Area_Id": null,
+            "Company": "江西省厅信息中心/高速公路联网管理中心/应急中心（合并办公）",
+            "Company_Short": null,
+            "Org_Type": "0",
+            "Children": [
+                {
+                    "Id": "e9ae73bcb93c440497da39ad6f818e9b",
+                    "Pid": "da684bfe493349e286ec2281a9a8cc2e",
+                    "Org_No": "jxgstzjtct",
+                    "Org_Name": "江西高速投资集团昌铜管理处",
+                    "Address": "江西",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "江西高速投资集团昌铜管理处",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "dd5e4cc0e40c4da8a3d971b0ab9e3481",
+                            "Pid": "e9ae73bcb93c440497da39ad6f818e9b",
+                            "Org_No": "jiangxifangxi",
+                            "Org_Name": "江西省",
+                            "Address": "江西",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "江西高速投资集团昌铜管理处",
+                            "Company_Short": null,
+                            "Org_Type": "3",
+                            "Children": [
+                                {
+                                    "Relation_id": "dd5e4cc0e40c4da8a3d971b0ab9e3481",
+                                    "IsUser": true,
+                                    "Id": "94173d8422f84120bd77098982ea567e",
+                                    "Pid": "dd5e4cc0e40c4da8a3d971b0ab9e3481",
+                                    "Org_No": null,
+                                    "Org_Name": "郭晓峰",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "cf066a72f9714f8a88a7062010f66b11",
+                    "Pid": "da684bfe493349e286ec2281a9a8cc2e",
+                    "Org_No": "jxgstzjtczglc",
+                    "Org_Name": "江西抚州管理中心（所属高投公司）",
+                    "Address": "江西",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "江西抚州管理中心（所属高投公司）",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "dda5176ecf3e40dbb608bb99275fff27",
+                            "Pid": "cf066a72f9714f8a88a7062010f66b11",
+                            "Org_No": "jiangxijinlu",
+                            "Org_Name": "江西省",
+                            "Address": "江西省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "江西抚州管理中心（所属高投公司）",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "dda5176ecf3e40dbb608bb99275fff27",
+                                    "IsUser": true,
+                                    "Id": "dc52521574494becaa6b35185e4f1a23",
+                                    "Pid": "dda5176ecf3e40dbb608bb99275fff27",
+                                    "Org_No": null,
+                                    "Org_Name": "谭工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "3035c19cbe3049a3adf78a395e8a5827",
+                    "Pid": "da684bfe493349e286ec2281a9a8cc2e",
+                    "Org_No": "jxfxkjyxgs",
+                    "Org_Name": "江西方兴科技有限公司（高投子公司）",
+                    "Address": "江西",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "江西方兴科技有限公司（高投子公司）",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "d3a1e79269264a5f85349908d7b759ec",
+                            "Pid": "3035c19cbe3049a3adf78a395e8a5827",
+                            "Org_No": "jiangxisheng01",
+                            "Org_Name": "江西省",
+                            "Address": "江西省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "江西方兴科技有限公司（高投子公司）",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "d3a1e79269264a5f85349908d7b759ec",
+                                    "IsUser": true,
+                                    "Id": "ecba92e4fca841f3b716c8a4ff8b2bc0",
+                                    "Pid": "d3a1e79269264a5f85349908d7b759ec",
+                                    "Org_No": null,
+                                    "Org_Name": "赖文冲",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "1f65761158444252b47307716f1e4b19",
+                    "Pid": "da684bfe493349e286ec2281a9a8cc2e",
+                    "Org_No": "jxjlkjyxgs",
+                    "Org_Name": "江西锦路科技有限公司",
+                    "Address": "江西",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "江西锦路科技有限公司",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "1b25cebce66442fd95b60481bf1e68d7",
+                            "Pid": "1f65761158444252b47307716f1e4b19",
+                            "Org_No": "jiangxisheng02",
+                            "Org_Name": "江西省",
+                            "Address": "江西省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "江西锦路科技有限公司",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "1b25cebce66442fd95b60481bf1e68d7",
+                                    "IsUser": true,
+                                    "Id": "ebb518e930114abf8548486d38328374",
+                                    "Pid": "1b25cebce66442fd95b60481bf1e68d7",
+                                    "Org_No": null,
+                                    "Org_Name": "夏工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Relation_id": "da684bfe493349e286ec2281a9a8cc2e",
+                    "IsUser": true,
+                    "Id": "2268a9fd0845485fb8c4331750ce441e",
+                    "Pid": "da684bfe493349e286ec2281a9a8cc2e",
+                    "Org_No": null,
+                    "Org_Name": "江西管理员",
+                    "Address": null,
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": null,
+                    "Company_Short": null,
+                    "Org_Type": null,
+                    "Children": null
+                }
+            ]
+        },
+        {
+            "Id": "b5f0e100588249ea88924a02f59996a4",
+            "Pid": "0000",
+            "Org_No": "fjsgsjkzx",
+            "Org_Name": "福建省高速监控中心",
+            "Address": "福建",
+            "Province_Id": null,
+            "City_Id": null,
+            "Area_Id": null,
+            "Company": "福建省高速监控中心",
+            "Company_Short": null,
+            "Org_Type": "0",
+            "Children": [
+                {
+                    "Id": "12876a3ef7c04ec4bd68e5c5c81f6675",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsglzxhpfzx",
+                    "Org_Name": "福建省高速公路监控中心和平分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心和平分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "7cf3befe249a4a70ac7bf1ed5691e135",
+                            "Pid": "12876a3ef7c04ec4bd68e5c5c81f6675",
+                            "Org_No": "fujiansheng01",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心和平分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "7cf3befe249a4a70ac7bf1ed5691e135",
+                                    "IsUser": true,
+                                    "Id": "a60c92b5fd0349b088d5b03dde1c9b9f",
+                                    "Pid": "7cf3befe249a4a70ac7bf1ed5691e135",
+                                    "Org_No": null,
+                                    "Org_Name": "詹金男",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "dcda18ef729e4134b9d2ce574f9db26c",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsglsjzx",
+                    "Org_Name": "福建省高速公路数据中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路数据中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "79d51840ac9845f3ba448f6eccf8e62a",
+                            "Pid": "dcda18ef729e4134b9d2ce574f9db26c",
+                            "Org_No": "fujiansheng02",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路数据中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "79d51840ac9845f3ba448f6eccf8e62a",
+                                    "IsUser": true,
+                                    "Id": "2da6232d06ef4e9ea7d5b914c55de7c1",
+                                    "Pid": "79d51840ac9845f3ba448f6eccf8e62a",
+                                    "Org_No": null,
+                                    "Org_Name": "郑煜",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "9dfab6b2c4c341e9b617e06ff8245165",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsgljkzxjlfzx",
+                    "Org_Name": "福建省高速公路监控中心将乐分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心将乐分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "a5a37a812191438a91f9ed3b966a559f",
+                            "Pid": "9dfab6b2c4c341e9b617e06ff8245165",
+                            "Org_No": "jl",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心将乐分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "a5a37a812191438a91f9ed3b966a559f",
+                                    "IsUser": true,
+                                    "Id": "1aa4a1f5827d46e2803c16ab756d2bac",
+                                    "Pid": "a5a37a812191438a91f9ed3b966a559f",
+                                    "Org_No": null,
+                                    "Org_Name": "杨工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "618cfbe4205a4569b447a00ab89c3d49",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsgljkzxsmfzx",
+                    "Org_Name": "福建省高速公路监控中心三明分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心三明分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "7f06c2b50b9643deb38d45e8397f5707",
+                            "Pid": "618cfbe4205a4569b447a00ab89c3d49",
+                            "Org_No": "smb",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心三明分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "7f06c2b50b9643deb38d45e8397f5707",
+                                    "IsUser": true,
+                                    "Id": "bb59a5abdf4a463b993d7a155d36f846",
+                                    "Pid": "7f06c2b50b9643deb38d45e8397f5707",
+                                    "Org_No": null,
+                                    "Org_Name": "陈工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "bf0f17a7ebc64924b60710d961d3c0a7",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsgljkzxnpfzx",
+                    "Org_Name": "福建省高速公路监控中心南平分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心南平分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "55405693d96c43c7883016e7e3bf75e0",
+                            "Pid": "bf0f17a7ebc64924b60710d961d3c0a7",
+                            "Org_No": "npn",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心南平分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "55405693d96c43c7883016e7e3bf75e0",
+                                    "IsUser": true,
+                                    "Id": "5176409945784d35b0870bc7f71fd708",
+                                    "Pid": "55405693d96c43c7883016e7e3bf75e0",
+                                    "Org_No": null,
+                                    "Org_Name": "郑工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "e5d186c91b4f45799c2cf412cd031f68",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsgljkzxyzfzx",
+                    "Org_Name": "福建省高速公路监控中心洋中分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心洋中分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "131748428f82401cad93e6ce38b35e13",
+                            "Pid": "e5d186c91b4f45799c2cf412cd031f68",
+                            "Org_No": "yz",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心洋中分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "131748428f82401cad93e6ce38b35e13",
+                                    "IsUser": true,
+                                    "Id": "bfb66107b8e34bd2a8f120451922b6ed",
+                                    "Pid": "131748428f82401cad93e6ce38b35e13",
+                                    "Org_No": null,
+                                    "Org_Name": "蔡亦富",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "9d8996e5160549349120e211c919b7d9",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsgljkzxfzxfzx",
+                    "Org_Name": "福建省高速公路监控中心福州西分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心福州西分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "e9b414d74feb4e93a0969ae9e9bd47b6",
+                            "Pid": "9d8996e5160549349120e211c919b7d9",
+                            "Org_No": "fzx",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心福州西分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "e9b414d74feb4e93a0969ae9e9bd47b6",
+                                    "IsUser": true,
+                                    "Id": "26d6511c9bd848b7ac8a736430da8e82",
+                                    "Pid": "e9b414d74feb4e93a0969ae9e9bd47b6",
+                                    "Org_No": null,
+                                    "Org_Name": "林工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "ef18f4ccb1b740bc9bfb31214cab19e5",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsgljkzxmwfzx",
+                    "Org_Name": "福建省高速公路监控中心马尾分中心",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路监控中心马尾分中心",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "3010830189da4472be8a01aab33644db",
+                            "Pid": "ef18f4ccb1b740bc9bfb31214cab19e5",
+                            "Org_No": "mw",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路监控中心马尾分中心",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "3010830189da4472be8a01aab33644db",
+                                    "IsUser": true,
+                                    "Id": "cc850e23b9fa4985a5592f1409c7d04b",
+                                    "Pid": "3010830189da4472be8a01aab33644db",
+                                    "Org_No": null,
+                                    "Org_Name": "蔡海煌",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Id": "1bd8ce8c2e434722b40109fc92a2e6a9",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": "fjsgsglgsndfgs",
+                    "Org_Name": "福建省高速公路公司宁德分公司",
+                    "Address": "福建",
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": "福建省高速公路公司宁德分公司",
+                    "Company_Short": null,
+                    "Org_Type": "1",
+                    "Children": [
+                        {
+                            "Id": "7badc36fa1c6422aae463cdc6e28c5ba",
+                            "Pid": "1bd8ce8c2e434722b40109fc92a2e6a9",
+                            "Org_No": "nd",
+                            "Org_Name": "福建省",
+                            "Address": "福建省",
+                            "Province_Id": null,
+                            "City_Id": null,
+                            "Area_Id": null,
+                            "Company": "福建省高速公路公司宁德分公司",
+                            "Company_Short": null,
+                            "Org_Type": "2",
+                            "Children": [
+                                {
+                                    "Relation_id": "7badc36fa1c6422aae463cdc6e28c5ba",
+                                    "IsUser": true,
+                                    "Id": "da480f8b92794db2872f7298bc9047ec",
+                                    "Pid": "7badc36fa1c6422aae463cdc6e28c5ba",
+                                    "Org_No": null,
+                                    "Org_Name": "韩庭炎",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                },
+                                {
+                                    "Relation_id": "7badc36fa1c6422aae463cdc6e28c5ba",
+                                    "IsUser": true,
+                                    "Id": "f26fabc6f0e14853a4de8ca866f6ac9c",
+                                    "Pid": "7badc36fa1c6422aae463cdc6e28c5ba",
+                                    "Org_No": null,
+                                    "Org_Name": "刘工",
+                                    "Address": null,
+                                    "Province_Id": null,
+                                    "City_Id": null,
+                                    "Area_Id": null,
+                                    "Company": null,
+                                    "Company_Short": null,
+                                    "Org_Type": null,
+                                    "Children": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Relation_id": "b5f0e100588249ea88924a02f59996a4",
+                    "IsUser": true,
+                    "Id": "d29d6dd24e8f4850a95dfb38530316d4",
+                    "Pid": "b5f0e100588249ea88924a02f59996a4",
+                    "Org_No": null,
+                    "Org_Name": "福建管理员",
+                    "Address": null,
+                    "Province_Id": null,
+                    "City_Id": null,
+                    "Area_Id": null,
+                    "Company": null,
+                    "Company_Short": null,
+                    "Org_Type": null,
+                    "Children": null
+                }
+            ]
+        },
+    ];
+    var index = relIndexOf(jsonData, "Org_No", 'zjxtjt'); //Org_No属性名字 ，zjxtjt属性值
+    var newData = []; //将第一条存储到内容
+    var zNodes =[]; //存储修改的内容
+    function relIndexOf(data,key, val) {
+        for (var i = 0; i < data.length; i++) {
+            if (data[i][key] == val){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+
+    newData.push(jsonData[index]);
+
+    //修改属性
+
+    GetTree2(newData); //将数组
+
+    function GetTree2(data) {
+        $.each(data,function (index,value) {
+            var nodes = {
+                "pId": value.Pid,
+                "id": value.Id,
+                "org_no": value.Org_No,
+                "name": value.Org_Name,
+                "IsUser": value.IsUser,
+                checked: false,
+                open: false
+            };
+
+            zNodes.push(nodes);
+            if(value.Children && value.Children.length>0){
+                GetTree2(value.Children); //不停的调用子元素
+            }else {
+                return
+            }
+        })
+    }
+    console.log(zNodes)
+</script>

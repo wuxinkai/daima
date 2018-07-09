@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body{ text-align:center;padding:0px;margin:0px;}
+        .div{ margin:0 auto; width:800px; height:100%; }
+    </style>
+    <title>嵌入PDF浏览</title>
+    <script type="text/javascript" src="js/pdfobject.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.media.js"></script>
+    <script>
+        window.onload = function (){
+            // chrome
+            var success = new PDFObject({ url: "http://www.benlai.trade/share1.pdf" }).embed();
+            if(!success){
+                var opts = {
+                    width:800,
+                    height:$(document).height(),
+                    autoplay:true
+                };
+                $('a.media').media(opts);
+            }
+        };
+
+    </script>
+</head>
+<body>
+<div class="div">
+    <a style="" class="media" href="http://www.benlai.trade/share1.pdf">点此预览pdf</a>
+</div>
+</body>
+</html>

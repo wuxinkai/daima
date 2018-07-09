@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script charset="utf-8" type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div id="box0"></div>
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<img src="" id="img4" alt="">
+<img src="" id="img5" alt="">
+</body>
+</html>
+<script>
+
+
+
+
+
+    var city = $('#city').val()||'北京';
+    $.ajax({
+        type:'get',
+        url:'http://api.map.baidu.com/telematics/v3/weather?output=json&ak=0A5bc3c4fb543c8f9bc54b77bc155724',
+        data:{location:city},
+        dataType:'jsonp',
+        success:function(data){
+            var weather_data = data.results[0].weather_data;
+//            console.log(weather_data)
+            var html0 = weather_data[0].date;
+            var html1 = weather_data[0].temperature;
+            var html2 = weather_data[0].weather;
+            var html3 = weather_data[0].wind;
+            var html4 = weather_data[0].dayPictureUrl;
+            var html5 = weather_data[0].nightPictureUrl;
+
+            $('#box0').html(html0);
+            $('#box1').html(html1);
+            $('#box2').html(html2);
+            $('#box3').html(html3);
+
+            $('#img4').attr('src',html4);
+            $('#img5').attr('src',html5);
+
+
+            var box =[];
+            var arr = weather_data;
+            for(var i=0;i<arr.length;i++){
+                box[i] = arr[i].date; //
+            }
+            console.log(box);
+        }
+    });
+
+</script>

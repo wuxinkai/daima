@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .c{width: 100px;height:100px;background: red;position: absolute;animation:mymove 5s infinite;}
+        @keyframes mymove {
+            from {top:0px;}
+            to {top:200px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="c">css</div>
+    <div id="e" style="background: red;width: 100px;height: 100px;position: absolute">setInterval</div>
+    <div id="a" style="background: red;width: 100px;height: 100px;position: absolute;top:300px;">requestAnimFrame</div>
+</body>
+</html>
+<script type="text/javascript">
+    var e = document.getElementById('e');
+    var flag = true;
+    var left = 0;
+    setInterval(() => {
+        //0  flag是true     100 flag是false
+        left == 0 ? flag = true : left == 100 ? flag = false : '';
+        //三元运算不断运动
+        flag ? e.style.left = ` ${left++}px` : e.style.left = ` ${left--}px`
+    }, 1000 / 60);
+
+
+
+
+    //兼容性处理  有时间差
+    window.requestAnimFrame = (function(){
+        return  window.requestAnimationFrame       ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            function(callback){
+                window.setTimeout(callback, 1000 / 60);
+            };
+    })();
+    var a = document.getElementById("a");
+    var flag2 = true;
+    var left2 = 0;
+    function render() {
+        left2 == 0 ? flag2 = true : left2 == 100 ? flag2 = false : '';
+        flag2 ? a.style.left = ` ${left2++}px` :
+            a.style.left = ` ${left2--}px`;
+    }
+    (function animloop() {
+        render();
+        requestAnimFrame(animloop);
+    })();
+
+
+    //用setTimeout()方法来模拟setInterval()
+    var say = function() {
+        setTimeout(say, 1000); //走到这一步，不断的调用，回调函数
+        console.log('hello world')
+    }
+    setTimeout(say, 1000); //这个调用一下就停止 了
+
+
+    // function _interval(){
+    //     window.setTimeout(_interval, 1000);
+    // }
+    // _interval();
+</script>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <style type="text/css">
+        *{margin: 0; padding: 0;list-style: none}
+        #container{width: 1000px; margin: 0 auto}
+        #container dl{width: 32%;margin-right: 1%;margin-top: 1%;float: left;display: block;overflow: hidden;border: 1px solid #ccc;}
+        #container dl a{display: block;text-decoration: none;color: #666; padding: 5px 5px;}
+        #container dl a img{background-size: 100%;display: block;width: 100%}
+        #container dl dd span em{font-style: normal;  font-weight: bold;  color: #F0378D;  }
+        #container dl dd span{font-size: 14px;  width: 100%;  height: 20px;  display: block;   }
+        #container dl .price{ height: 20px;padding: 10px 10px;   }
+        #container dl .price em{font-style: normal;  color: #F0378D;  font-size: 14px;  font-weight: bold;  float: left; }
+        #container dl .price i{    font-style: normal;  float: right;  color: #999; font-size: 14px;}
+        #container dl .price del{float: left;  padding: 0 0 0 10px;  color: #999; }
+
+    </style>
+</head>
+<body>
+    <button id="pprice">点击按钮执行结果</button>
+    <div class="conBottomT" id="container" >
+        <!--<dl>-->
+            <!--<dt><a href="javascript:;"><img src="img/boutque01_r2_c2.jpg" alt="`"></a></dt>-->
+            <!--<dd>-->
+                <!--<span>-->
+                    <!--<a href="javascript:;">-->
+                        <!--<em>3.5折/</em>-->
+                        <!--手机中的战斗机-->
+                    <!--</a>-->
+                <!--</span>-->
+            <!--</dd>-->
+            <!--<dd class="price">-->
+                <!--<em>?998.00</em>-->
+                <!--<del>?58.99</del>-->
+                <!--<i>销售：0天2小时58分6秒</i>-->
+            <!--</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt><a href="javascript:;"><img src="img/boutque01_r2_c2.jpg" alt="`"></a></dt>-->
+            <!--<dd>-->
+                <!--<span>-->
+                    <!--<a href="javascript:;">-->
+                        <!--<em>3.5折/</em>-->
+                        <!--手机中的战斗机-->
+                    <!--</a>-->
+                <!--</span>-->
+            <!--</dd>-->
+            <!--<dd class="price">-->
+                <!--<em>?998.00</em>-->
+                <!--<del>?58.99</del>-->
+                <!--<i>销售：0天2小时58分6秒</i>-->
+            <!--</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt><a href="javascript:;"><img src="img/boutque01_r2_c2.jpg" alt="`"></a></dt>-->
+            <!--<dd>-->
+                <!--<span>-->
+                    <!--<a href="javascript:;">-->
+                        <!--<em>3.5折/</em>-->
+                        <!--手机中的战斗机-->
+                    <!--</a>-->
+                <!--</span>-->
+            <!--</dd>-->
+            <!--<dd class="price">-->
+                <!--<em>?998.00</em>-->
+                <!--<del>?58.99</del>-->
+                <!--<i>销售：0天2小时58分6秒</i>-->
+            <!--</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt><a href="javascript:;"><img src="img/boutque01_r2_c2.jpg" alt="`"></a></dt>-->
+            <!--<dd>-->
+                <!--<span>-->
+                    <!--<a href="javascript:;">-->
+                        <!--<em>3.5折/</em>-->
+                        <!--手机中的战斗机-->
+                    <!--</a>-->
+                <!--</span>-->
+            <!--</dd>-->
+            <!--<dd class="price">-->
+                <!--<em>?998.00</em>-->
+                <!--<del>?58.99</del>-->
+                <!--<i>销售：0天2小时58分6秒</i>-->
+            <!--</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt><a href="javascript:;"><img src="img/boutque01_r2_c2.jpg" alt="`"></a></dt>-->
+            <!--<dd>-->
+                <!--<span><a href="javascript:;"><em>3.5折/</em>手机中的战斗机</a></span>-->
+            <!--</dd>-->
+            <!--<dd class="price"><em>?998.00</em><del>?58.99</del><i>销售：0天2小时58分6秒</i></dd>-->
+        <!--</dl>-->
+    </div>
+</body>
+</html>
+<script>
+    function Product() {
+        this.src='';
+        this.imgs='';
+        this.discount='';
+        this.describe='';
+        this.price='';
+        this.original='';
+        this.time='';
+    }
+
+    Product.prototype={
+        bindDom:function () {
+            //+this.src 就是product的src
+
+            var str ='';
+            str+='<dl>';
+                str+='<dt><a href='+this.src+'><img  src='+this.imgs+' alt=""></a></dt>';
+                str+='<dd>';
+                    str+='<span><a href="javascript:;" id="btn"><em>'+this.discount+'</em>'+this.describe+'</a></span>';
+                str+='</dd>';
+                str+='<dd class="price">';
+                    str+='<em>'+this.price+'</em><del>'+this.original+'</del><i>'+this.time+'</i>';
+                str+='</dd>';
+            str+='</dl>';
+
+            return str //将内容传递出来
+        },
+        bindEvents:function () {
+            var btn = document.getElementById('pprice');
+            var that =this;
+            btn.onclick = function(){
+                that.addProduct()
+            }
+        },
+        addProduct:function () {
+          alert('当前原型上的方法')
+        }
+    };
+
+   window.onload =function () {
+       var products =[
+           {src:'javascrip:;',imgs:'img/boutque01_r2_c2.jpg',discount:'3.5折',describe:'手机中的战斗机',price:'998.00',original:'2000.00',time:'0天2小时58分6秒'},
+           {src:'javascrip:;',imgs:'img/boutque01_r2_c2.jpg',discount:'3.5折',describe:'手机中的战斗机',price:'998.00',original:'2000.00',time:'0天2小时58分6秒'},
+           {src:'javascrip:;',imgs:'img/boutque01_r2_c2.jpg',discount:'3.5折',describe:'手机中的战斗机',price:'998.00',original:'2000.00',time:'0天2小时58分6秒'},
+           {src:'javascrip:;',imgs:'img/boutque01_r2_c2.jpg',discount:'3.5折',describe:'手机中的战斗机',price:'998.00',original:'2000.00',time:'0天2小时58分6秒'},
+           {src:'javascrip:;',imgs:'img/boutque01_r2_c2.jpg',discount:'3.5折',describe:'手机中的战斗机',price:'998.00',original:'2000.00',time:'0天2小时58分6秒'},
+           {src:'javascrip:;',imgs:'img/boutque01_r2_c2.jpg',discount:'3.5折',describe:'手机中的战斗机',price:'998.00',original:'2000.00',time:'0天2小时58分6秒'},
+       ];
+
+       //循环绑定数据；
+            var str2 ='';
+            var product = new  Product();
+
+            product.bindEvents();
+
+            for (var i=0; i<products.length; i++){
+                product.src =products[i].src;
+                product.imgs =products[i].imgs;
+                product.discount =products[i].discount;
+                product.describe =products[i].describe;
+                product.price =products[i].price;
+                product.original =products[i].original;
+                product.time =products[i].time;
+
+                //（1）调用product.bindDom() 方法
+                //（2）将字符串存储到str2中， str2 = "<dl><dt><a href=https://www.baidu.com/><img src=img/boutque01_r2_c2.jpg alt="">
+                //（3）不断的向str2 插入数据
+                str2 += product.bindDom(); //
+            }
+
+       var container = document.getElementById('container');
+
+       //插入内容
+       container.innerHTML =str2; //（4）将拼接字符串插入到内容中
+
+
+       //怎么添加事件
+       container.addEventListener('click', function () {
+                console.dir(this.children)
+       }, false);
+
+
+       var list = document.getElementById("container").getElementsByTagName("dl");
+
+       for (var i = 0; i < list.length; i++) {
+           var dl = list[i];
+           (function (i) {
+               dl.onclick= function () {
+                   console.log("第" + (i + 1) + "条" + this);
+               }
+           })(i)
+       }
+   }
+
+
+</script>

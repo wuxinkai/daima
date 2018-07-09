@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    //基本类型值不共享 ，引用数据类型值共享。
+    var fun = function(){
+
+    };
+    fun.prototype = {
+        info : {
+            name : 'peter',
+            age : 25
+        }
+    };
+
+    var a = new fun();
+    var b = new fun();
+    a.info.name = 'jack';
+    b.info.name = 'tom';
+
+    console.log(a.info.name);//tom
+    console.log(b.info.name);//tom
+</script>

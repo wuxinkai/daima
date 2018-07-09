@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #list{list-style: none;background: #ccc;padding: 10px;border: 1px solid #1b2435;width: 400px}
+        #list li{line-height: 40px;border-bottom: 1px solid #1b2435}
+        #list li.selected{background: pink}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+<button id="btn">点击事件获取多少个被选中内容</button>
+</body>
+</html>
+<script type="text/javascript">
+    var n =[];
+    $('#list ').find('li').click(function () {
+        $(this).toggleClass('selected')
+    });
+
+    $("#btn").on('click',function () {
+        n =[]; //点击之前清空数组
+        $('#list ').find('li').each(function(index,el) {
+            if($(this).hasClass('selected')){
+                n.push($(this).text())
+            }
+        });
+        console.log(n)
+    })
+</script>

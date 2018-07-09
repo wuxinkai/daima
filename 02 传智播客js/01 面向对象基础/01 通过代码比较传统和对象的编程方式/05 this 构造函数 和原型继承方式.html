@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+
+    //产品对象
+    //    js使用函数+this的形式实现对象 - 这个时候的函数称之为构造函数
+    //    js中我们一般将属性放在上面的构造函数中，一般将方法放在下面的原型中
+    //    本质：其实是两个对象  上面叫构造对象，下面叫原型对象 --- 简称双对象定义对象法则 或者 双函数定义对象法则
+
+    //构造函数
+    function Product(name,price,des) {
+        this.name =name;
+        this.price=price;
+        this.description = des;
+    }
+    //查看原型链
+    console.dir(Product);
+
+    //原型: 从原型上获取内容
+    Product.prototype={
+        getPrice:function() {
+            return[ this.name,this.price,this.description]
+        },
+        addToCart:function(){
+        },
+    };
+
+    //创建实例
+    var box =new  Product();
+
+    //赋值
+    box.name ='小米';
+    box.price =20;
+    box.description ='质量不错';
+
+    //执行原型上的方法，  用的是实例执行，而不是函数执行
+   console.log(box.getPrice())
+</script>

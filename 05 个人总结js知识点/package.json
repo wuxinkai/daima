@@ -1,0 +1,7 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "pdf.js": "git+https://github.com/mozilla/pdf.js.git"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+ var human = {};
+//将属性name设置成无法修改
+//writable: false 无法修改了
+//value: "晁天王" 无法修改的名字
+
+// Object.defineProperty(obj, prop, descriptor)
+// obj: 需要被操作的目标对象
+// prop: 目标对象需要定义或修改的属性的名称
+// descriptor: 将被定义或修改的属性的描述符
+
+
+Object.defineProperty(human, "name", { writable: false, value: "晁天王" });
+ console.log(human.name); //晁天王
+human.name = "宋江";//严格模式下会报错 
+
+
+console.log(human.name); //这个时候显示的还是晁天王
+console.log(human);
+
+</script>
+</body>
+</html>

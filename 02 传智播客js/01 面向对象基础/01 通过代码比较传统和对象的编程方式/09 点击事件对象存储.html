@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>价格：<strong id='pprice'>6000</strong></div>
+    <button id='btn'>加入购物车</button>
+    <div>购物车价格：<strong id='sum'>0</strong></div>
+</body>
+</html>
+
+<script>
+    window.onload=function() {
+        var btn=document.getElementById('btn'); //按钮
+        var price= document.getElementById('pprice'); //价格
+        var sum= document.getElementById('sum'); //总价
+        var iphone = {
+            price:6000,
+            addToCart:function(product){
+                cart.products.push(product); //iphone 这个对象
+                cart.sum+=product.price; //出入数量
+                sum.innerHTML=cart.sum //在也买显示多少
+            }
+        };
+        //创建一个购物车内容不销毁
+        var cart ={
+            products:[],
+            sum:0
+        };
+        btn.onclick = function(){
+            iphone.addToCart(iphone)
+        }
+    }
+</script>

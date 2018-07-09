@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+var arr = [
+            {"id":"1001","name":"值1","value":"111"},
+            {"id":"1001","name":"值1","value":"11111"},
+            {"id":"1002","name":"值2","value":"25462"},
+            {"id":"1002","name":"值2","value":"23131"},
+            {"id":"1002","name":"值2","value":"2315432"},
+            {"id":"1003","name":"值3","value":"333333"}
+        ];
+
+    var object = {},
+        dest = [];
+    for(var i = 0; i < arr.length; i++){
+        var curArray = arr[i];
+//        console.log(curArray)
+//        console.log(!object[curArray.id])
+        if(!object[curArray.id]){ //当前没有这个id， 就存储到里面 ， 对象去重
+
+            dest.push({
+                id: curArray.id, //存id
+                name: curArray.name,//存名字
+                data: [curArray],//存储整个文件
+            });
+            object[curArray.id] = curArray;
+        }else{ //如果存储过了。
+
+            for(var j = 0; j < dest.length; j++){
+                var dj = dest[j];
+                if(dj.id == curArray.id){
+                    dj.data.push(curArray);
+                    break;
+                }
+            }
+        }
+    }
+
+//    console.log(dest)
+</script>

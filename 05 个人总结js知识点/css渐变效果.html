@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .hide-article-box {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-top: 160px;
+            background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),color-stop(70%, #fff));
+             background-image:linear-gradient(-180deg,rgba(255,255,255,0) 0%,#fff 70%);
+            text-align: center;
+        }
+        .btn-red-hollow {
+            color: #ca0c16 !important;
+            border: 1px solid #ca0c16 !important;
+            background-color: #fff !important;
+            -webkit-transition: background-color .1s ease-in-out;
+            transition: background-color .1s ease-in-out;}
+        .btn{
+
+            padding: 0 8px;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            text-align: center;
+            border: none;
+            background-color: transparent;
+            height: 34px;
+            line-height: 32px;
+            min-width: 72px;
+            cursor: pointer;
+
+        }
+        botton:hover{
+            background-color: #fde3e4 !important;
+            border-color: #ca0c16 !important;
+        }
+    </style>
+</head>
+<body>
+        <div  style="position: relative;width: 300px;margin: 100px auto;background: #ccc ">
+            <div>　字面上的理解，回调函数就是一个参数，将这个函数作为参数传到另一个函数里面，当那个函数执行完之后，再执行传进去的这个函数。这个过程就叫做回调。
+
+                　　其实也很好理解对吧，回调，回调，就是回头调用的意思。主函数的事先干完，回头再调用传进来的那个函数。但是以前看过很多博客，他们总是将回调函数解释的云里雾里，很高深的样子。
+
+                　　举一个别人举过的例子：约会结束后你送你女朋友回家，离别时，你肯定会说：“到家了给我发条信息，我很担心你。” 对不，然后你女朋友回家以后还真给你发了条信息。小伙子，你有戏了。其实这就是一个回调的过程。你留了个参数函数（要求女朋友给你发条信息）给你女朋友，然后你女朋友回家，回家的动作是主函数。她必须先回到家以后，主函数执行完了，再执行传进去的函数，然后你就收到一条信息了。</div>
+            <div class="hide-article-box">
+                <botton href="" class="btn btn-red-hollow">阅读更多</botton>
+            </div>
+        </div>
+</body>
+</html>

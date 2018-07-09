@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <style>
+        .cart_box{
+            width: 100%;
+            height: 80px;
+        }
+        .sub-icon1 img{
+            border:none;
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .cart_box{
+            margin-bottom:1em;
+            border-bottom:1px solid #E0E0E0;
+            padding-bottom:10px;
+        }
+        .list_img{
+            float:left;
+            width:20%;
+            border:1px solid #e0e0e0;
+            margin-right:6%;
+        }
+        .list_desc{
+            float:left;
+            width:50%;
+        }
+        .list_desc h4{
+            font-size:12px;
+            text-decoration:none;
+            font-weight:100;
+            text-transform:uppercase;
+        }
+        .list_desc h4 a{
+            color:#000;
+        }
+        .list_desc h4 a:hover{
+            color: #f54d56;
+        }
+        .total{
+            padding:10px;
+            background:#ddd;
+            margin-top: 10px;
+        }
+        .c1 {
+            font-size: 15px;
+            color: #000;
+        }
+        a.active-icon.c1:hover {
+            text-decoration:none;
+            color:#ff0d40;
+        }
+        .alert-close{float: right;font-size: 50px;padding-right: 40px;cursor: pointer}
+    </style>
+</head>
+<body>
+<h3>var index = $(".shopping_cart .message").index($(this).parent('.message'));可以获取到当前点击的是第几个</h3>
+    <div class="shopping_cart">
+        <div class="cart_box">
+            <div class="message">
+                <div class="alert-close">X </div>
+                <div class="list_img"><img src="images/1.jpg" class="img-responsive" alt=""/></div>
+                <div class="list_desc">
+                    <h4><a href="#">标题标题标题</a></h4>1 x<span class="actual">$12.00</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="cart_box">
+            <div class="message">
+                <div class="alert-close">X</div>
+                <div class="list_img"><img src="images/1.jpg" class="img-responsive" alt=""/></div>
+                <div class="list_desc">
+                    <h4><a href="#">标题标题标题</a></h4> x<span class="actual">$12.00</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="cart_box">
+            <div class="message">
+                <div class="alert-close">X </div>
+                <div class="list_img"><img src="images/1.jpg" class="img-responsive" alt=""/></div>
+                <div class="list_desc">
+                    <h4><a href="#">标题标题标题</a></h4>1 x<span class="actual">$12.00</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="cart_box">
+            <div class="message">
+                <div class="alert-close">X </div>
+                <div class="list_img"><img src="images/1.jpg" class="img-responsive" alt=""/></div>
+                <div class="list_desc">
+                    <h4><a href="#">通过$(this).parent('.message')，来获取内容</a></h4>1 x<span class="actual">$12.00</span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+<h3 id="boxIn" style="background: #ccc;height: 80px;line-height: 80px;padding-left: 50px;font-size: 40px;"></h3>
+</body>
+</html>
+<script>
+
+
+    $('.shopping_cart').on('click','.alert-close', function(c){
+        var index2 = $(".shopping_cart .message").index($(this).parent('.message'));
+        console.log( index2)
+        $("#boxIn").html(index2)
+    })
+
+</script>

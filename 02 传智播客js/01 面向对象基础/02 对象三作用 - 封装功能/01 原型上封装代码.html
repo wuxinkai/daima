@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn">按钮</button>
+    <div>传智播客</div>
+    <div>传智播客</div>
+    <div>传智播客</div>
+    <div>传智播客</div>
+    <div>传智播客</div>
+
+<br>
+<br>
+<div>
+    <label>用户名</label>
+    <input id="loginname" type="text"  value="" placeholder="邮箱/用户名/已验证手机">
+</div>
+<div>
+    <label>密 码: </label>
+    <input type="text" id="nloginpwd"  placeholder="密码">
+</div>
+<div id="textValue"></div>
+<button id="btnValue">获取内容</button>
+</body>
+</html>
+<script>
+
+    //定义一个对象 - 名字是$
+    var $$ = function() {};
+    //获取id
+    $$.prototype.$id=function(id) {
+        return document.getElementById(id)
+    }
+    //获取class名字
+    $$.prototype.$tag=function(tag) {
+        return document.getElementsByTagName(tag)
+    };
+    //删除左右两端的空格
+    $$.prototype.trim=function(str) {
+        return str.replace(/(^\s*)|(\s*$)/g, '');
+    };
+
+    //在框架中实例化，这样外面使用的使用就不用实例化了
+    //前面讲过了，对象使用之前需要先实例化
+    $$ = new $$();
+
+
+
+    //使用封装好的对象
+    var btn = $$.$id('btn');
+
+    var divs = $$.$tag('div');
+
+    btn.onclick = function(){
+        for(var i= 0,len=divs.length;i<len;i++){
+            divs[i].style.background='red';
+        }
+    }
+
+    //使用封装好的对象
+    var btnValue = $$.$id('btnValue');
+    var object =[];
+    btnValue.onclick = function(){
+         object.push($$.trim($$.$id('loginname').value));
+         object.push($$.trim($$.$id('nloginpwd').value));
+
+        $$.$id('textValue').innerHTML =object
+        //ajax提交数据
+    }
+</script>
+

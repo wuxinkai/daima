@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+//我们来看一下一个粗略的一个定义“函数a有一个参数，这个参数是个函数b，当函数a执行完以后执行函数b。那么这个过程就叫回调
+    function  a(callback){
+        alert('a');
+        callback.call(this);//或者是 callback（）,  callback.apply(this),看个人喜好
+    }
+    function  b(){
+        alert('b');
+    }
+    //调用
+    a(b);
+
+</script>

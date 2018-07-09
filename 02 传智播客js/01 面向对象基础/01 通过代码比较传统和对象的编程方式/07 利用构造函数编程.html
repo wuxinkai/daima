@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="content">
+        <h1 id="name"></h1>
+        <p id="title"></p>
+        <p id="time"></p>
+        <p id="con"></p>
+        <button id="btn">点击事件</button>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    //构造函数  首字母大写    没有return
+    function News() {
+        this.name ='';
+        this.title ='';
+        this.time ='';
+        this.con ='';
+        this.doms ={
+            //给dom 捆绑内容
+            name:document.getElementById('name'),
+            title:document.getElementById('title'),
+            time:document.getElementById('time'),
+            con:document.getElementById('con'),
+            btn:document.getElementById('btn'),
+        }
+    }
+    News.prototype ={
+        //原型添加事件
+       bindDom:function () {
+           this.doms.name.innerHTML=this.name;
+           this.doms.title.innerHTML=this.title;
+           this.doms.time.innerHTML=this.time;
+           this.doms.con.innerHTML=this.con;
+       },
+        addToCart:function () {
+            console.log('1133');
+            return  '12345'
+        },
+        bindEvents:function () {
+           var that =this; //原型链上的实例 this指向news
+           this.doms.btn.onclick =function () { //this 指向dom元素
+               that.addToCart();
+           }
+        }
+    };
+    //和上面写法一样
+//    News.prototype.bindDom = function() {
+//        this.doms.name.innerHTML=this.name;
+//        this.doms.title.innerHTML=this.title;
+//        this.doms.time.innerHTML=this.time;
+//        this.doms.con.innerHTML=this.con;
+//    };
+
+    //创建实例
+    var news = new News(); //News()是一个类   news是一个实例
+
+    //实例赋值
+    news.name = '名字：王晓光';
+    news.title = '德国小组没有出线';
+    news.time = '2018.06.28';
+    news.con = '德国国家男子足球队，由德国足球协会负责管辖，代表德国参加大型国际性足球赛事，是世界上历史最悠久、战绩最辉煌的豪门球队之一。德国由于二战后政治原因分裂成东德、西德以及萨尔保护领，分别成立各自的地区代表队参加国际比赛'
+
+    //实例执行，而不是函数执行
+    news.bindDom();
+    //事件执行
+    news.bindEvents()
+</script>

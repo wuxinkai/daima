@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> name:名字</p>
+<p> price:价格</p>
+<p> description:描述</p>
+<p> sales:出售</p>
+<div class="content" style="padding: 20px;border: 2px solid #ccc    ">
+    <h2 id="name"></h2>
+    <p id="title"></p>
+    <p id="time"></p>
+    <p id="con"></p>
+    <button id="btn">点击console.log</button>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    function Product(name,price,description,sales) {
+        this.name =name;
+        this.price =price;
+        this.description =description;
+        this.sales =sales;
+    }
+
+    Product.prototype = {
+        getPrice:function () {
+            return [this.name,this.price,this.description,this.sales]
+        },
+        addSales:function () {
+            return this.sales
+        }
+    }
+
+
+    window.onload =function () {
+        //类传参  对象的使用必须先实例化，对象定义好之后，都是抽象的，必须实例化成具体
+        var iphone = new Product('iphone8',8700,'手机中的战斗机',8200);
+
+       document.getElementById('name').innerHTML =iphone.name;
+       document.getElementById('title').innerHTML =iphone.price;
+       document.getElementById('time').innerHTML =iphone.description;
+       document.getElementById('con').innerHTML =iphone.sales;
+       var btn =document.getElementById('btn')
+
+        btn.onclick =function () {
+            console.log(iphone.getPrice())
+        }
+    }
+
+</script>

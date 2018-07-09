@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var arr1 = new Array(); //构造函数创建一个空数组；
+    var arr2 = new Array(20); // 创建一个包含20项的数组；
+    var arr3 = new Array('One','two','three','four','five','six','seven','eight','nine','ten');
+    var arr4 = ['1','2','3','4','5','6','7','8','9','10'];
+    // 创建一个包含3个字符串的数组
+
+    console.log(arr2);
+    console.log(arr3[0]); //索引从0开始
+    console.log(arr3.length); //10length属性是可以修改 获取数组长度
+    console.log(arr3[arr3.length-1]); // 长度从1开始计算  获取数组最后一个
+    console.log(arr3.length = arr3.length-1); //删除最后一项
+
+
+//增删改
+//push()逐个添加到数组末尾，并返回修改后数组的长度。
+    var b = ["Lily","lucy","Tom"];
+    var count = b.push("Jack","Sean");
+    console.log(count); // 5
+    console.log(b); // ["Lily", "lucy", "Tom", "Jack", "Sean"]
+
+//unshift：向数组开头增加一项 返回值是数组的新长度
+    var c= [1,2,3,4,5,6,7,8,];
+    var d=c.unshift(3);//在数组的开头增加一项
+    console.log(c);
+    console.log(d);//返回数组最新长度。
+
+//pop:删除数组的末尾项 返回值是删除的数组项;
+    var e= [1,2,3,4];
+    var f=e.pop();
+    console.log(e);
+    console.log(f);//返回被删除的那一项
+
+//shift:删除数组开头项 返回被删除的开头项目
+    var g= ['c',2,3,'t'];
+    var h=g.shift();
+    console.log(g);
+    console.log(h);//返回被删除的那一项
+
+//splice：删除数组中的任意项 返回值是被删除的数组项
+    var k= [1,2,3,4];
+    var l=k.splice(1,2,'替换内容'); // 1和2 是索引的位置
+    console.log(k);
+    console.log(l);
+
+//slice 复制数组 返回值是复制到的新数组 写上数值之后 不包含被复制的最后一项
+    var n= [1,2,3,4,5,6,7];
+    var m=n.slice(2,5);//通过索引赋值数组
+    console.log(n); //原数组
+    console.log(m); //[3,4,5]
+
+//拼接：
+//concat:把一个数组和另一个数组拼接在一起 返回拼接好的数组
+    var p=['$','#','@'], ary1=[1,2,3],ary2=['a','b','c'];
+    var o =p.concat(ary1,ary2);//可以连接多少数组
+    console.log(o);
+
+//join  将数组的元素组起一个字符串 ，把数组中的每一项 按照指定的分隔符拼接成字符串
+    var a=['a','b','c'];
+    console.log(a.join('+'));
+    console.log(a); // ['a','b','c']（原数组不变）
+
+//排序
+//reverse:倒序数组 返回值倒序数组 原有数组改变
+    var ary3 =[1,2,3,4,5,6];
+    var ary4=ary3.reverse();//倒序排序  原有数组改变
+    console.log(ary3);
+    console.log(ary4);
+
+//sort:根据匿名函数进行冒泡排序 b-a倒序 a-b升序
+    var ary5 =[1,2,3,4,5,6];
+    var ary4=ary5.sort(function(a,b){
+        return b-a;
+    });
+    console.log(ary5);
+
+//兼容性不好：
+//indexOf:返回获取项在数组中的索引
+    var array =['a','b','c','d','e','f','g'];
+    var ls=array.indexOf('c');//在数组找查找你要的内容，返回索引，如果没也找到返回-1
+    console.log(ls);
+
+//lastIndexOf:返回获取项在数组中出现的最后一次索引
+    var array3 =['a','b','c','g','d','e','f','g'];
+    var lt=array3.lastIndexOf('g');//返回获取项在数组中出现的最后一次索引
+    console.log(lt);
+
+//forEach返回获取项在数组中出现的最后一次索引
+//    forEach()方法用于调用数组的每个元素，将元素传给回调函数。
+//    注意：forEach对于空数组是不会调用回调函数的
+    // 。
+    var array2 =['a','b','c','d','e','f','g'];
+    array2.forEach(function(item,index,arr){ //a是每一项  b是索引
+        console.log(item,index,arr)
+    },fn())
+    function fn() {
+        alert('1')
+    }
+//map：循环遍历数组 参数是一个匿名函数
+//    map定义和用法：
+//    map方法返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。
+//    我的理解就是：原数组进行处理之后对应的一个新的数组。
+//    map()方法按照原始数组元素顺序依次处理元素。
+//    注意：map()方法不会对空数组进行检测。
+//    map()方法不会改变原始数组。
+
+    var array4 =['a','b','c'];
+    array4.map(function(d,f){
+      console.log('-----'+d,f)
+    });
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="name"></h1>
+        <p id="price"></p>
+        <p id="desc"></p>
+        <p id="salse"></p>
+    </div>
+    <button id="btn">点击按钮</button>
+</body>
+</html>
+<script>
+    function Product(name,price,desc,salse) {
+        this.name = name;
+        this.price = price;
+        this.desc = desc;
+        this.salse = salse;
+        this.doms ={
+            name:document.getElementById('name'),
+            price:document.getElementById('price'),
+            desc:document.getElementById('desc'),
+            salse:document.getElementById('salse'),
+            btn:document.getElementById('btn'),
+        }
+    }
+    Product.prototype ={
+        add:function () {
+            console.log('请添加产品');
+        },
+        bindDom:function (dom) {
+            //字符串拼接添加
+
+            var str ='';
+            str+='<div id="name"><h1>品牌:'+this.name+'</h1></div>';
+            str+='<div id="price"><p>原价:'+this.price+'</p></div>';
+            str+='<div id="desc"><p>描述:'+this.desc+'</p></div>';
+            str+='<div id="salse"><p>现价:'+this.salse+'</p></div>';
+            //插入内容
+            dom.innerHTML =str;
+        },
+        bindEvents:function () {
+           var that =this;
+           this.doms.btn.onclick =function () {
+               that.add()
+           }
+        }
+    };
+
+    var iphone = new  Product('iphone',8700,'手机中的战斗机',8200);
+    var content =document.getElementById('container');
+
+    iphone.bindDom(content);
+
+    iphone.bindEvents();
+
+</script>

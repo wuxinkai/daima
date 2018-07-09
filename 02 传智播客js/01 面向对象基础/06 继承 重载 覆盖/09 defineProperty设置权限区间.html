@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var NBAMember= {}
+
+    //将属性name设置成无法修改
+    //这样别人就无法修改了
+    //创建一个name属性
+//    Object.defineProperty(NBAMember,"name",{ writable: false,value: "火箭队" });
+
+//    alert(NBAMember.name); //火箭队
+//    NBAMember.name = "小火箭";//严格模式下会报错 虽然我将其更改了，但是还是显示火箭队
+//    alert(NBAMember.name); //火箭队
+
+
+    //    创建一个age属性
+    Object.defineProperty(NBAMember, "age", {
+
+        get: function () { //取值器
+            return age+1;
+            },
+        set: function (value) { //设置器
+            if(value>100)
+            {
+                console.log('值必须在0-100之间');
+            }else{
+                age = value;
+
+            }
+        }
+    });
+
+    NBAMember.age =12;
+    console.log(NBAMember.age);
+
+    NBAMember.age =172; //大于100
+</script>
