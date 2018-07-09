@@ -1,13 +1,11 @@
-/*
- * utils.js ´æ´¢µÄÊÇÎÒÃÇÏîÄ¿ÖĞ³£ÓÃµÄ¹«¹²µÄ·½·¨
- */
+
 var utils = {
-    //listToArray:°ÑÀàÊı×é×ª»»ÎªÊı×é(¼æÈİËùÓĞµÄä¯ÀÀÆ÷)
+
     listToArray: function (likeAry) {
         var ary = [];
         try {
-            ary = Array.prototype.slice.call(likeAry, 0);
-        } catch (e) {
+            ary = Array.prototype.slice.call(likeAry, 0); //è½¬æ¢æ•°ç»„
+        } catch (e) { //ieä¸æ”¯æŒ å°±æŠŠæ¯ä¸€é¡¹å­˜å‚¨åˆ°æ•°ç»„ä¸­
             for (var i = 0; i < likeAry.length; i++) {
                 ary[ary.length] = likeAry[i];
             }

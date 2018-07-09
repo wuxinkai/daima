@@ -65,7 +65,7 @@
 //            bind解决重复问题和this问题
 //            重复问题在每一次往自定义属性中存储的时候是否存在 ，存在就不存了，
             for(var i=0;i<ary.length;i++){
-                if(ary[i].photo===evenFn)){
+                if(ary[i].photo===evenFn){
                     return
                 }
             }
@@ -91,6 +91,7 @@
 
                     var flay =
                     var ary =this["myEvent"+evenType];
+
                     for(var i=0;i<ary.length;i++){
                         var tempFn=ary[i];
                         tempFn.call(this,e); // 因为在内置事件池中绑定的this都是当前要操作的元素，并且浏览器会给其元素创建的容器为了和内置的统一我们让其this变成当前的元素，并且传递一个事件对象；
