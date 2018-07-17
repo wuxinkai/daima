@@ -36,6 +36,7 @@
     };
 })(String.prototype);
 
+//上面是兼容方法
 var $urlHost = "http://matchweb.sports.qq.com";
 var $index = 0;
 var timeModel = {
@@ -46,7 +47,8 @@ var timeModel = {
             var cur = ary[i];
             cur["weekday"] = cur["weekday"] || "--";
             cur["date"] = cur["date"] || "2015-01-01";
-            str += "<li class='cursor left' time='" + cur["date"] + "'>";
+
+            str += "<li class='cursor left' time='" + cur["date"] + "'>";  //cur["date"] 当前日期高亮显示
             str += "<span class='list-top'>" + cur["weekday"] + "</span>";
             str += "<span class='list-bot'>" + cur["date"].myFormatTime("{1}-{2}") + "</span>";
             str += "</li>";
@@ -78,8 +80,7 @@ var timeModel = {
             e = e || window.event;
             e.target = e.target || e.srcElement;
             var n = 1;
-
-            if (e.target.className.indexOf("time-left") > -1) { //判断class名字
+            if (e.target.className.indexOf("time-left") > -1) {
                 n *= -1;
             }
             $index += n;
@@ -87,13 +88,12 @@ var timeModel = {
                 //还要让当前的这个选中的向左或者向右移动一个选中
                 var $curItem = _this.timeUl.children("li").eq($index + 3);
                 $curItem.addClass("select").siblings().removeClass("select");
-                    //切换完成后绑定数据
-                    listModel.init($curItem.attr("time"));
+                //切换完成后绑定数据
+                listModel.init($curItem.attr("time"));
             });
         });
     },
     callback: function (jsonData) {
-        // (2)过滤数据
         if (jsonData.code !== 0) {
             //->只有code===0才是正常的返回我们需要的数据
             return;
@@ -101,10 +101,10 @@ var timeModel = {
         jsonData = jsonData["data"];
         var today = jsonData["today"];
 
-        //->（3）绑定数据
+        //->绑定数据
         this.bind(jsonData["data"]);
 
-        //->（4）让当前的这个时间默认被选中
+        //->让当前的这个时间默认被选中
         this.selectCur(today);
 
         //->给左右按钮绑定点击事件
@@ -115,13 +115,13 @@ var timeModel = {
         this.timeUl.children("li").click(function () {
             $(this).addClass("select").siblings().removeClass("select");
             listModel.init($(this).attr("time"));
+
             $index = $(this).index() - 3;
             _this.timeUl.animate({left: -$index * 105}, 500);
         });
     },
     init: function () {
         var _this = this;
-        // (1)获取数据
         $.ajax({
             url: $urlHost + "/kbs/calendar?columnId=100000&_=" + Math.random(),
             type: "get",
@@ -135,7 +135,6 @@ var timeModel = {
 };
 var listModel = {
     callback: function (jsonData, time) {
-        console.log(jsonData);
         if (jsonData["code"] !== 0) {
             return;
         }
@@ -146,10 +145,10 @@ var listModel = {
             var cur = jsonData[i];
             cur["leftGoal"] = cur["leftGoal"] == 0 ? "" : cur["leftGoal"];
             cur["rightGoal"] = cur["rightGoal"] == 0 ? "" : cur["rightGoal"];
+
             str += "<li>";
             str += "<div class='conList-left left'><span class='w80 left'>" + cur["startTime"].myFormatTime("{3}:{4}") + "</span><span class='w140 left'>" + cur["matchDesc"] + "</span></div>";
             str += "<div class='conList-center left'>";
-
             str += "<img src='" + cur["leftBadge"] + "' class='home left'/>";
             str += "<span class='home left'>" + cur["leftName"] + "</span>";
             str += "<span class='w92 left'>" + cur["leftGoal"] + "-" + cur["rightGoal"] + "</span>";
@@ -171,7 +170,6 @@ var listModel = {
             dataType: "jsonp",
             jsonpCallback: "gameList",
             success: function () {
-                console.log(time);
                 _this.callback(arguments[0], time);
             }
         });
