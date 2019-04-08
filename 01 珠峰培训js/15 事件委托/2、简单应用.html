@@ -69,8 +69,9 @@
 </div>
 
 <script type="text/javascript">
-    var shop = document.getElementById("shop"), shopDetail = document.getElementById("shopDetail");
-    document.body.onclick = function (e) {
+    var shop = document.getElementById("shop");
+    var shopDetail = document.getElementById("shopDetail");
+        document.body.onclick = function (e) {
         e = e || window.event;
         e.target = e.target || e.srcElement;
         if (/^(shop|shopDetail)$/.test(e.target.id)) {

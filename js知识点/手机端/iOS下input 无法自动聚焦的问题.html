@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" id="inputElementId">
+</div>
+<div>
+    <input type="text" id="inputElem">
+    <input type="button"  value="按钮"  id="btn" >
+</div>
+</body>
+</html>
+<script>
+    //在一般的正常浏览器上，可以用 javascript 来 focus 到一个输入框上：
+    var elem = document.getElementById('inputElementId');
+    elem.focus();
+
+    //但是在 iOS手机 上，这样的代码根本不起作用只有在监听了用户出发的事件的函数中执行 focus 才有用。
+    //比如说这样：
+
+
+    var inputElem = document.getElementById('inputElem');
+
+    document.getElementById('btn').addEventListener("click", function(){
+        inputElem.focus();
+    });
+
+
+
+</script>

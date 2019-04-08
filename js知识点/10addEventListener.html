@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+</body>
+</html>
+<script>
+    var ulNode = document.getElementById("ul");
+    ulNode.addEventListener('click', function (e) {
+        if (e.target && e.target.nodeName.toUpperCase() == "LI") {
+            alert(e.target.innerHTML);
+        }
+    }, false);
+
+
+//    怎么判断两个对象相等？
+    obj={
+        a:1,
+        b:2
+    }
+    obj2={
+        a:1,
+        b:2
+    }
+    obj3={
+        a:1,
+        b:'2'
+    };
+
+    //JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
+   console.log( JSON.stringify(obj)==JSON.stringify(obj2)); //true
+   console.log(JSON.stringify(obj)==JSON.stringify(obj3)) //false
+
+</script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //编程式代码 ，一步一步实现结果
+    let arr = [1, 2, 3, 4, 5, 6]
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+
+    //声明式代码  不支持return ，不考虑实现原理
+    arr.forEach(function (item) {
+        console.log(item)
+    })
+
+    // forEach ,for in ,for ,for of 的区别
+    for (let key in arr) { //key 会变成字符串类型，可以遍历对象
+        console.log('遍历除了【数组】以为的类型，数组的私有属性可以打印')
+    }
+    //es6 既有支持数组 又支持return,不能遍历对象
+    for (let key of arr) {
+        console.log()
+    }
+    let obj = {
+        name: 'lilei',
+        age: 18
+    }
+    //Object.keys(obj) 将对象的key作为新数组
+    for (let val of Object.keys(obj)) {//循环对象的属性名
+        console.log(obj.val ) //强制转为对象
+    }
+
+    //filter，返回结果式过滤后的新数组， 回调函数的返回结果是true 就把这一项放到新数组中
+    let newAry = [1,2,3,4].filter(function(item){
+        return item
+    })
+
+    //map 映射 将原有的数组 映射成一个新数组
+    // 需求式将[1,2,3,4]变成一个列表 <li>1</li><li>2</li><li>3</li>
+    let arr1 = [1,2,3].map(function(item){
+        return `<li>${item}</li>`
+    })
+
+    //includes() //是否包含的意思 是否包含5
+    let arr3 = [1,2,3]
+   console.log( arr3.includes(5))
+
+   // some 找到true 找到true后停止 返回true
+   let arr4 = [1,2,3].some(function(item){
+    })
+   // every 找到false 找到false 返回  返回false
+   let arr5 = [1,2,3].every(function(item){
+    })
+
+    //求数组的和 reduce 
+
+</script>

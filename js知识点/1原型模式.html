@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    设置模式遵循的原则：
+    （1）最少知识量原则：一个软件实体尽量少于其他实体发生作用（把对象分为较小的颗粒，以便提高复用性）
+    （2）开发-封闭原则:软体实体（类，模块，函数）等 都可以扩展，但不建议修改
+
+    （一）原型模式
+    javascript基于原型的委托机制实现对象与对象之间的继承，当对象无法响应请求时，会把该委托给自己的原型，
+    构造器有原型，实例对象没有原型，有一个叫proto的属性，其默认指向它的构造函数原型对象，即{constructor}.prototype
+    */
+    var obj ={name:'ligang'};
+    var A = function () {};
+    A.prototype = obj; //A的原型指向 obj
+    var a = new A();  //
+    console.log(a.name);  //原型继承   ligang
+    /*
+    （1）遍历对象a中所有属性，未找到name属性
+    （2）查找name属性的请求被委托给对象a的对象构造器的原型，它被a.proto记录着并且指向A.prototype，而其被设置为对象obj
+    （3）在对象obj中找到name属性，并返回
+    */
+
+    var obj1 = {name:'ligang2'};
+    var B = function(name) {
+        this.name = name; //B 有name这个属性，但是没有赋值，
+    };
+    B.prototype =obj1;
+    var b= new B();
+    // var b= new B(2); b.name =2;
+    console.log(b.name)
+    //首选遍历对象a中的所有属性，存在name属性，但未赋值
+
+    var obj3 = {name: "ligang3"};
+    var C = function() {};
+    C.prototype = obj3; //C原型指向 obj3
+    var D = function() {};
+    D.prototype = new C(); //D的原型指向C
+    var d = new D(); // 创建实例d
+    console.log(d.name);    // ligang
+    //d对象 –> d.proto(即：D.prototype) –> new C()对象 –> D.prototype –> obj3
+
+</script>

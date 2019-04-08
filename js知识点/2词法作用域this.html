@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    词法作用域;
+    首先明确JavaScript只具备词法作用域（书写代码时函数声明的位置来决定），
+    不具备动态作用域。通过下述示例说明。
+    */
+//（1）---------------------------------------------------------
+    function foo() {
+        // console.log(a);
+    }
+    function bar() {
+        var a = 1;
+        foo();
+    }
+    bar(); //ReferenceError 直接报错；
+
+//（2）---------------------------------------------------------
+    function foo2() {
+        console.log(this.a);// this指向window
+    }
+    function bar2() {
+        var a = 1;
+        foo2();
+    }
+    bar2();// undefined
+
+//(3)--------------------------------------------------------
+    function foo3() {
+        console.log(this.a);
+    }function bar3() {
+        this.a = 1;
+        foo3();
+    }
+    bar3();      // 1
+
+
+//this指向（构造器调用）
+//(4)--------------------------------------------------------
+    var MyClass = function() {
+        this.age = 25;
+        this.name = "ligang";
+    };
+    var obj4 = new MyClass();
+    console.log("姓名：" +　obj4.name + " 年龄：" + obj4.age); //25  ligang
+
+//(5) 带有 return的对象内容  ------------------------------------
+    var MyClass2 = function() {
+        this.age2 = 25;
+        this.name2 = "ligang";
+        return { //如果构造器显式地返回一个object类型的对象，那么此次运算最终返回这个对象，而不是我们之前期待的this。
+            name2: "camile",
+        };
+    };var obj5 = new MyClass2();
+    console.log("姓名：" +　obj5.name2 + " 年龄：" + obj5.age2); // 姓名：camile 年龄：undefined
+
+//指定函数内部this指向
+    var obj6 = {name: "ligang"};
+    var func = function(a, b, c) {
+        console.log(this.name);
+        console.log([a, b, c])
+    }.bind(obj6, 1, 2); //bind 的this指向了 obj6
+
+    func('这是第三个值');
+</script>

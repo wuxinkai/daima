@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 高阶函数：函数作为参数传递；函数作为返回值输出。
+    //如果一个函数接受一个或多个函数作为参数,或者可以返回一个参数,则这样的函数就叫高阶函数
+    //常见的高阶函数 ,setInterval,setTimeout,sort 一般用于函数回调
+    function foo(f){
+        if(f instanceof Function){
+            f();
+        }
+    }
+    foo(function(){console.log("asdf")});
+
+    function fun(callback) {
+        if(typeof callback === 'function'){
+            callback();
+        }
+    }
+    fun(function(){console.log(2);});
+
+
+//数组过滤
+    var arr = [1,2,3,4,5];
+    var a1 = arr.filter(function (ele,index,array){
+        return ele%2 == 1    //返回所有奇数,过滤了所有偶数
+    })
+    console.log(a1);    //[1,3,5]
+
+//map:应用于数组,对数组进行操作
+    var arrIn = [1,9,4,16,25];
+    var arr2 = arrIn.map(function(x){  //传进来的是一个函数
+        return x*2;
+    });
+    console.log(arr2);  //[2,18,8,32,50]
+
+</script>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var a = 1;
+    function foo() {
+        var a = 2;
+        console.log( this,a); //window 2
+        console.log( this.a );
+    }
+    foo(); // 1  方法执行前没有点 就是window
+
+</script>

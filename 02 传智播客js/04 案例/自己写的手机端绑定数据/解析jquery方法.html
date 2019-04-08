@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <style>
+        .hide{display: none}
+    </style>
+</head>
+<body>
+    <div style="position: relative">
+        <div id="box">点击事件</div>
+        <!--切换栏-->
+        <div id="option_menu" class="menu-list hide">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">我们</a>
+        </div>
+    </div>
+
+</body>
+</html>
+<script >
+    //(1)tab切换栏
+    if($('box')!=null){ //判断 设置上有没有 这个id属性
+        addEvent('optionsb','click',function(){
+            boxToggle(this,'option_menu') //option_menu也是id的名字
+        });
+    }
+    function boxToggle(t,id){
+        console.log(t,id)
+        var boxId = $(id);
+        if(boxId.style.opacity == '0' || boxId.style.height ==''){
+            boxId.style.display = 'block';
+            boxId.style.height = 'auto';
+            boxId.style.opacity = '1';
+            boxId.style.top = '0';
+            t.className = 'active';
+        }else {
+            boxId.style.opacity = '0';
+            boxId.style.top = '-20px';
+            boxId.style.height = '0';
+            boxId.style.display = 'none';
+            t.className = '';
+        }
+    }
+
+    //ie和其它浏览器点击事件不兼容解决办法
+    function addEvent(obj,type,fun){
+
+        obj=$(obj);
+        if(obj.addEventListener){
+            obj.addEventListener(type,fun);
+            return true;
+        }else if(obj.attachEvent){
+            return obj.attachEvent("on"+type,fun);
+        }else{
+            return false;
+        };
+    }
+
+    // 如果id不存在返回null  存在就返回捕获内容
+    function $(id) {
+        return !id ? null : document.getElementById(id);
+    }
+</script>

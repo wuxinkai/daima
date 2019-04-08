@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //声明函数
+    function fn1(){}
+
+    //匿名函数表达式
+    var fn2=function (){};
+
+    //创建具名函数表达式
+    var fn3=function fn4(){
+        return 1
+    };
+//    console.log(fn3,fn4)   fn3返回整个函数，  fn4报错
+
+    //自执行函数
+    (function(){console.log(1);})();
+    (function fn1(){console.log(1);})();
+
+</script>

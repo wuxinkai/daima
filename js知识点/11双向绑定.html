@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" id="txt">
+    <p id="show-txt"></p>
+</div>
+<script>
+    var obj = {};
+    Object.defineProperty(obj, 'txt', { //2触发事件
+        get: function () {
+            return obj
+        },
+        set: function (newValue) { //3 将值给input  和 p标签
+            document.getElementById('txt').value = newValue;
+            document.getElementById('show-txt').innerHTML = newValue
+        }
+    });
+
+    document.addEventListener('keyup', function (e) { //1 将内容存储到obj对象里
+        obj.txt = e.target.value
+    })
+</script>
+</body>
+</html>

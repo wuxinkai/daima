@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script>
+//设置对象变量键值的语法
+    let myKey = 'key3';
+    let obj = {
+        key1: 'One',
+        key2: 'Two'
+    };
+    obj[myKey] = 'Three'; //对象添加内容的方法；
+    console.log(obj);
+
+//es6 添加属性的方法
+    let myKey2 = 'variableKey';
+    let obj2 = {
+        key1: 'One',
+        key2: 'Two',
+        [myKey2]: 'Three' /* yay! */
+    };
+    console.log(obj2);
+
+
+
+//箭头函数
+let calculateTotal = total => total * 1.1;
+console.log(calculateTotal(10) );// 11
+
+
+//find/findIndex
+let ages = [12, 19, 6, 4];
+let firstAdult = ages.find(age => age >= 18); // 19   返回的是值
+console.log(firstAdult);
+let firstAdultIndex = ages.findIndex(age => age >= 18); // 1  返回的是个数
+console.log(firstAdultIndex);
+
+
+//扩展运算符
+    let divsArray = [...document.querySelectorAll('div')];
+    console.log(divsArray);
+    function fn() {
+        let argsArray = [...arguments];
+        console.log(argsArray)
+    }
+    fn(1,2,3,4,5,6,7,8,9,10,11)
+
+//模板字符串
+let obj4 = { x: 1, y: 2 };
+console.log(`Your total is: ${obj4.x + obj4.y}`); // Your total is: 3
+
+
+//默认值
+function greet(name = 'Anon') {
+    console.log(`Hello ${name}!`);
+}
+greet()
+
+
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 修改list列表中的某一个元素的某一个值 -->
+</body>
+
+</html>
+<script>
+  var ItemsArry = [
+    {
+      container: {},
+      data: null,
+      id: "S4",
+      inputIds: ["S4"],
+      inputPathIds: [],
+      name: "Subjects + Studies",
+      outputIds: ["S3"],
+      outputPathIds: [],
+      type: "FUNCTION",
+      x: 884,
+      y: 489
+    },
+    {
+      container: {},
+      data: null,
+      id: "S3",
+      inputIds: ["S3"],
+      inputPathIds: [],
+      name: "Subjects + Studies",
+      outputIds: ["S1"],
+      outputPathIds: [],
+      type: "FUNCTION",
+      x: 684,
+      y: 489
+    },
+    {
+      container: {},
+      data: null,
+      id: "S1",
+      inputIds: ["S1"],
+      inputPathIds: [],
+      name: "Subjects",
+      outputIds: [],
+      outputPathIds: [],
+      type: "FUNCTION",
+      x: 484,
+      y: 439
+    }
+  ]
+  for (let i = 0; i < ItemsArry.length; i++) {
+     if(ItemsArry[i].id =='S3'){
+      ItemsArry[i].inputPathIds ='修改当前的这个'
+     }
+  }
+  console.log(ItemsArry);
+</script>

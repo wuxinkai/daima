@@ -25,15 +25,13 @@ var arr = [
 //        console.log(curArray)
 //        console.log(!object[curArray.id])
         if(!object[curArray.id]){ //当前没有这个id， 就存储到里面 ， 对象去重
-
             dest.push({
                 id: curArray.id, //存id
                 name: curArray.name,//存名字
-                data: [curArray],//存储整个文件
+                data: [curArray],//存储id相同的文件
             });
             object[curArray.id] = curArray;
         }else{ //如果存储过了。
-
             for(var j = 0; j < dest.length; j++){
                 var dj = dest[j];
                 if(dj.id == curArray.id){
@@ -44,5 +42,5 @@ var arr = [
         }
     }
 
-//    console.log(dest)
+   console.log(dest)
 </script>

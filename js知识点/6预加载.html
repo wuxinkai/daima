@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var preload = (function() {
+        console.log(1);
+        preload = function() {
+            console.log(2);
+        };
+
+        return preload; //将 preload = function() {console.log(2);};作为字符串返回给外面
+    })();
+
+    preload(); //外面再调用方法
+</script>

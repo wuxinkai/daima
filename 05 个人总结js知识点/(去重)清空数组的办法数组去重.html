@@ -34,7 +34,7 @@
 
     $("#btn").on('click',function () {
         n =[]; //点击之前清空数组
-        $('#list ').find('li').each(function(index,el) {
+        $('#list').find('li').each(function(index,el) {
             if($(this).hasClass('selected')){
                 n.push($(this).text())
             }

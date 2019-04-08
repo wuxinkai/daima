@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //回调函数:
+    // 高阶函数：函数作为参数传递；函数作为返回值输出。
+    //如果一个函数接受一个或多个函数作为参数,或者可以返回一个参数,则这样的函数就叫高阶函数
+    function fun(callback) {
+        console.log(1);
+        if(typeof callback === 'function'){
+            setTimeout(function() {
+                callback();
+            });
+        }
+    }
+
+    fun(function(){console.log(2);});
+</script>

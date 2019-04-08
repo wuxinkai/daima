@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP实现跨域2</title>
+</head>
+<body>
+<div id="mydiv">
+    <button id="btn">点击</button>
+</div>
+</body>
+
+<script type="text/javascript">
+    /*
+     JSONP
+     JSONP技术实际和Ajax没有关系。我们知道<script>标签可以加载跨域的javascript脚本，并且被加载的脚本和当前文档属于同一个域。
+     因此在文档中可以调用/访问脚本中的数据和函数。如果javascript脚本中的数据是动态生成的，那么只要在文档中动态创建<script>标签就可以实现和服务端的数据交互。
+     JSONP就是利用<script>标签的跨域能力实现跨域数据的访问，请求动态生成的JavaScript脚本同时带一个callback函数名作为参数。
+     其中callback函数本地文档的JavaScript函数，服务器端动态生成的脚本会产生数据，并在代码中以产生的数据为参数调用callback函数。
+     另外JSONP只支持GET请求
+     */
+    function handleResponse(response){
+        console.log(response);
+    }
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+
+        var oBtn = document.getElementById('btn');
+
+        oBtn.onclick = function() {
+            var script = document.createElement("script");
+            script.src = "https://api.douban.com/v2/book/search?q=javascript&count=1&callback=handleResponse";
+            document.body.insertBefore(script, document.body.firstChild);
+        };
+    };
+
+/*
+(1)创建函数handleResponse 接收后台数据
+(2)动态创建script标签
+(3)script标签地址src的引入，https://api.douban.com/v2/book/search?q=javascript&count=1
+(4)回调执行&callback=handleResponse的handleResponse()方法，
+(5)等到数据，将标签插入到页面里面
+
+*/
+</script>
+</html>

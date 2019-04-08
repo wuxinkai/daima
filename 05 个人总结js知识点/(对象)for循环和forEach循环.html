@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  //  对象嵌套 数组  数组嵌套对象， 修改里面的某一个值
+  var object = {
+    aaa: [{
+      container: '#rt',
+      data: null,
+      id: "S1"
+    }, {
+      container: '#22',
+      data: null,
+      id: "S2"
+    }, {
+      container: '#32',
+      data: null,
+      id: "S3"
+    }],
+    bbb: [{
+      container: '#44',
+      data: null,
+      id: "A1"
+    }, {
+      container: 'A22',
+      data: null,
+      id: "A2"
+    }, {
+      container: 'A32',
+      data: null,
+      id: "A3"
+    }, {
+      container: 'A23',
+      data: null,
+      id: "A4"
+    }],
+    ccc: [{
+      container: 'c44',
+      data: null,
+      id: "C1"
+    }, {
+      container: 'C22',
+      data: null,
+      id: "C2"
+    }]
+  }
+  for (var key in object) {
+    object[key].forEach(function (value, index, array) {
+      // 找到id等于A3的 修改他的data值
+      // console.log(value);
+      if (value.id == 'A3') {
+        value.data = '这是我想要的值'
+      };
+    })
+    console.log(object[key]);
+  }
+</script>
