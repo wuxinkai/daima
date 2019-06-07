@@ -15,7 +15,8 @@
         console.log(this.x)  //函数还没执行不知道函数是谁
     };
     var f=new Fn;
-    f.getX() //方法名执行前面有点，执行的是 Fn 底下的getx，  console.log(this.x)  就是f.x = 先找私有的，再找公有的 ，私有上有this.x=100;  结果就是100
+    console.log(f);
+    f.getx() //方法名执行前面有点，执行的是 Fn 底下的getx，  console.log(this.x)  就是f.x = 先找私有的，再找公有的 ，私有上有this.x=100;  结果就是100
     f.__proto__.getx(); // this是f.__proto__ ，直接查找公有的console.log(this.x)  Fn.prototype.x=200就是200
 
     //查找公有上的this问题

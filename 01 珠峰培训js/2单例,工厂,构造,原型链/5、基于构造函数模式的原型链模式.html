@@ -66,7 +66,8 @@
    console.log(f1.writeJs === f2.writeJs);//->true
    console.log(f1.__proto__.writeJs === f1.writeJs);//->true
    console.log(Fn.prototype.writeJs === f1.writeJs);//->true
-//
+
+//hasOwnProperty 用来检测某一个属性是否属于这个对象的私有属性，这个方法只能检测私有属性
 //    //f1.hasOwnProperty === Object.prototype.hasOwnProperty === f1.__proto__.__proto__.hasOwnProperty;
 //
    console.log(f1.hasOwnProperty === f2.hasOwnProperty ) //->true

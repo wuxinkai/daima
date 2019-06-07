@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+  // 在js中变量名和函数名重名了，也算冲突
+ // 在预解释 var 和 function的名字一样,
+
+  var fn = 123;
+   function fn(){
+    return '23456'
+   }
+   console.log(fn);
+
+ // 在预解释的时候，如果名字已经声明过了，不需要重新声明，但是需要重新赋值
+   console.log(1,n2()); //n2---3
+   function n2(){return ('n2---1');} //（1）声明+定义
+   console.log(2,n2());//n2---3
+   //（2）声明 （不需要重新声明）
+   var n2 = 10;
+   console.log(3,n2()); // n2=10  让10执行 结果报错 10()
+    //（3）声明 +定义 （不需要重新声明，但是需要重新赋值）修改成了n2 ， 之前是n1
+   function n2(){ return ('n2---3');}
+   console.log(4, n2()); //上面变成这行不执行
+</script>

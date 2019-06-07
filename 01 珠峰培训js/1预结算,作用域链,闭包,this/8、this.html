@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
+
 <body>
-<div id="div1">有本事点我啊!!</div>
-<script type="text/javascript">
+  <div id="div1">有本事点我啊!!</div>
+  <script type="text/javascript">
     //console.log(this);//->window
     //接下来我们研究的都是当函数执行的时候,私有作用域中的this指向问题
 
@@ -16,8 +18,10 @@
     //2)this是谁和当前的函数在哪定义也没有任何的关系
 
     //    function 吃饭(){}
-    //    周慧琼.吃饭();//this->周慧琼  在全局下吃饭(上下文就是全局)
-    //    function 北京饭店(){
+    //    周慧琼.吃饭();//this-> 周慧琼  在全局下吃饭(上下文就是全局)
+
+
+    //    function 北京饭店(){ //方法在哪里执行和this没有关系
     //        周慧琼.吃饭();//this->周慧琼  在北京饭店吃饭(上下文就是北京饭店)
     //    }
     //    北京饭店();
@@ -47,21 +51,73 @@
     //    })();
     //    //oDiv.onclick=xxxfff111;
 
-    //3、方法执行,看方法名前面是否有".",有的话,"."前面是谁this就是谁,没有的话,this就是window
+    //3、方法执行,看方法名前面是否有".",有的话,"."前面是谁this就是谁,没有的话,this就是window，还有特殊元因
     function fn() {
-        console.log(this.innerHTML);
+      console.log(this.innerHTML);
     }
     var innerHTML = "我是window";
     var obj = {
-        innerHTML: "我是obj",
-        fn: fn
+      innerHTML: "我是obj",
+      fn: fn
     };
     //fn();//this->window
     //obj.fn();//this->obj
+    //（4）给某个元素绑定一个事件，当事件触发的时候，执行对应的的方法，方法中的this是当前函数
     document.getElementById("div1").onclick = function () {
-        console.log(this.innerHTML);//this->#div1
-        fn();//fn中的this->window
+      console.log(this.innerHTML); //this->#div1
+      fn(); //fn中的this->window
     };
-</script>
+
+
+
+    // （5） new Fn() 构造函数的this指向 实例
+    function Fn() {
+      this.user = "追梦子";
+    }
+    var a = new Fn();
+    console.log(a.user); //追梦子
+
+
+    // this前面两个点 ，从里面想父亲一级查找
+    var o = {
+      a: 10,
+      b: {
+        a: 12,
+        fn: function () {
+          console.log(this.a); //12
+        }
+      }
+    }
+    o.b.fn();
+
+    // o2.b 的this 指向当前函数
+    var o2 = {
+      a: 10,
+      b: {
+        // a:12,
+        fn: function () {
+          console.log(this); //this 是当前函数
+          console.log(this.a); //undefined
+        }
+      }
+    }
+    o2.b.fn();
+
+
+    // 匿名
+    var o3 = {
+      a: 10,
+      b: {
+        a: 12,
+        fn: function () {
+          console.log(this.a); //undefined
+          console.log(this); //window
+        }
+      }
+    }
+    var j = o3.b.fn;
+    j();
+  </script>
 </body>
+
 </html>
