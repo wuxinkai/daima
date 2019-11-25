@@ -30,9 +30,11 @@ var utils = {
         return {top: t, left: l};
     },
     hasClass: function hasClass(curEle, cName) {
+        
         var reg = new RegExp("(?:^| +)" + cName + "(?: +|$)");
         return reg.test(curEle.className);
     },
+
     addClass: function addClass(curEle, cName) {
         if (!this.hasClass(curEle, cName)) {
             curEle.className += " " + cName;

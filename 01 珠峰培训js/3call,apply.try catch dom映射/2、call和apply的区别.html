@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
+
 <body>
-<script type="text/javascript">
+  <div id="box"></div>
+  <script type="text/javascript">
+  "use strict"; //严格模式执行
+    //严格模式下 call第一个参数不传是undefined， 如果不是严格模式就window
+    
     //1、call和apply的作用
     //当call/apply执行的时候,它做了两件事情:
     //1)让"."前面方法中的this变为第一个参数传递进来的值
@@ -22,25 +28,34 @@
     //第一个参数值不传或者传递的是null/undefined,在非严格模式下this指向的都是window;在严格模式下,传递的是null,this指向null,传递的是undefined/不传,this都是undefined;
 
     var name = "welcome to zhu feng~~";
-    var obj = {name: "珠峰培训", fn: fn};
+    var obj = {
+      name: "珠峰培训",
+      fn: fn
+    };
+// 两个函数地址相同
     function fn(num1, num2) {
-        var total = num1 + num2;
-        console.log(this, total);
+      // console.log(arguments[0]);
+      var total = num1 + num2;
+      console.log(this, total);
     }
-    //fn.call(100, 200);//this->100 num1=200 num2=undefined
-    //fn.call(obj, 100, 200);//this->obj num1=100 num2=200
-    //fn.call();//this->window num1=undefined num2=undefined
-    //fn.call(null);//this->window
+    // fn.call(100, 200);//this->100 num1=200 num2=undefined
+    // fn.call(obj, 100, 200);//this->obj num1=100 num2=200
+    // fn.call();//this->window num1=undefined num2=undefined
+    // fn.call(null);//this->window
     //fn.call(undefined);//this->window
 
-        fn.apply(obj, [100, 200]);//this->obj num1=100 num2=200
+    fn.apply(obj, [100, 200]);//this->obj num1=100 num2=200
 
 
     //fn();//this->window
-    //obj.fn();//this->obj
+    // obj.fn(); //this->obj
 
     //obj.fn.call(window);//this->window
     //fn.call(obj);//this->obj
-</script>
+
+
+    // bind 方法 ie6-8不兼容，和call 和apply的作用一样都是改变this关键字
+  </script>
 </body>
+
 </html>

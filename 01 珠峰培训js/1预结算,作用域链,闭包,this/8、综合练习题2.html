@@ -15,14 +15,16 @@
             return function () {
                 this.num *= 3;
                 num += 1;
-                console.log(num);
+                console.log( `获取this`,this); 
+                console.log( `获取this.num`,this.num); //获取的是形参的值，而不是 this的值
+                console.log(`形参赋值 `,num); //获取的是形参的值，而不是 this的值
             }
         })(num)//->在给自执行函数的形参赋值,把全局变量num的值10赋值给形参
     };
     var fn = obj.fn;//->把obj下的fn对应的值赋值给了fn这个全局变量一份
-    fn();//->21
-    obj.fn();//->22
-    console.log(window.num, obj.num);//->60 60
+    fn();//->21   这里的this是window
+    obj.fn();//->22   这里的this是obj
+    // console.log(window.num, obj.num);//->60 60
 </script>
 </body>
 </html>

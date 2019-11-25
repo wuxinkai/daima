@@ -24,7 +24,7 @@
 
     Array.prototype.myDistinct = function myDistinct() {
         //->this其实就是我们当前要操作的那个数组
-        var obj = {};
+        var obj = {}; //利用属性不能重复的原理
         for (var i = 0; i < this.length; i++) {
             var cur = this[i];
             if (obj[cur] == cur) {

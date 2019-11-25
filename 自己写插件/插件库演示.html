@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript" src="插件库的封装.js"></script>
 </head>
+
 <body>
     <div id="box" class="classBox1 classBox2 classBox3 classBox4 classBox5">
 
     </div>
 </body>
+
 </html>
 <script type="text/javascript">
-    var box  =document.getElementById('box');
-   var hsaName = utils.hasClass(box,'classBox');
-    utils.hasClass(box,'classBox3');
-    console.log(hsaName)
+    //数组
+    var test = [{
+            name: '1',
+            age: 1
+        },
+        {
+            name: '2',
+            age: 2
+        },
+        {
+            name: '3',
+            age: 3
+        },
+        {
+            name: '4',
+            age: 4
+        }
+    ];
+    //（1）删除
+    // test.splice(1,1)
+
+
+    //（2）删除 +替换
+    // 1 代表 删除name: '2', 
+    // 2 代表 删除 2个
+    // test.splice(1,2,{name: '替换5', age: 5});
+
+
+    //（3）数组判断是否存在
+    // test.forEach(item => {
+    //     if (item.name === '1') {
+    //         console.log(item)
+    //     }
+    // })
+
+
+
+
+
+
+
+    //（1）字符串 判断
+    var hsaName = 'class0 class1 class2 class3 class4';
+    var box = hsaName.indexOf("class2")
+    console.log(box != -1) //判断是否存在
+
+    //
 </script>
